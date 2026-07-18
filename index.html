@@ -157,6 +157,42 @@
             <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 15px;">* 提示：請確保透過此頁面連結進入註冊，方能自動帶入全球團隊最高規格獎金權益。</p>
         </div>
 
+
+
+        <!-- 顯示人數的區塊 -->
+        <div style="text-align: center; margin-top: 20px; font-size: 1.1rem; color: #666;">
+            🔥 全球已有 <span id="visitor-count" style="color: #ef4444; font-weight: bold;">...</span> 位夥伴參與逆轉人生計畫
+        </div>
+
+        <!-- 自動計數與讀取的腳本 -->
+        <script>
+            // 建立一個專屬於你專案的計數網址（這裡把網址當作唯一 Key）
+            const namespace = "vipcytmall-mall";
+            const key = "index-visits";
+
+            // 每次開啟網頁時，呼叫 API 讓數字 +1 並取得最新數字
+            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+                .then(response => response.json())
+                .then(data => {
+                    // 把網頁上的 "..." 替換成實際的訪問人數
+                    document.getElementById('visitor-count').innerText = data.value.toLocaleString();
+                })
+                .catch(error => {
+                    console.error('計數器載入失敗:', error);
+                    // 失敗時的備用顯示
+                    document.getElementById('visitor-count').innerText = "1,208+"; 
+                });
+        </script>
+
+
+
+
+
+
+
+
+
+
     </div>
 
     <footer>
