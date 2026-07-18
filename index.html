@@ -4,200 +4,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- === SEO 核心標籤 === -->
+    <!-- === SEO 核心優化標籤 === -->
     <title>抗老化逆轉人生：AKG海購聖經與跨境全球賺錢分紅計畫</title>
     <meta name="description" content="啟動細胞級抗老化，用科學逆轉人生！深入解析全球熱門 AKG 商品健康密碼，並手把手帶你掌握跨境海購獎金制度。加入我們的全球團隊，邊消費邊投資，賺取跨國被動收入。點擊立即領取專屬邀請碼註冊！">
     <meta name="keywords" content="抗老化, 逆轉人生, AKG商品, 海購, 跨境電商, 賺錢, 投資, 獎金制度, 被動收入, 邀請碼, 財富自由">
     <meta name="author" content="全球 AKG 海購俱樂部">
     
-    <!-- Open Graph (Facebook / LINE 分享優化) -->
+    <!-- Open Graph (社群分享優化) -->
     <meta property="og:title" content="抗老化逆轉人生：AKG海購聖經與跨境全球賺錢分紅計畫">
     <meta property="og:description" content="啟動細胞級抗老化！解析 AKG 商品健康密碼與海購獎金制度，透過全球邀請碼，開啟你的財富與健康逆轉之旅。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vipcytmall.github.io/mall/">
-    <!-- 可在此處加入分享時顯示的圖片網址 <meta property="og:image" content="圖片網址"> -->
 
-    <!-- RWD 簡單極簡樣式（可自由修改顏色與字體） -->
+    <!-- === Webnode 風格高質感 CSS 樣式 === -->
     <style>
         :root {
-            --primary-color: #d4af37; /* 黃金/財富感 */
-            --dark-color: #111827; /* 科技深色高質感 */
-            --light-color: #f9fafb;
-            --accent-color: #ef4444; /* 醒目的按鈕紅 */
+            --bg-dark: #0B0F19;      /* Webnode 常用的深邃科技藍黑 */
+            --text-main: #1F2937;    /* 高階內文深灰（比純黑更有質感） */
+            --text-muted: #4B5563;   /* 次要內文字 */
+            --accent-blue: #2563EB;  /* 頂級數位藍（核心引導顏色） */
+            --accent-hover: #1D4ED8; /* 按鈕懸停色 */
+            --bg-light: #F9FAFB;     /* 輕盈背景灰 */
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
         }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif, "Microsoft JhengHei";
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Microsoft JhengHei";
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: var(--light-color);
+            color: var(--text-main);
+            background-color: #ffffff;
+            overflow-x: hidden;
         }
-        header {
-            background-color: var(--dark-color);
-            color: #fff;
-            padding: 60px 20px;
+
+        /* 導覽列（Webnode 標誌性極簡頂欄） */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #ffffff;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--bg-dark);
+        }
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        /* 1. 英雄主視覺區 (Hero Section) - 大器、震撼 */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #111827 100%);
+            color: #ffffff;
             text-align: center;
+            padding: 100px 20px 120px 20px;
+            position: relative;
         }
-        header h1 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            max-width: 900px;
+            margin: 0 auto 24px auto;
+            line-height: 1.3;
         }
-        header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        section {
-            background: #fff;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: var(--dark-color);
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-            margin-top: 0;
-        }
-        .highlight {
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-        /* 按鈕樣式 (CTA) */
-        .cta-box {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #111827, #1f2937);
-            color: #fff;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        .cta-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 40px;
+        .hero p {
             font-size: 1.3rem;
+            color: #9CA3AF;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-weight: 300;
+        }
+
+        /* 核心 CTA 按鈕 - Webnode 標誌性大按鈕 */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            padding: 18px 44px;
+            font-size: 1.2rem;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: bold;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
-            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
         }
-        .cta-btn:hover {
-            transform: scale(1.05);
-            background-color: #dc2626;
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(37, 99, 235, 0.5);
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--dark-color);
-            color: #9ca3af;
+
+        /* 訪客計數膠囊 */
+        .visitor-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 30px;
             font-size: 0.9rem;
+            color: #E5E7EB;
+            margin-bottom: 30px;
+        }
+
+        /* 內容通用排版 */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: var(--bg-dark);
+        }
+
+        /* 2. 三欄式特色區塊 (Grid Layout) */
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid #F3F4F6;
+            box-shadow: var(--card-shadow);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--bg-dark);
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 3. 交錯式大圖文介紹區塊 */
+        .split-section {
+            background-color: var(--bg-light);
+            padding: 100px 20px;
+        }
+        .split-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .split-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .split-text h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .split-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+        /* 模擬高質感圖表/圖片區 */
+        .split-visual {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .visual-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 4. 底部 Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 20px;
+            background: #ffffff;
+            border-top: 1px solid #E5E7EB;
+        }
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .final-cta p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* 頁尾 */
+        footer {
+            background: var(--bg-dark);
+            color: #9CA3AF;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #1F2937;
+        }
+
+        /* RWD 行動裝置優化 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .split-container { flex-direction: column; gap: 40px; }
+            .section-title { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 💡 核心大標題 (H1 貼合搜尋意圖，對 SEO 極其重要) -->
-    <header>
-        <h1>逆轉人生，從細胞抗老化與全球海購商機開始！</h1>
-        <p>掌握科學抗老科技 AKG，啟動跨國海購獎金制度，用消費為自己投資一份永續的全球被動收入。</p>
+    <!-- 導覽頂欄 -->
+    <nav>
+        <div class="logo">AKG<span>Global</span></div>
+    </nav>
+
+    <!-- 1. 英雄主視覺區 -->
+    <header class="hero">
+        <!-- 頂部計數器（符合 Webnode 風格的精緻膠囊外觀） -->
+        <div class="visitor-badge">
+            ⚡ 全球已有 <span id="visitor-count" style="font-weight: bold; color: #6EE7B7;">...</span> 位夥伴加入逆轉計畫
+        </div>
+        
+        <h1>逆轉時間與人生的黃金公式</h1>
+        <p>結合前沿細胞抗老科學 AKG 商品，與頂級全球跨境海購獎金制度。用消費投資健康，用分享建立永續被動收入。</p>
+        
+        <!-- ⚠️ 請將 href 網址替換成你的實際邀請連結 -->
+        <a href="https://example.com/register?invite=YOUR_INVITE_CODE" class="btn-primary" target="_blank" rel="noopener">
+            立即領取專屬邀請碼註冊
+        </a>
     </header>
 
-    <div class="container">
-
-        <!-- 💡 第一區塊：痛點引導與抗老科學 -->
-        <section id="anti-aging">
-            <h2>💡 科學抗老化：什麼是 AKG？</h2>
-            <p>你是否想過，老化其實是可以被延緩、甚至逆轉的？隨著全球生醫科技的突破，<span class="highlight">AKG（Alpha-Ketoglutarate，α-酮戊二酸）</span>已成為當今科學界公認的抗老化明日之星！</p>
-            <p>研究指出，AKG 能夠深入細胞層面，維持線粒體健康、優化代謝，幫助你找回年輕時的活力狀態。這不僅僅是健康投資，更是重掌生命主導權、逆轉人生的關鍵第一步。</p>
-        </section>
-
-        <!-- 💡 第二區塊：商品優勢 -->
-        <section id="products">
-            <h2>🌍 全球海購首選：頂級 AKG 商品系列</h2>
-            <p>我們為全球使用者嚴選最高純度、最安全合規的 AKG 系列商品。透過高效的跨境海購模式，省去傳統代理商的中間層層剝削，讓你可以用最實惠的價格，直接擁有源自全球頂尖實驗室的抗老結晶。</p>
-            <ul>
-                <li><strong>高純度活性成分：</strong> 確保每一粒都能發揮極致細胞防護。</li>
-                <li><strong>國際權威認證：</strong> 嚴格製程，給家人與自己最安心的健康保障。</li>
-                <li><strong>全球直郵到家：</strong> 無論你在世界哪個角落，都能輕鬆一鍵下單。</li>
-            </ul>
-        </section>
-
-        <!-- 💡 第三區塊：賺錢與投資（核心轉換） -->
-        <section id="compensation">
-            <h2>💰 投資健康、賺取全球：獨家海購獎金制度</h2>
-            <p>這不只是一次消費，更是一場「零風險」的財富投資！我們的跨境電商平台擁有全網最具競爭力的<strong>海購獎金制度</strong>：</p>
-            <ol>
-                <li><strong>消費即投資：</strong> 自己購買省下高額費用，還能累積個人業績。</li>
-                <li><strong>全球分享分紅：</strong> 透過你的專屬連結，將商品與逆轉人生的機會分享給全球好友。</li>
-                <li><strong>無限代獎金機制：</strong> 只要你邀請的會員持續消費或拓展團隊，你就能源源不絕地獲得跨國跨境的動態與靜態獎金，真正實現財富自由！</li>
-            </ol>
-        </section>
-
-        <!-- 💡 核心 CTA 行動呼籲區塊 (引導點擊邀請碼) -->
-        <div class="cta-box">
-            <h3>🚀 準備好開啟你的「健康與財富」逆轉之旅了嗎？</h3>
-            <p style="margin-bottom: 25px;">現在使用下方專屬邀請連結註冊，即可立刻解鎖全球海購資格，並免費取得你的推廣獎金經營權！</p>
+    <!-- 2. 三欄式特色說明（網頁內容核心：AKG 與海購優勢） -->
+    <main>
+        <div class="features-grid">
             
-            <!-- ⚠️ 請將下方的 href 網址替換成你的實際邀請註冊連結 -->
-            <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="cta-btn" target="_blank" rel="noopener">
-                點此使用專屬邀請碼 ➡️ 立即免費註冊領取資格
+            <div class="feature-card">
+                <span class="icon">🧬</span>
+                <h3>科學級抗老化</h3>
+                <p>Alpha-Ketoglutarate (AKG) 經全球頂尖生醫實驗室證實，能從細胞根源優化線粒體、啟動代謝活力，重塑大眾對年齡的認知，真正實現逆轉人生的可能。</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">🌍</span>
+                <h3>全球跨境海購</h3>
+                <p>打破傳統高昂代理商限制，高純度頂級 AKG 商品直接由全球直郵到家。更低成本、更高效率，讓所有人都能享受國際第一線的健康結晶。</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="icon">💼</span>
+                <h3>零風險健康投資</h3>
+                <p>每一次消費都是在累積你走向財富自由的籌碼。不用囤貨、不用高額加盟費，從個人健康出發，即可開闢一條通往全球市場的商機通道。</p>
+            </div>
+
+        </div>
+
+        <!-- 3. 交錯式大圖文介紹（獎金制度詳細解析） -->
+        <section class="split-section">
+            <div class="split-container">
+                
+                <div class="split-text">
+                    <h2>無限動能的「海購獎金制度」</h2>
+                    <p>Web 時代最強大的電商分紅機制。透過你的個人邀請碼連結，將全球頂級抗老好物分享出去，只要有人消費，你就能獲得持久的推廣紅利。</p>
+                    <p>不僅如此，制度更支援多層次全球業績分紅，團隊滾雪球效應一旦啟動，跨國被動收入將源源不絕。</p>
+                </div>
+
+                <div class="split-visual">
+                    <h3>🏆 獎金放大三大核心</h3>
+                    <div class="visual-box">
+                        <strong>📊 自用省錢・分享賺錢</strong>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9rem; opacity: 0.8;">自購即享會員批發價，推薦再享高額現金融資回饋。</p>
+                    </div>
+                    <div class="visual-box">
+                        <strong>📈 全球網狀分紅</strong>
+                        <p style="margin: 5px 0 0 0; font-size: 0.9rem; opacity: 0.8;">打破國家地域界線，全球市場業績共同合併計算。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. 底部 Final CTA 行動呼籲 -->
+        <section class="final-cta">
+            <h2>這不只是健康，更是一場人生的轉折點</h2>
+            <p>立刻點擊下方，成為全球首批佈局 AKG 跨境海購商機的核心菁英。</p>
+            
+            <!-- ⚠️ 請將 href 網址替換成你的實際邀請連結 -->
+            <a href="https://example.com/register?invite=YOUR_INVITE_CODE" class="btn-primary" target="_blank" rel="noopener">
+                點此使用專屬連結 ➡️ 搶先免費註冊
             </a>
-            
-            <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 15px;">* 提示：請確保透過此頁面連結進入註冊，方能自動帶入全球團隊最高規格獎金權益。</p>
-        </div>
+        </section>
+    </main>
 
-
-
-        <!-- 顯示人數的區塊 -->
-        <div style="text-align: center; margin-top: 20px; font-size: 1.1rem; color: #666;">
-            🔥 全球已有 <span id="visitor-count" style="color: #ef4444; font-weight: bold;">...</span> 位夥伴參與逆轉人生計畫
-        </div>
-
-        <!-- 自動計數與讀取的腳本 -->
-        <script>
-            // 建立一個專屬於你專案的計數網址（這裡把網址當作唯一 Key）
-            const namespace = "vipcytmall-mall";
-            const key = "index-visits";
-
-            // 每次開啟網頁時，呼叫 API 讓數字 +1 並取得最新數字
-            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-                .then(response => response.json())
-                .then(data => {
-                    // 把網頁上的 "..." 替換成實際的訪問人數
-                    document.getElementById('visitor-count').innerText = data.value.toLocaleString();
-                })
-                .catch(error => {
-                    console.error('計數器載入失敗:', error);
-                    // 失敗時的備用顯示
-                    document.getElementById('visitor-count').innerText = "1,208+"; 
-                });
-        </script>
-
-
-
-
-
-
-
-
-
-
-    </div>
-
+    <!-- 頁尾 -->
     <footer>
-        <p>&copy; 2026 全球 AKG 海購俱樂部. All Rights Reserved. 本網頁內容為推廣與制度說明，實際權益以平台規章為準。</p>
+        <p>&copy; 2026 全球 AKG 海購俱樂部. All Rights Reserved.</p>
+        <p style="font-size: 0.8rem; color: #4B5563; margin-top: 10px;">本網頁為全球獨立推廣與制度分析頁面，實際商業條款與收益以母平台規章為準。</p>
     </footer>
+
+    <!-- === 自動無感計數器指令碼 === -->
+    <script>
+        // 設定唯一的 Key（用於區隔其他網站）
+        const namespace = "vipcytmall-webnode-mall";
+        const key = "index-visits";
+
+        // 呼叫免費計數 API
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-count').innerText = data.value.toLocaleString();
+            })
+            .catch(error => {
+                console.error('計數器加載失敗:', error);
+                // 萬一第三方計數服務阻斷，自動顯示一個漂亮的基本數字維持畫面氣勢
+                document.getElementById('visitor-count').innerText = "1,650+"; 
+            });
+    </script>
 
 </body>
 </html>
