@@ -120,7 +120,7 @@
         .card p { color: #94A3B8; font-size: 0.98rem; line-height: 1.6; }
         .card-more { color: var(--accent-glow); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block; }
 
-        /* 4. 🚀 升級：對接商城連結的商品卡片展示區 */
+        /* 4. 🚀 5大明星商品對接區 */
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .prod-card { 
             background: #111827; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); 
@@ -153,11 +153,35 @@
         .pulse-dot { width: 10px; height: 10px; background: var(--accent-green); border-radius: 50%; animation: pulseDot 1.5s infinite; }
         @keyframes pulseDot { 0% { transform: scale(0.8); opacity: 0.5; } 50% { transform: scale(1.3); opacity: 1; } 100% { transform: scale(0.8); opacity: 0.5; } }
 
+        /* 7. 底部引流區（🛠️ 已修正為完美置中對齊） */
+        .bottom-cta {
+            text-align: center;
+            padding: 80px 20px;
+            background: radial-gradient(circle at center, #1E293B 0%, var(--bg-dark) 100%);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .bottom-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #FFFFFF, #FCD34D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bottom-cta p {
+            font-size: 1.2rem;
+            color: #94A3B8;
+            max-width: 650px;
+            margin: 0 auto 45px auto;
+            line-height: 1.6;
+        }
+
         /* 響應式優化 */
         @media (max-width: 900px) {
             .split-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             .hero h1 { font-size: 2.2rem; }
+            .bottom-cta h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -202,7 +226,7 @@
             <a href="bible.html" class="card">
                 <h3 id="c1-t">⏳ 逆轉生物年齡 (回春) ➔</h3>
                 <p id="c1-d">科學家已證實老化是可逆的！點擊進入【AKG海購聖經】，深入解析頂級膠囊如何從細胞內源修復線粒體。</p>
-                <span class="card-more" id="c1-m">閱讀海購聖經 ➔</span>
+                <span class="card-more" id="c1-m">閱讀海購聖延 ➔</span>
             </a>
             <a href="system.html" class="card">
                 <h3 id="c2-t">💰 翻轉財富極限 (賺錢) ➔</h3>
@@ -217,34 +241,54 @@
         </div>
     </section>
 
-    <!-- 3. 🎯 升級版商品專區：直通你指定的 VIPYCT 分類通道 -->
+    <!-- 3. 🎯 5大明星商品專區：對齊官網自營 1025 分類 -->
     <section class="container" id="products" style="border-top: 1px solid rgba(255,255,255,0.05);">
-        <h2 class="section-title" id="title-prod">⚡ 頂尖生醫明星商品精選</h2>
+        <h2 class="section-title" id="title-prod">⚡ 頂尖生醫明星商品精選 (官網同步 5 大核心)</h2>
         <div class="product-grid">
             
-            <!-- 點擊直達自營專區該商品分類 -->
+            <!-- 商品 1 -->
             <a href="https://www.vipyct.com/#/category?categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
-                <div class="prod-img">💊</div>
-                <div class="prod-badge" id="p1-b">熱銷冠軍</div>
-                <h3 id="p1-t">高純度細胞級 AKG 膠囊系列</h3>
-                <p style="color: #94A3B8; font-size: 0.9rem;" id="p1-d">激活長壽基因，全面修復線粒體，逆轉生理時鐘、重獲巔峰活力。</p>
+                <div class="prod-img">🧬</div>
+                <div class="prod-badge" id="p1-b">細胞修復</div>
+                <h3 id="p1-t">高純度 AKG 長壽核心膠囊</h3>
+                <p style="color: #94A3B8; font-size: 0.9rem;" id="p1-d">直接激活長壽基因，全面修復線粒體，逆轉生理時鐘、重獲巔峰活力。</p>
                 <span class="prod-goto" id="p1-goto">進入官方商城選購 ➔</span>
             </a>
 
+            <!-- 商品 2 -->
             <a href="https://www.vipyct.com/#/category?categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
                 <div class="prod-img">🧪</div>
-                <div class="prod-badge" id="p2-b">科技突破</div>
-                <h3 id="p2-t">複合式 NMN + AKG 頂級專區</h3>
-                <p style="color: #94A3B8; font-size: 0.9rem;" id="p2-d">雙效協同增強 DNA 修復能力，深層抗衰，鎖住肌膚與身體的青春源泉。</p>
+                <div class="prod-badge" id="p2-b">雙效協同</div>
+                <h3 id="p2-t">複合式 NMN + AKG 頂級配方</h3>
+                <p style="color: #94A3B8; font-size: 0.9rem;" id="p2-d">加倍增強 DNA 修復能力，深層抗衰，鎖住肌膚與身體的青春源泉。</p>
                 <span class="prod-goto" id="p2-goto">進入官方商城選購 ➔</span>
             </a>
 
+            <!-- 商品 3 -->
+            <a href="https://www.vipyct.com/#/category?categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+                <div class="prod-img">🍷</div>
+                <div class="prod-badge" id="p3-b">逆齡奇蹟</div>
+                <h3 id="p3-t">高濃度白藜蘆醇精華膠囊</h3>
+                <p style="color: #94A3B8; font-size: 0.9rem;" id="p3-d">強效清除體內自由基，極致抗氧化，協同 AKG 啟動細胞防禦機制。</p>
+                <span class="prod-goto" id="p3-goto">進入官方商城選購 ➔</span>
+            </a>
+
+            <!-- 商品 4 -->
             <a href="https://www.vipyct.com/#/category?categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
                 <div class="prod-img">🌱</div>
-                <div class="prod-badge" id="p3-b">草本精粹</div>
-                <h3 id="p3-t">全效天然抗氧化與防護調理</h3>
-                <p style="color: #94A3B8; font-size: 0.9rem;" id="p3-d">清除體內自由基，強化免疫防護網，提供細胞每日所需的頂級防護。</p>
-                <span class="prod-goto" id="p3-goto">進入官方商城選購 ➔</span>
+                <div class="prod-badge" id="p4-b">免疫防護</div>
+                <h3 id="p4-t">全效天然草本抗氧調理素</h3>
+                <p style="color: #94A3B8; font-size: 0.9rem;" id="p4-d">優化機體免疫防護網，提供細胞每日所需的頂級微量營養素。</p>
+                <span class="prod-goto" id="p4-goto">進入官方商城選購 ➔</span>
+            </a>
+
+            <!-- 商品 5 -->
+            <a href="https://www.vipyct.com/#/category?categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+                <div class="prod-img">⚡</div>
+                <div class="prod-badge" id="p5-b">能量代謝</div>
+                <h3 id="p5-t">線粒體複合能量活化素</h3>
+                <p style="color: #94A3B8; font-size: 0.9rem;" id="p5-d">精準針對細胞能量工廠，瞬間提升日常代謝率與大腦專注力。</p>
+                <span class="prod-goto" id="p5-goto">進入官方商城選購 ➔</span>
             </a>
             
         </div>
@@ -311,7 +355,7 @@
         </div>
     </section>
 
-    <!-- 7. 底部引流區 -->
+    <!-- 7. 底部引流區（🛠️ 完美置中升級版） -->
     <section class="bottom-cta">
         <h2 id="final-title">全球富豪與科技巨頭都在瘋狂佈局</h2>
         <p id="final-desc">這不是趨勢，這是正在發生的世紀變革。現在，這條捷徑就在你眼前。</p>
@@ -342,10 +386,12 @@
                 c1T: "⏳ 逆轉生物年齡 (回春) ➔", c1D: "科學家已證實老化是可逆的！點擊進入【AKG海購聖經】，深入解析頂級膠囊如何從細胞內源修復線粒體。", c1M: "閱讀海購聖經 ➔",
                 c2T: "💰 翻轉財富極限 (賺錢) ➔", c2D: "消費即投資！點擊進入【跨境全球獎金制度解析】，帶你拆解跨國海購網狀裂變高額分紅，打造被動收入。", c2M: "拆解獎金制度 ➔",
                 c3T: "🤝 大愛渡人救人 (傳播) ➔", c3D: "把最頂尖的抗老福音帶給世界。點擊查看【一星直衝三星黑鑽速成攻略】，運用核心戰術成就福慧人生。", c3M: "查看黑鑽攻略 ➔",
-                titleProd: "⚡ 頂尖生醫明星商品精選",
-                p1B: "熱銷冠軍", p1T: "高純度細胞級 AKG 膠囊系列", p1D: "激活長壽基因，全面修復線粒體，逆轉生理時鐘、重獲巔峰活力。", p1Go: "進入官方商城選購 ➔",
-                p2B: "科技突破", p2T: "複合式 NMN + AKG 頂級專區", p2D: "雙效協同增強 DNA 修復能力，深層抗衰，鎖住肌膚與身體的青春源泉。", p2Go: "進入官方商城選購 ➔",
-                p3B: "草本精粹", p3T: "全效天然抗氧化與防護調理", p3D: "清除體內自由基，強化免疫防護網，提供細胞每日所需的頂級防護。", p3Go: "進入官方商城選購 ➔",
+                titleProd: "⚡ 頂尖生醫明星商品精選 (官網同步 5 大核心)",
+                p1B: "細胞修復", p1T: "高純度 AKG 長壽核心膠囊", p1D: "直接激活長壽基因，全面修復線粒體，逆轉生理時鐘、重獲巔峰活力。", p1Go: "進入官方商城選購 ➔",
+                p2B: "雙效協同", p2T: "複合式 NMN + AKG 頂級配方", p2D: "加倍增強 DNA 修復能力，深層抗衰，鎖住肌膚與身體的青春源泉。", p2Go: "進入官方商城選購 ➔",
+                p3B: "逆齡奇蹟", p3T: "高濃度白藜蘆醇精華膠囊", p3D: "強效清除體內自由基，極致抗氧化，協同 AKG 啟動細胞防禦機制。", p3Go: "進入官方商城選購 ➔",
+                p4B: "免疫防護", p4T: "全效天然草本抗氧調理素", p4D: "優化機體免疫防護網，提供細胞每日所需的頂級微量營養素。", p4Go: "進入官方商城選購 ➔",
+                p5B: "能量代謝", p5T: "線粒體複合能量活化素", p5D: "精準針對細胞能量工廠，瞬間提升日常代謝率與大腦專注力。", p5Go: "進入官方商城選購 ➔",
                 titleTeach: "📖 傻瓜式三步爆發教學",
                 t1T: "Step 1. 領券與註冊", t1D: "點擊本站邀請連結，填寫基本資料並驗證信箱，1分鐘即可免費開通全球海購會員帳號，搶佔裂變矩陣最前端。",
                 t2T: "Step 2. 跨境商城購物", t2D: "登入後台進入跨境直購商城（自營商品專區 1025），挑選心儀的 AKG 科技商品，支援全球主流信用卡，海外直郵直送到家。",
@@ -357,7 +403,7 @@
                 liveTitle: "想了解如何一星直衝黑鑽？立刻進入即時視訊直播間！",
                 liveDesc: "我們每天固定舉辦全球多語系線上招商與生醫講座，頂級黑鑽導師親自在線帶飛，幫你解答所有關於回春與網賺的秘密。",
                 liveBtn: "點擊進入即時視訊會議室 ➔",
-                fTitle: "全球富豪與科技巨頭都在瘋狂佈局", fDesc: "這不是趨勢，這是正在發生的世紀變革。現在，長壽與財富的捷徑就在你眼前。"
+                fTitle: "全球富豪與科技巨頭都在瘋狂佈局", fDesc: "這不是趨勢，這是正在發生的世紀變革。現在，這條捷徑就在你眼前。"
             },
             "en": {
                 seoTitle: "Age Reversal & Wealth: Global AKG Sourcing & Cross-Border Plan",
@@ -372,10 +418,12 @@
                 c1T: "⏳ Cellular Age Reversal ➔", c1D: "Science proves aging is treatable. Click to view [AKG Sourcing Bible] to discover how formulas rejuvenate cells.", c1M: "Read Sourcing Bible ➔",
                 c2T: "💰 Hyper Passive Income ➔", c2D: "Turn consumption into investment. Click to open [Global Compensation Plan] and learn how our matrix scales.", c2M: "Analyze Compensation ➔",
                 c3T: "🤝 Global Human Impact ➔", c3D: "Share the gospel of longevity. Click to read [Black Diamond Blueprint] to help others heal while building respect.", c3M: "View Strategy Blueprint ➔",
-                titleProd: "⚡ Premium Bio-Tech Product Showcase",
-                p1B: "Best Seller", p1T: "High-Purity Cellular AKG Capsules", p1D: "Activate longevity genes, repair mitochondria, and reclaim peak energy levels.", p1Go: "Shop in Store ➔",
-                p2B: "Breakthrough", p2T: "Synergistic NMN + AKG Essence", p2D: "Dual-action DNA repair formula that locks in youthfulness from deep within.", p2Go: "Shop in Store ➔",
-                p3B: "Natural", p3T: "All-in-One Antioxidant Shield", p3D: "Clears free radicals and reinforces your daily cellular defense barrier system.", p3Go: "Shop in Store ➔",
+                titleProd: "⚡ Premium Bio-Tech Product Showcase (5 Core Products)",
+                p1B: "Cell Repair", p1T: "High-Purity Longevity AKG Capsules", p1D: "Activate longevity genes, repair mitochondria, and reclaim peak energy levels.", p1Go: "Shop in Store ➔",
+                p2B: "Synergy Bio", p2T: "Advanced NMN + AKG Complex Formula", p2D: "Dual-action DNA repair formula that locks in youthfulness from deep within.", p2Go: "Shop in Store ➔",
+                p3B: "Age Defy", p3T: "Premium Resveratrol Antioxidant Essence", p3D: "Clears free radicals and perfectly synergizes with AKG for cell defense.", p3Go: "Shop in Store ➔",
+                p4B: "Immune Shield", p4T: "All-in-One Herbal Cellular Defense", p4D: "Reinforces your daily biological defense and immune system barrier.", p4Go: "Shop in Store ➔",
+                p5B: "Energy Boost", p5T: "Mitochondrial Energy & Focus Activator", p5D: "Target cellular power plants to boost metabolism and daily focus instantly.", p5Go: "Shop in Store ➔",
                 titleTeach: "📖 Step-by-Step Launch Blueprint",
                 t1T: "Step 1. Get Code & Register", t1D: "Click our invitation link, fill in details, verify email, and activate your international account within 60 seconds.",
                 t2T: "Step 2. Purchase on Global Mall", t2D: "Log in to access cross-border mall (Category 1025). Select your AKG items with secure worldwide credit cards and direct shipping.",
@@ -420,11 +468,13 @@
             document.getElementById('c2-t').innerText = data.c2T; document.getElementById('c2-d').innerText = data.c2D; document.getElementById('c2-m').innerText = data.c2M;
             document.getElementById('c3-t').innerText = data.c3T; document.getElementById('c3-d').innerText = data.c3D; document.getElementById('c3-m').innerText = data.c3M;
 
-            // 商品板塊
+            // 商品板塊（擴充至5項）
             document.getElementById('title-prod').innerText = data.titleProd;
             document.getElementById('p1-b').innerText = data.p1B; document.getElementById('p1-t').innerText = data.p1T; document.getElementById('p1-d').innerText = data.p1D; document.getElementById('p1-goto').innerText = data.p1Go;
             document.getElementById('p2-b').innerText = data.p2B; document.getElementById('p2-t').innerText = data.p2T; document.getElementById('p2-d').innerText = data.p2D; document.getElementById('p2-goto').innerText = data.p2Go;
             document.getElementById('p3-b').innerText = data.p3B; document.getElementById('p3-t').innerText = data.p3T; document.getElementById('p3-d').innerText = data.p3D; document.getElementById('p3-goto').innerText = data.p3Go;
+            document.getElementById('p4-b').innerText = data.p4B; document.getElementById('p4-t').innerText = data.p4T; document.getElementById('p4-d').innerText = data.p4D; document.getElementById('p4-goto').innerText = data.p4Go;
+            document.getElementById('p5-b').innerText = data.p5B; document.getElementById('p5-t').innerText = data.p5T; document.getElementById('p5-d').innerText = data.p5D; document.getElementById('p5-goto').innerText = data.p5Go;
 
             // 教學
             document.getElementById('title-teach').innerText = data.titleTeach;
