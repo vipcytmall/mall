@@ -245,6 +245,113 @@
         /* 🖼️ 圖片預留位骨架樣式 */
         .placeholder-img { width: 100%; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px dashed rgba(255,255,255,0.15); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #64748B; font-size: 0.85rem; padding: 20px; text-align: center; }
 
+        /* ====================================================
+           🎨 資訊圖表化（Infographic）風格三步爆發教學樣式區
+           ==================================================== */
+        .infographic-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            position: relative;
+            margin-top: 40px;
+        }
+        .flow-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 10px;
+        }
+        /* 大圓形插圖背景 */
+        .flow-circle-bg {
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            margin: 0 auto 35px auto;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flow-circle-bg::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+        /* Step 圓圈數字徽章 */
+        .flow-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #E11D48; /* 搶眼活力紅 */
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            font-weight: 800;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.5);
+            border: 3px solid var(--bg-dark);
+            z-index: 2;
+        }
+        .flow-item h3 {
+            font-size: 1.4rem;
+            color: #FFFFFF;
+            margin: 15px 0 10px 0;
+            font-weight: 700;
+        }
+        .flow-item p {
+            color: #94A3B8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 70px;
+        }
+        /* 活潑引導向右箭頭 */
+        .flow-arrow {
+            position: absolute;
+            top: 75px;
+            right: -10%;
+            width: 18%;
+            height: auto;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+        }
+        /* 下方專屬精美教程按鈕 */
+        .btn-tutorial {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: var(--accent-glow);
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .btn-tutorial:hover {
+            background: var(--accent-blue);
+            color: #FFFFFF;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
         /* 5. 見證與活動動態區 */
         .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .witness-box, .event-box { background: var(--panel-bg); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.02); }
@@ -312,6 +419,8 @@
             .hero h1 { font-size: 2.2rem; }
             .bottom-cta h2 { font-size: 1.8rem; }
             .cert-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+            .infographic-flow { flex-direction: column; align-items: center; gap: 50px; }
+            .flow-arrow { display: none; }
         }
         @media (max-width: 480px) {
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
@@ -448,6 +557,14 @@
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/fP57UmTxE5o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h4 id="v-t4">貝佐斯豪砸30億美金 the secret：人類壽命即將突破100歲，你準備好活到永生了嗎？</h4>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/1s4Cf2-uPLI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
                     <h4 id="v-t4">貝佐斯豪砸30億美金 the secret：人類壽命即將突破100歲，你準備好活到永生了嗎？</h4>
@@ -599,21 +716,50 @@
         </section>
     </section>
 
-    <!-- 4. 註冊及商城購物教學卡片區 -->
+    <!-- 4. 🎨 全新升級：資訊圖表化三步爆發教學區塊 -->
     <section class="container" id="tutorials" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <h2 class="section-title" id="title-teach">📖 傻瓜式三步爆發教學</h2>
-        <div class="grid-cards">
-            <div class="card" style="cursor: default;">
-                <h3 id="t1-t">Step 1. 領券與註冊</h3>
+        <p class="section-subtitle" id="subtitle-teach">跟隨視覺指引，輕鬆開啟跨國財富與健康密碼</p>
+        
+        <div class="infographic-flow">
+            <!-- 步驟 1 -->
+            <div class="flow-item">
+                <div class="flow-circle-bg">
+                    <!-- 內部使用發光的太空幾何風格圖樣，底部自帶圓圈數字標籤 -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM20 8v6M23 11h-6"/></svg>
+                    <div class="flow-badge" id="badge-step-1">1</div>
+                </div>
+                <h3 id="t1-t">Step1. 免費申請個人帳號</h3>
                 <p id="t1-d">點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端</p>
+                <a href="#" class="btn-tutorial" id="btn-tut-1">📄 <span id="lbl-tut-1">觀看註冊教程</span></a>
+                
+                <!-- 引導向右箭頭 svg -->
+                <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
-            <div class="card" style="cursor: default;">
-                <h3 id="t2-t">Step 2. 跨境商城購物</h3>
+
+            <!-- 步驟 2 -->
+            <div class="flow-item">
+                <div class="flow-circle-bg">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+                    <div class="flow-badge" id="badge-step-2" style="background:#D97706; box-shadow:0 4px 15px rgba(217,119,6,0.5);">2</div>
+                </div>
+                <h3 id="t2-t">Step2. 直購商品活躍帳號</h3>
                 <p id="t2-d">登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益</p>
+                <a href="#" class="btn-tutorial" id="btn-tut-2">🛍️ <span id="lbl-tut-2">觀看購物教程</span></a>
+                
+                <!-- 引導向右箭頭 svg -->
+                <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
-            <div class="card" style="cursor: default;">
-                <h3 id="t3-t">Step 3. 獲取分享邀請碼</h3>
+
+            <!-- 步驟 3 -->
+            <div class="flow-item">
+                <div class="flow-circle-bg">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3.5z"/></svg>
+                    <div class="flow-badge" id="badge-step-3" style="background:#059669; box-shadow:0 4px 15px rgba(5,150,105,0.5);">3</div>
+                </div>
+                <h3 id="t3-t">Step3. 分享推廣啟至富之路</h3>
                 <p id="t3-d">開始分享推廣，啟動被動收益，開創源源不絕的致富之路！</p>
+                <a href="#" class="btn-tutorial" id="btn-tut-3">🔗 <span id="lbl-tut-3">觀看推廣教程</span></a>
             </div>
         </div>
     </section>
@@ -714,9 +860,12 @@
                 cert1: "美國製造認證", cert2: "清真潔淨認證", cert3: "歐盟實驗室認證", cert4: "美國非轉基因<br>產品認證", cert5: "美國 FDA 註冊", cert6: "美國全國<br>衛生基金會", cert7: "cGMP 優良製造",
 
                 titleTeach: "📖 傻瓜式三步爆發教學",
-                t1T: "Step 1. 領券與註冊", t1D: "點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端",
-                t2T: "Step 2. 跨境商城購物", t2D: "登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益",
-                t3T: "Step 3. 獲取分享邀請碼", t3D: "開始分享推廣，啟動被動收益，開創源源不絕的致富之路！",
+                subtitleTeach: "跟隨視覺指引，輕鬆開啟跨國財富與健康密碼",
+                t1T: "Step1. 免費申請個人帳號", t1D: "點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端",
+                t2T: "Step2. 直購商品活躍帳號", t2D: "登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益",
+                t3T: "Step3. 分享推廣啟至富之路", t3D: "開始分享推廣，啟動被動收益，開創源源不絕的致富之路！",
+                lblTut1: "觀看註冊教程", lblTut2: "觀看購物教程", lblTut3: "觀看推廣教程",
+                
                 titleWit: "👥 全球會員真實見證", titleEve: "📢 最新官方活動資訊",
                 w1Text: "「服用 AKG 三個月後，精神狀態回到30歲！更不可思議的是，透過分享邀請碼，上個月我的海外被動分紅破了10萬！」",
                 liveStatus: "LIVE · 全球創富線上招商會議中",
@@ -752,7 +901,7 @@
                 titleProd: "⚡ 顶尖生医明星商品精选 (官网同步 5 大核心)",
                 p1B: "Aureva Women", p1T: "支持能量代谢、红血球形成及女性日常健康所需的整体 nutritional 平衡", p1D: "Higo Aureva Women™专为现代女性配方，结合植物萃取物、胺基酸、维生​​素与抗氧化剂。", p1Go: "进入官方商城选购 ➔",
                 p2B: "ReGeneX Men", p2T: "有助于支持前列腺健康、日常代谢平衡及整体男性健康", p2D: "Higo ReGeneX Men™ 专为现代男性配方，结合植物萃取物、胺基酸、维生​​素与矿物质。", p2Go: "进入官方商城选购 ➔",
-                p3B: "GnCell", p3T: "富含β-glucan和多糖，有助于支持免疫系统健康及日常健康平衡", p3D: "Higo GnCell™ 是一款综合营养支持配方，结合植物性营养素、蘑菇提取物及关键微量营养素。", p3Go: "进入官方商城选购 ➔",
+                p3B: "GnCell", p3T: "富含β-glucan和多糖，有助于支持免疫系统健康 및 일상적인 건강 균형 지원", p3D: "Higo GnCell™ 是一款综合营养支持配方，结合植物性营养素、蘑菇提取物及关键微量营养素。", p3Go: "进入官方商城选购 ➔",
                 p4B: "Higo AKG Women", p4T: "有助于支持细胞能量生成，维持每日活力与整体健康", p4D: "Higo AKG Women™专为现代女性配方，结合关键营养素，有助于支持能量代谢。", p4Go: "进入官方商城选购 ➔",
                 p5B: "Higo AKG Men", p5T: "有助于支持细胞能量的产生，维持每日活力与整体身体功能", p5D: "Higo AKG Men™ 专為现代男性配方，结合多种关键营养素，帮助支持能量代谢。", p5Go: "进入官方商城选购 ➔",
                 
@@ -764,11 +913,14 @@
                 cert1: "美国制造认证", cert2: "清真洁净认证", cert3: "欧盟实验室认证", cert4: "美国非转基因<br>产品认证", cert5: "美国 FDA 注册", cert6: "美国全国<br>卫生基金会", cert7: "cGMP 优良制造",
 
                 titleTeach: "📖 傻瓜式三步爆发教学",
-                t1T: "Step 1. 领券与注册", t1D: "点击注册链接，填写基本资料申请个人专属账号立即完成全球部署，抢占网络矩阵最前端",
-                t2T: "Step 2. 跨境商城购物", t2D: "登录跨境直购商品，自由选配商品激活账号，拥有全球推广链接与经营权，开启专属权益",
-                t3T: "Step 3. 获取分享邀请码", t3D: "开始分享推广，启动被动收益，开创源源不断的致富之路！",
+                subtitleTeach: "跟随视觉指引，轻松开启跨国财富与健康密码",
+                t1T: "Step1. 免费申请个人账号", t1D: "点击注册链接，填写基本资料申请个人专属账号立即完成全球部署，抢占网络矩阵最前端",
+                t2T: "Step2. 直购商品活跃账号", t2D: "登录跨境直购商品，自由选配商品激活账号，拥有全球推广链接与经营权，开启专属权益",
+                t3T: "Step3. 分享推广启至富之路", t3D: "开始分享推广，启动被动收益，开创源源不断的致富之路！",
+                lblTut1: "观看注册教程", lblTut2: "观看购物教程", lblTut3: "观看推广教程",
+
                 titleWit: "👥 全球会员真实见证", titleEve: "📢 最新官方活动资讯",
-                w1Text: "「服用 AKG 三个月后，精神状态回到30岁！更不可思议的是，透过分享邀请码，上个月我的海外被動分红破了10萬！」",
+                w1Text: "「服用 AKG 三个月后，精神状态回到30岁！更不可思議的是，透过分享邀请码，上个月我的海外被動分红破了10萬！」",
                 liveStatus: "LIVE · 全球创富线上招商会议中",
                 liveTitle: "想了解如何一星直冲黑钻？立刻进入即时视讯直播间！",
                 liveDesc: "我们每天固定举办全球多语系线上招商与生医讲座，顶级黑钻导师亲自在线带飞。",
@@ -814,9 +966,12 @@
                 cert1: "Made in USA Certified", cert2: "HALAL Certified", cert3: "EU Lab Tested", cert4: "Non-GMO Project<br>Verified", cert5: "FDA Registered", cert6: "NSF International<br>Standard", cert7: "cGMP Certified",
 
                 titleTeach: "📖 Step-by-Step Launch Blueprint",
-                t1T: "Step 1. Get Code & Register", t1D: "Click the registration link, fill in your basic profile to apply for a dedicated personal account, and achieve instant global deployment to seize the forefront of the network matrix.",
-                t2T: "Step 2. Purchase on Global Mall", t2D: "Log in to purchase cross-border goods, freely select and match products to activate your account, and obtain a global promotion link and business rights to unlock exclusive benefits.",
-                t3T: "Step 3. Share & Multiply", t3D: "Start sharing and promoting to activate passive income, paving a never-ending path to ultimate wealth creation!",
+                subtitleTeach: "Follow the visual flow to seamlessly unlock universal health & wealth",
+                t1T: "Step1. Free Account Application", t1D: "Click registration link, fill in basic details to apply for an exclusive account for immediate positioning.",
+                t2T: "Step2. Store Purchase Activation", t2D: "Log in and purchase products to activate your account, gaining global promo links and business rights.",
+                t3T: "Step3. Promote & Scale Wealth", t3D: "Start sharing and marketing to unleash hyper passive income stream and build true abundance!",
+                lblTut1: "Registration Guide", lblTut2: "Shopping Guide", lblTut3: "Marketing Guide",
+
                 titleWit: "👥 Global Success Testimonials", titleEve: "📢 Official News & Events",
                 w1Text: "「After 3 months of AKG, my energy levels feel like 30 again! Best of all, my monthly passive split surpassed $3,000 via sharing codes!」",
                 liveStatus: "LIVE · Global Business Seminar in Progress",
@@ -832,7 +987,7 @@
                 n1: "AKG海外購入聖書", n2: "グローバル報酬制度", n3: "ブラックダイヤ速成攻略", n4: "スター商品", n5: "登録・購入チュートリアル", n6: "リアルタイム会議室", nVideoNav: "重棒映像",
                 vPrefix: "世界で既に", vSuffix: "人のエリートがこのルートで人生を逆転させています",
                 heroTitle: "バイオ年齢と富の軌道を逆転させ、大富大慧の人生を掴め！",
-                heroSubtitle: "ハーバードの最先端バイオ科学AKG商品と、世界規模の海外購入爆発ボーナスを融合。",
+                heroSubtitle: "ハーバードの最先端バイオ科学AKG商品と、世界規模の海外購入爆發ボーナスを融合。",
                 btn1: "専用招待コードを今すぐ受け取る ➡️ グローバル代理権を獲得",
                 btn2: "今すぐ登録してポジションを確保・早い者勝ち ➡️ グローバル分配金を先取り",
                 titleExplore: "下のモジュールをクリックして、人生逆転のコードを探索",
@@ -864,9 +1019,12 @@
                 cert1: "米国製造（Made in USA）", cert2: "ハラール（HALAL）認証", cert3: "欧州独立研究所試験済", cert4: "非遺伝子組み換え<br>（Non-GMO）認証", cert5: "米国 FDA 施設登録", cert6: "米国公衆衛生<br>安全基金会（NSF）", cert7: "cGMP 適正製造基準",
 
                 titleTeach: "📖 初心者向け3ステップ爆発チュートリアル",
-                t1T: "ステップ1. 特典獲得と登録", t1D: "登録リンクをクリックし、基本情報を入力して個人専用アカウントを申請。すぐにグローバル展開を完了させ、ネットワークマトリクスの最先端を確保しましょう。",
-                t2T: "ステップ2. クロスボーダー買い物", t2D: "バックオフィスにログインして海外直送商品を購入。お好みの商品を自由に選んでアカウントを有効化し、世界共通のプロモーションリンクと運営権を取得して専用特典を開始します。",
-                t3T: "ステップ3. 紹介コードの取得", t3D: "シェアとプロモーションを開始して、不労所得を始動。源々として尽きることのない富への道を切り開きましょう！",
+                subtitleTeach: "視覚的ガイドに従って、国境を越えた富と健康の暗号を簡単に解き放ちましょう",
+                t1T: "Step1. 個人アカウントの無料申請", t1D: "登録リンクをクリックし、基本情報を入力して個人専用アカウントを申請。すぐにポジションを確保しましょう。",
+                t2T: "Step2. 商品の直販によるアカウント有効化", t2D: "システムにログインして商品を直接購入し、アカウントを有効化。グローバル共通リンクと運営権を獲得します。",
+                t3T: "Step3. シェアとプロモーションで富への道へ", t3D: "紹介・拡散をスタートし、不労所得を稼ぎ出します。無限に続く富への道を切り開きましょう！",
+                lblTut1: "登録チュートリアル", lblTut2: "購入チュートリアル", lblTut3: "プロモーション推進",
+
                 titleWit: "👥 グローバル会員のリアルな体験談", titleEve: "📢 最新の公式イベント情報",
                 w1Text: "「AKGを3ヶ月服用した後、精神状態が30代に戻りました！さらに驚くべきことに、紹介コードをシェアしたことで、先月の海外不労所得配當が10萬（台湾ドル）を超えました！」",
                 liveStatus: "LIVE ・ グローバル創富オンライン説明会開催中",
@@ -914,9 +1072,12 @@
                 cert1: "미국 제조 인증", cert2: "할랄(HALAL) 인증", cert3: "유럽 실험실 검증 완료", cert4: "비유전자변형<br>(Non-GMO) 인증", cert5: "미국 FDA 등록 시설", cert6: "미국 위생협회<br>(NSF) 표준 인증", cert7: "cGMP 우수 제조 기준",
 
                 titleTeach: "📖 초간단 3단계 폭발적 비즈니스 가이드",
-                t1T: "Step 1. 쿠폰 수령 및 회원가입", t1D: "가입 링크를 클릭하고 기본 정보를 입력하여 개인 전용 계정을 신청하면, 즉시 글로벌 배치가 완료되어 네트워크 매트릭스의 최전방을 선점할 수 있습니다.",
-                t2T: "Step 2. 크로스보더 쇼핑몰 쇼핑", t2D: "해외 직구 상품을 구매하기 위해 로그인 후, 원하는 상품을 자유롭게 선택하여 계정을 활성화하고 전 세계 프로모션 링크와 운영권을 획득하여 전용 혜택을 시작하세요.",
-                t3T: "Step 3. 추천인 초대 코드 획득", t3D: "공유와 홍보를 시작하여 파이프라인 수입을 가동하고, 끊임없이 이어지는 부의 길을 개척하세요!",
+                subtitleTeach: "비주얼 가이드를 따라 국경을 초월한 부와 건강의 암호를 손쉽게 해제하세요",
+                t1T: "Step1. 개인 계정 무료 신청", t1D: "가입 링크를 클릭하고 기본 정보를 입력하여 전용 계정을 신청해 즉시 자리를 선점하세요.",
+                t2T: "Step2. 상품 직구 활성화", t2D: "쇼핑몰 로그인 후 상품을 직구해 계정을 활성화하고 글로벌 추천 링크와 경영권을 획득하세요.",
+                t3T: "Step3. 공유 홍보로 부의 길 진입", t3D: "공유와 추천을 시작하여 파이프라인 수입을 가동하고 끝없이 이어지는 부의 길을 개척하세요!",
+                lblTut1: "가입 가이드", lblTut2: "구매 가이드", lblTut3: "홍보 마케팅",
+
                 titleWit: "👥 글로벌 회원들의 생생한 후기", titleEve: "📢 최신 공식 이벤트 정보",
                 w1Text: "「AKG를 복용한 지 3개월 만에 정신이 30대로 돌아간 것 같습니다! 더 놀라운 것은 초대 코드를 공유했더니 지난달 저의 해외 파이프라인 배당 수입이 10만 대만달러를 돌파했다는 점입니다!」",
                 liveStatus: "LIVE · 글로벌 창부 온라인 설명회 진행 중",
@@ -985,9 +1146,13 @@
             document.getElementById('cert-7').innerHTML = data.cert7;
 
             document.getElementById('title-teach').innerText = data.titleTeach;
+            document.getElementById('subtitle-teach').innerText = data.subtitleTeach;
             document.getElementById('t1-t').innerText = data.t1T; document.getElementById('t1-d').innerText = data.t1D;
             document.getElementById('t2-t').innerText = data.t2T; document.getElementById('t2-d').innerText = data.t2D;
             document.getElementById('t3-t').innerText = data.t3T; document.getElementById('t3-d').innerText = data.t3D;
+            document.getElementById('lbl-tut-1').innerText = data.lblTut1;
+            document.getElementById('lbl-tut-2').innerText = data.lblTut2;
+            document.getElementById('lbl-tut-3').innerText = data.lblTut3;
 
             document.getElementById('title-wit').innerText = data.titleWit; document.getElementById('title-eve').innerText = data.titleEve;
             document.getElementById('w1-text').innerText = data.w1Text; 
@@ -997,7 +1162,6 @@
             document.getElementById('final-title').innerText = data.fTitle;
             document.getElementById('final-desc').innerText = data.fDesc;
             
-            // 處理新加入的 hero-title2 翻譯多國語系
             document.getElementById('hero-title2').innerText = data.heroTitle2;
         }
 
