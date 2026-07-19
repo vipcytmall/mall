@@ -488,7 +488,7 @@
         <h1 id="hero-title2">長壽密碼已找到！活到150歲不是夢！</h1>
     </header>
 
-    <!-- 2. 三大核心專題網頁整合區 -->
+    <!-- 2. 三大核心專題網頁整合區 (上半部重複區：ID加上 -top) -->
     <section class="container">
         <div class="video-grid">
             <div class="video-card">
@@ -547,22 +547,20 @@
         </div>
         <p></p><p></p>
 
+        <!-- 上半部流程圖 (加上 -top 後綴避開 ID 重複問題) -->
         <div class="infographic-flow">
             <!-- 步驟 1 -->
             <div class="flow-item">
                 <div class="flow-circle-bg">
                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM20 8v6M23 11h-6"/></svg>
-                    <div class="flow-badge" id="badge-step-1">1</div>
+                    <div class="flow-badge" id="badge-step-1-top">1</div>
                 </div>
-                <h3 id="t1-t">Step1. 免費申請個人帳號</h3>
-                <p id="t1-d">點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端</p>
+                <h3 id="t1-t-top">Step1. 免費申請個人帳號</h3>
+                <p id="t1-d-top">點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
-                <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-1">⚡ GO 進入註冊</a>
-                <!-- 原有教程按鈕 -->
-                <a href="#" class="btn-tutorial" id="btn-tut-1">📄 <span id="lbl-tut-1">觀看註冊教程</span></a>
+                <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-1-top">⚡ GO 進入註冊</a>
+                <a href="#" class="btn-tutorial" id="btn-tut-1-top">📄 <span id="lbl-tut-1-top">觀看註冊教程</span></a>
                 
-                <!-- 引導向右箭頭 svg -->
                 <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
 
@@ -570,17 +568,14 @@
             <div class="flow-item">
                 <div class="flow-circle-bg">
                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
-                    <div class="flow-badge" id="badge-step-2" style="background:#D97706; box-shadow:0 4px 15px rgba(217,119,6,0.5);">2</div>
+                    <div class="flow-badge" id="badge-step-2-top" style="background:#D97706; box-shadow:0 4px 15px rgba(217,119,6,0.5);">2</div>
                 </div>
-                <h3 id="t2-t">Step2. 直購商品活躍帳號</h3>
-                <p id="t2-d">登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益</p>
+                <h3 id="t2-t-top">Step2. 直購商品活躍帳號</h3>
+                <p id="t2-d-top">登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
-                <a href="https://www.vipyct.com/#/shopdetail?id=169&from=category&categoryType=self&categoryId=1025" class="btn-go" target="_blank" rel="noopener" id="btn-go-2">⚡ GO 進入商城</a>
-                <!-- 原有教程按鈕 -->
-                <a href="#" class="btn-tutorial" id="btn-tut-2">🛍️ <span id="lbl-tut-2">觀看購物教程</span></a>
+                <a href="https://www.vipyct.com/#/shopdetail?id=169&from=category&categoryType=self&categoryId=1025" class="btn-go" target="_blank" rel="noopener" id="btn-go-2-top">⚡ GO 進入商城</a>
+                <a href="#" class="btn-tutorial" id="btn-tut-2-top">🛍️ <span id="lbl-tut-2-top">觀看購物教程</span></a>
                 
-                <!-- 引導向右箭頭 svg -->
                 <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
 
@@ -588,21 +583,15 @@
             <div class="flow-item">
                 <div class="flow-circle-bg">
                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3.5z"/></svg>
-                    <div class="flow-badge" id="badge-step-3" style="background:#059669; box-shadow:0 4px 15px rgba(5,150,105,0.5);">3</div>
+                    <div class="flow-badge" id="badge-step-3-top" style="background:#059669; box-shadow:0 4px 15px rgba(5,150,105,0.5);">3</div>
                 </div>
-                <h3 id="t3-t">Step3. 分享推廣啟至富之路</h3>
-                <p id="t3-d">開始分享推廣，啟動被動收益，開創源源不絕的致富之路！</p>
+                <h3 id="t3-t-top">Step3. 分享推廣啟至富之路</h3>
+                <p id="t3-d-top">開始分享推廣，啟動被動收益，開創源源不絕的致富之路！</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
-                <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-3">⚡ GO 進入推廣</a>
-                <!-- 原有教程按鈕 -->
-                <a href="#" class="btn-tutorial" id="btn-tut-3">🔗 <span id="lbl-tut-3">觀看推廣教程</span></a>
+                <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-3-top">⚡ GO 進入推廣</a>
+                <a href="#" class="btn-tutorial" id="btn-tut-3-top">🔗 <span id="lbl-tut-3-top">觀看推廣教程</span></a>
             </div>
         </div>
-
-
-
-
     </section>
 
     <!-- 🎬 改變世界觀的巨頭密碼 -->
@@ -788,7 +777,7 @@
         </div>
     </section>
 
-    <!-- 4. 🎨 資訊圖表化三步爆發教學區塊 -->
+    <!-- 4. 🎨 資訊圖表化三步爆發教學區塊 (下半部主教學區：維持原ID) -->
     <section class="container" id="tutorials" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <h2 class="section-title" id="title-teach">📖 傻瓜式三步爆發教學</h2>
         <p class="section-subtitle" id="subtitle-teach">跟隨視覺指引，輕鬆開啟跨國財富與健康密碼</p>
@@ -803,12 +792,9 @@
                 <h3 id="t1-t">Step1. 免費申請個人帳號</h3>
                 <p id="t1-d">點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
                 <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-1">⚡ GO 進入註冊</a>
-                <!-- 原有教程按鈕 -->
                 <a href="#" class="btn-tutorial" id="btn-tut-1">📄 <span id="lbl-tut-1">觀看註冊教程</span></a>
                 
-                <!-- 引導向右箭頭 svg -->
                 <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
 
@@ -821,12 +807,9 @@
                 <h3 id="t2-t">Step2. 直購商品活躍帳號</h3>
                 <p id="t2-d">登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
                 <a href="https://www.vipyct.com/#/shopdetail?id=169&from=category&categoryType=self&categoryId=1025" class="btn-go" target="_blank" rel="noopener" id="btn-go-2">⚡ GO 進入商城</a>
-                <!-- 原有教程按鈕 -->
                 <a href="#" class="btn-tutorial" id="btn-tut-2">🛍️ <span id="lbl-tut-2">觀看購物教程</span></a>
                 
-                <!-- 引導向右箭頭 svg -->
                 <svg class="flow-arrow" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
             </div>
 
@@ -839,9 +822,7 @@
                 <h3 id="t3-t">Step3. 分享推廣啟至富之路</h3>
                 <p id="t3-d">開始分享推廣，啟動被動收益，開創源源不絕的致富之路！</p>
                 
-                <!-- 🆕 GO按鈕 (帶有多語系ID) -->
                 <a href="https://point.vipyct.com/login?w=hs0QHK1efX-vk" class="btn-go" target="_blank" rel="noopener" id="btn-go-3">⚡ GO 進入推廣</a>
-                <!-- 原有教程按鈕 -->
                 <a href="#" class="btn-tutorial" id="btn-tut-3">🔗 <span id="lbl-tut-3">觀看推廣教程</span></a>
             </div>
         </div>
@@ -949,12 +930,6 @@
                 t3T: "Step3. 分享推廣啟至富之路", t3D: "開始分享推廣，啟動被動收益，開創源源不絕的致富之路！",
                 lblTut1: "觀看註冊教程", lblTut2: "觀看購物教程", lblTut3: "觀看推廣教程",
 
-                t1Ts: "Step1. 免費申請個人帳號", t1Ds: "點擊註冊連結，填寫基本資料申請個人專屬帳號立即完成全球部署，搶佔網絡矩陣最前端",
-                t2Ts: "Step2. 直購商品活躍帳號", t2Ds: "登入跨境直購商品，自由選配商品激活帳號，擁有全球推廣連結與經營權，開啟專屬權益",
-                t3Ts: "Step3. 分享推廣啟至富之路", t3Ds: "開始分享推廣，啟動被動收益，開創源源不絕的致富之路！",
-                lblTut1s: "觀看註冊教程", lblTut2s: "觀看購物教程", lblTut3s: "觀看推廣教程",
-                                                                  
-                // ✨ 這裡新增新按鈕的繁中語系
                 go1: "⚡ GO 進入註冊", go2: "⚡ GO 進入商城", go3: "⚡ GO 進入推廣",
 
                 titleWit: "👥 全球會員真實見證", titleEve: "📢 最新官方活動資訊",
@@ -993,7 +968,7 @@
                 p1B: "Aureva Women", p1T: "支持能量代谢、红血球形成及女性日常健康所需的整体营养平衡", p1D: "Higo Aureva Women™专为现代女性配方，结合植物提取物、胺基酸、维生素与抗氧化剂。", p1Go: "进入官方商城选购 ➔",
                 p2B: "ReGeneX Men", p2T: "有助于支持前列腺健康、日常代谢平衡及整体男性健康", p2D: "Higo ReGeneX Men™ 专为现代男性配方，结合植物提取物、胺基酸、维生素与矿物质。", p2Go: "进入官方商城选购 ➔",
                 p3B: "GnCell", p3T: "富含β-葡聚糖和多糖，有助于支持免疫系统健康及日常健康平衡", p3D: "Higo GnCell™ 是一款综合营养支持配方，结合植物性营养素、蘑菇提取物及关键微量营养素。", p3Go: "进入官方商城选购 ➔",
-                p4B: "Higo AKG Women", p4T: "有助于支持细胞能量生成，维持每日活力与整体健康", p4D: "Higo AKG Women™专为现代女性配方，结合关键营养素，有助于支持能量代谢。", p4Go: "进入官方商城选购 ➔",
+                p4B: "Higo AKG Women", p4T: "有助于支持细胞能量生成，维持每日活力与整体健康", p4D: "Higo AKG Women™专為现代女性配方，结合关键营养素，有助于支持能量代谢。", p4Go: "进入官方商城选购 ➔",
                 p5B: "Higo AKG Men", p5T: "有助于支持细胞能量的产生，维持每日活力与整体身体功能", p5D: "Higo AKG Men™ 专为现代男性配方，结合多种关键营养素，帮助支持能量代谢。", p5Go: "进入官方商城选购 ➔",
                 
                 titleBonus: "💰 全球海购电商・完美网状裂变奖金制度",
@@ -1010,16 +985,10 @@
                 t3T: "Step3. 分享推广启至富之路", t3D: "开始分享推广，启动被动收益，开创源源不断的致富之路！",
                 lblTut1: "观看注册教程", lblTut2: "观看购物教程", lblTut3: "观看推广教程",
 
-                t1Ts: "Step1. 免费申请个人账号", t1Ds: "点击注册链接，填写基本资料申请个人专属账号立即完成全球部署，抢占网络矩阵最前端",
-                t2Ts: "Step2. 直购商品活跃账号", t2Ds: "登录跨境直购商品，自由选配商品激活账号，拥有全球推广链接与经营权，开启专属权益",
-                t3Ts: "Step3. 分享推广启至富之路", t3Ds: "开始分享推广，启动被动收益，开创源源不断的致富之路！",
-                lblTut1s: "观看注册教程", lblTut2s: "观看购物教程", lblTut3s: "观看推广教程",
-
-                // ✨ 這裡新增新按鈕的簡中語系
                 go1: "⚡ GO 进入注册", go2: "⚡ GO 进入商城", go3: "⚡ GO 进入推广",
 
                 titleWit: "👥 全球会员真实见证", titleEve: "📢 最新官方活动资讯",
-                w1Text: "「服用 AKG 三个月后，精神状态回到30岁！更不可思议的是，透过分享邀请码，上个月我的海外被动分红破了10万！」",
+                w1Text: "「服用 AKG 三个月后，精神状态回到30岁！更不可思議的是，透過分享邀請碼，上個月我的海外被動分紅破了10萬！」",
                 liveStatus: "LIVE · 全球创富线上招商会议中",
                 liveTitle: "想了解如何一星直冲黑钻？立刻进入即时视讯直播间！",
                 liveDesc: "我们每天固定举办全球多语系线上招商与生医讲座，顶级黑钻导师亲自在线带飞。",
@@ -1071,12 +1040,6 @@
                 t3T: "Step3. Promote & Scale Wealth", t3D: "Start sharing and marketing to unleash hyper passive income stream and build true abundance!",
                 lblTut1: "Registration Guide", lblTut2: "Shopping Guide", lblTut3: "Marketing Guide",
 
-                t1Ts: "Step1. Free Account Application", t1Ds: "Click registration link, fill in basic details to apply for an exclusive account for immediate positioning.",
-                t2Ts: "Step2. Store Purchase Activation", t2Ds: "Log in and purchase products to activate your account, gaining global promo links and business rights.",
-                t3Ts: "Step3. Promote & Scale Wealth", t3Ds: "Start sharing and marketing to unleash hyper passive income stream and build true abundance!",
-                lblTut1s: "Registration Guide", lblTut2s: "Shopping Guide", lblTut3s: "Marketing Guide",
-
-                // ✨ 這裡新增新按鈕的英文語系
                 go1: "⚡ GO Sign Up", go2: "⚡ GO to Mall", go3: "⚡ GO Promote",
 
                 titleWit: "👥 Global Success Testimonials", titleEve: "📢 Official News & Events",
@@ -1132,12 +1095,6 @@
                 t3T: "Step3. シェアとプロモーションで富への道へ", t3D: "紹介・拡散をスタートし、不労所得を稼ぎ出します。無限に続く富への道を切り開きましょう！",
                 lblTut1: "登録チュートリアル", lblTut2: "購入チュートリアル", lblTut3: "プロモーション推進",
 
-                t1Ts: "Step1. 個人アカウントの無料申請", t1Ds: "登録リンクをクリックし、基本情報を入力して個人専用アカウントを申請。すぐにポジションを確保しましょう。",
-                t2Ts: "Step2. 商品の直販によるアカウント有効化", t2Ds: "システムにログインして商品を直接購入し、アカウントを有効化。グローバル共通リンクと運営権を獲得します。",
-                t3Ts: "Step3. シェアとプロモーションで富への道へ", t3Ds: "紹介・拡散をスタートし、不労所得を稼ぎ出します。無限に続く富への道を切り開きましょう！",
-                lblTut1s: "登録チュートリアル", lblTut2s: "購入チュートリアル", lblTut3s: "プロモーション推進",
-
-                // ✨ 這裡新增新按鈕的日文語系
                 go1: "⚡ GO 新規登録", go2: "⚡ GO モールへ", go3: "⚡ GO 推進する",
 
                 titleWit: "👥 グローバル会員のリアルな体験談", titleEve: "📢 最新の公式イベント情報",
@@ -1193,7 +1150,6 @@
                 t3T: "Step3. 공유 홍보로 부의 길 진입", t3D: "공유와 추천을 시작하여 파이프라인 수입을 가동하고 끝없이 이어지는 부의 길을 개척하세요!",
                 lblTut1: "가입 가이드", lblTut2: "구매 가이드", lblTut3: "홍보 마케팅",
 
-                // ✨ 這裡新增新按鈕的韓文語系
                 go1: "⚡ GO 회원가입", go2: "⚡ GO 쇼핑몰", go3: "⚡ GO 홍보하기",
 
                 titleWit: "👥 글로벌 회원들의 생생한 후기", titleEve: "📢 최신 공식 이벤트 정보",
@@ -1265,6 +1221,7 @@
             document.getElementById('cert-6').innerHTML = data.cert6;
             document.getElementById('cert-7').innerHTML = data.cert7;
 
+            // 渲染下半部主教學區
             document.getElementById('title-teach').innerText = data.titleTeach;
             document.getElementById('subtitle-teach').innerText = data.subtitleTeach;
             document.getElementById('t1-t').innerText = data.t1T; document.getElementById('t1-d').innerText = data.t1D;
@@ -1273,11 +1230,23 @@
             document.getElementById('lbl-tut-1').innerText = data.lblTut1;
             document.getElementById('lbl-tut-2').innerText = data.lblTut2;
             document.getElementById('lbl-tut-3').innerText = data.lblTut3;
-
-            // ✨ 這裡將新按鈕綁定多語系渲染
             if(document.getElementById('btn-go-1')) document.getElementById('btn-go-1').innerText = data.go1;
             if(document.getElementById('btn-go-2')) document.getElementById('btn-go-2').innerText = data.go2;
             if(document.getElementById('btn-go-3')) document.getElementById('btn-go-3').innerText = data.go3;
+
+            // ✨ 同步渲染上半部重複區 (-top) 欄位的多國語言
+            if(document.getElementById('t1-t-top')) document.getElementById('t1-t-top').innerText = data.t1T;
+            if(document.getElementById('t1-d-top')) document.getElementById('t1-d-top').innerText = data.t1D;
+            if(document.getElementById('t2-t-top')) document.getElementById('t2-t-top').innerText = data.t2T;
+            if(document.getElementById('t2-d-top')) document.getElementById('t2-d-top').innerText = data.t2D;
+            if(document.getElementById('t3-t-top')) document.getElementById('t3-t-top').innerText = data.t3T;
+            if(document.getElementById('t3-d-top')) document.getElementById('t3-d-top').innerText = data.t3D;
+            if(document.getElementById('lbl-tut-1-top')) document.getElementById('lbl-tut-1-top').innerText = data.lblTut1;
+            if(document.getElementById('lbl-tut-2-top')) document.getElementById('lbl-tut-2-top').innerText = data.lblTut2;
+            if(document.getElementById('lbl-tut-3-top')) document.getElementById('lbl-tut-3-top').innerText = data.lblTut3;
+            if(document.getElementById('btn-go-1-top')) document.getElementById('btn-go-1-top').innerText = data.go1;
+            if(document.getElementById('btn-go-2-top')) document.getElementById('btn-go-2-top').innerText = data.go2;
+            if(document.getElementById('btn-go-3-top')) document.getElementById('btn-go-3-top').innerText = data.go3;
 
             document.getElementById('title-wit').innerText = data.titleWit; document.getElementById('title-eve').innerText = data.titleEve;
             document.getElementById('w1-text').innerText = data.w1Text; 
