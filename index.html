@@ -69,7 +69,7 @@
             font-size: 0.85rem;
             outline: none;
             backdrop-filter: blur(8px);
-            appearance: none; /* 移除瀏覽器預設箭頭 */
+            appearance: none;
             -webkit-appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
@@ -80,7 +80,6 @@
             border-color: var(--accent-glow);
             box-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
         }
-        /* 修正下拉選單清單在 Chrome/Firefox 等瀏覽器底下的深色風格 */
         .lang-selector option { 
             background: #0F172A; 
             color: #F8FAFC; 
@@ -139,7 +138,31 @@
         .card p { color: #94A3B8; font-size: 0.98rem; line-height: 1.6; }
         .card-more { color: var(--accent-glow); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block; }
 
-        /* 🎞️ 影音專區 */
+        /* 📊 海購電商獎金制度圖表專區樣式 */
+        .bonus-system-container {
+            background: var(--panel-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        .bonus-img-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #111827;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+        }
+        .bonus-img-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 影片專區 */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
         .video-card { background: #111827; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); overflow: hidden; display: block; }
         .video-card:hover { border-color: var(--accent-blue); }
@@ -159,6 +182,65 @@
         .prod-img-box img { width: 100%; height: 100%; object-fit: contain; }
         .prod-badge { background: var(--accent-gold); color: #000; font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 10px; display: inline-block; margin-bottom: 10px; }
         .prod-goto { font-size: 0.85rem; color: var(--accent-gold); font-weight: bold; margin-top: 15px; display: block; }
+
+        /* 🛡️ 七大權威認證區塊樣式 */
+        .cert-container {
+            margin-top: 50px;
+            padding: 30px 20px;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cert-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #94A3B8;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            align-items: top;
+            justify-items: center;
+        }
+        .cert-item {
+            text-align: center;
+            width: 100%;
+        }
+        .cert-img-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 10px auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .cert-img-box img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+            filter: grayscale(10%) brightness(95%);
+        }
+        .cert-img-box:hover {
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+            transform: translateY(-3px);
+        }
+        .cert-name {
+            font-size: 0.8rem;
+            color: #64748B;
+            font-weight: 500;
+            display: block;
+            line-height: 1.3;
+        }
 
         /* 🖼️ 圖片預留位骨架樣式 */
         .placeholder-img { width: 100%; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px dashed rgba(255,255,255,0.15); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #64748B; font-size: 0.85rem; padding: 20px; text-align: center; }
@@ -214,6 +296,10 @@
             .nav-links { display: none; }
             .hero h1 { font-size: 2.2rem; }
             .bottom-cta h2 { font-size: 1.8rem; }
+            .cert-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        }
+        @media (max-width: 480px) {
+            .cert-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
@@ -228,6 +314,7 @@
             <a href="strategy.html" id="n-3">黑鑽速成攻略</a>
             <a href="#videos" id="n-video-nav">重磅影音</a>
             <a href="#products" id="n-4">明星商品</a>
+            <a href="#bonus-section" id="n-bonus-nav">獎金制度圖表</a>
             <a href="#tutorials" id="n-5">註冊購物教學</a>
             <a href="#live" id="n-6">即時會議室</a>
         </div>
@@ -282,7 +369,6 @@
         <h2 class="section-title" id="v-main-title">🔮 改變世界觀的巨頭密碼</h2>
         <p class="section-subtitle" id="v-main-subtitle">哈佛、劍橋與科技巨頭 Google、貝佐斯正在聯手揭開永生序幕</p>
         <div class="video-grid">
-            <!-- 影片 1 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/1mf-BdPR74o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -291,7 +377,6 @@
                     <h4 id="v-t1">哈佛教授震驚全球：老化竟是可治癒的「傳染病」？活到120歲只是保底！</h4>
                 </div>
             </div>
-            <!-- 影片 2 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/6unktcCahTM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -300,7 +385,6 @@
                     <h4 id="v-t2">劍橋大學13天奇蹟：人類正式攻克衰老？生老病死即將成為歷史！</h4>
                 </div>
             </div>
-            <!-- 影片 3 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/zIdGk4Ytaq8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -309,16 +393,14 @@
                     <h4 id="v-t3">人類永生已打通？掃描大腦即刻上傳！Eon Systems 震撼發布：首個擁有靈魂的數字生命！</h4>
                 </div>
             </div>
-            <!-- 影片 4 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/fP57UmTxE5o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h4 id="v-t4">貝佐斯豪砸30億美金的秘密：人類壽命即將突破100歲，你準備好活到永生了嗎？</h4>
+                    <h4 id="v-t4">貝佐斯豪砸30億美金 the secret：人類壽命即將突破100歲，你準備好活到永生了嗎？</h4>
                 </div>
             </div>
-            <!-- 影片 5 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/1s4Cf2-uPLI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -327,7 +409,6 @@
                     <h4 id="v-t5">2035年這一針你敢打嗎？💉庫茲韋爾預言：人類即將迎來永生或毀滅！</h4>
                 </div>
             </div>
-            <!-- 影片 6 -->
             <div class="video-card">
                 <div class="video-iframe-wrapper">
                     <iframe src="https://www.youtube.com/embed/hszhA6hceRQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -343,46 +424,87 @@
     <section class="container" id="products" style="border-top: 1px solid rgba(255,255,255,0.05);">
         <h2 class="section-title" id="title-prod">⚡ 頂尖生醫明星商品精選 (官網同步 5 大核心)</h2>
         <div class="product-grid">
-            <!-- 商品 1 -->
-            <a href="https://www.vipyct.com/#/shopdetail?id=281&from=category&categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+            <div class="prod-card">
                 <div class="prod-img-box"><img src="https://higos3.s3.ap-southeast-1.amazonaws.com/eafe7749efeb423f885d563a5dc97476" alt="Aureva Women"></div>
                 <div class="prod-badge" id="p1-b">Aureva Women</div>
                 <h3 id="p1-t">支持能量代謝、紅血球形成及女性日常健康所需的整體營養平衡</h3>
-                <p style="color: #94A3B8; font-size: 0.85rem;" id="p1-d">Higo Aureva Women™專為現代女性配方，結合植物萃取物、胺基酸、維生素與抗氧化劑，為女性日常健康提供全面的營養支持。設計用以維持荷爾蒙平衡、能量代謝、情緒健康及整體活力。</p>
+                <p style="color: #94A3B8; font-size: 0.85rem;" id="p1-d">Higo Aureva Women™專為現代女性配方，結合植物萃取物、胺基酸、維生素與抗氧化劑，為女性日常健康提供全面的營養支持。</p>
                 <span class="prod-goto" id="p1-goto">進入官方商城選購 ➔</span>
-            </a>
-            <!-- 商品 2 -->
-            <a href="https://www.vipyct.com/#/shopdetail?id=276&from=category&categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+            </div>
+            <div class="prod-card">
                 <div class="prod-img-box"><img src="https://higos3.s3.ap-southeast-1.amazonaws.com/b98cea86545141e79edde647f300657f" alt="ReGeneX Men"></div>
                 <div class="prod-badge" id="p2-b">ReGeneX Men</div>
                 <h3 id="p2-t">有助於支持前列腺健康、日常代謝平衡及整體男性健康</h3>
-                <p style="color: #94A3B8; font-size: 0.85rem;" id="p2-d">Higo ReGeneX Men™ 專為現代男性配方，結合植物萃取物、胺基酸、維生素與礦物質，為男性日常健康提供全面的營養支持。設計目的是幫助維持活力、新陳代謝平衡及整體健康，以應對當今快節奏的生活。</p>
+                <p style="color: #94A3B8; font-size: 0.85rem;" id="p2-d">Higo ReGeneX Men™ 專為現代男性配方，結合植物萃取物、胺基酸、維生素與礦物質，為男性日常健康提供全面的營養支持。</p>
                 <span class="prod-goto" id="p2-goto">進入官方商城選購 ➔</span>
-            </a>
-            <!-- 商品 3 -->
-            <a href="https://www.vipyct.com/#/shopdetail?id=215&from=category&categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+            </div>
+            <div class="prod-card">
                 <div class="prod-img-box"><img src="https://higos3.s3.ap-southeast-1.amazonaws.com/265d405687dc40639f696b1bcb8258b1" alt="GnCell"></div>
                 <div class="prod-badge" id="p3-b">GnCell</div>
-                <h3 id="p3-t">富含β-葡聚醣和多醣，有助於支持免疫系統健康及日常健康平衡</h3>
-                <p style="color: #94A3B8; font-size: 0.85rem;" id="p3-d">Higo GnCell™ 是一款綜合營養支持配方，結合植物性營養素、蘑菇萃取物及關鍵微量營養素，有助於支持免疫平衡、抗氧化保護、細胞健康及整體每日活力。專為現代健康與長期健康維護而設計。</p>
+                <h3 id="p3-t">富含β-葡聚醣 and 多醣，有助於支持免疫系統健康及日常健康平衡</h3>
+                <p style="color: #94A3B8; font-size: 0.85rem;" id="p3-d">Higo GnCell™ 是一款綜合營養支持配方，結合植物性營養素、蘑菇萃取物及關鍵微量營養素。</p>
                 <span class="prod-goto" id="p3-goto">進入官方商城選購 ➔</span>
-            </a>
-            <!-- 商品 4 -->
-            <a href="https://www.vipyct.com/#/shopdetail?id=170&from=category&categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+            </div>
+            <div class="prod-card">
                 <div class="prod-img-box"><img src="https://higos3.s3.ap-southeast-1.amazonaws.com/a6c117f444714c96981eebe19785440f" alt="Higo AKG Women"></div>
                 <div class="prod-badge" id="p4-b">Higo AKG Women</div>
                 <h3 id="p4-t">有助於支持細胞能量生成，維持每日活力與整體健康</h3>
-                <p style="color: #94A3B8; font-size: 0.85rem;" id="p4-d">Higo AKG Women™專為現代女性配方，結合關鍵營養素，有助於支持能量代謝、抗氧化保護、荷爾蒙平衡及每日活力。專為滿足當今快節奏生活方式中女性的營養需求而設計。</p>
+                <p style="color: #94A3B8; font-size: 0.85rem;" id="p4-d">Higo AKG Women™專為現代女性配方，結合關鍵營養素，有助於支持能量代謝、抗氧化保護。</p>
                 <span class="prod-goto" id="p4-goto">進入官方商城選購 ➔</span>
-            </a>
-            <!-- 商品 5 -->
-            <a href="https://www.vipyct.com/#/shopdetail?id=169&from=category&categoryType=self&categoryId=1025" target="_blank" rel="noopener" class="prod-card">
+            </div>
+            <div class="prod-card">
                 <div class="prod-img-box"><img src="https://higos3.s3.ap-southeast-1.amazonaws.com/1f040274af0945c7bd8c72e6dc1497ad" alt="Higo AKG Men"></div>
                 <div class="prod-badge" id="p5-b">Higo AKG Men</div>
                 <h3 id="p5-t">有助於支持細胞能量的產生，維持每日活力與整體身體功能</h3>
-                <p style="color: #94A3B8; font-size: 0.85rem;" id="p5-d">Higo AKG Men™ 專為現代男性配方，結合多種關鍵營養素，幫助支持能量代謝、抗氧化保護及每日活力。專為滿足快節奏生活方式的營養需求而設計</p>
+                <p style="color: #94A3B8; font-size: 0.85rem;" id="p5-d">Higo AKG Men™ 專為現代男性配方，結合多種關鍵營養素，幫助支持能量代謝。</p>
                 <span class="prod-goto" id="p5-goto">進入官方商城選購 ➔</span>
-            </a>
+            </div>
+        </div>
+
+        <!-- 七大權威認證圖樣區塊 -->
+        <div class="cert-container animate__animated animate__fadeInUp">
+            <div class="cert-title" id="title-cert">🏆 頂尖生醫・全球七大權威安全認證 🏆</div>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5c5453e0f4ebb7433066976f/1554228796683-9K7IK3Y48I28F1B3E3E3/Made-In-USA-Logo.png" alt="Made in USA"></div>
+                    <span class="cert-name" id="cert-1">美國製造認證</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Halal_logo.svg/512px-Halal_logo.svg.png" alt="HALAL 認證"></div>
+                    <span class="cert-name" id="cert-2">清真潔淨認證</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5c088a53e74c22bd51bdf2a4/1569430155097-J5N8LIF2J8L8X6U6W4T2/Thirdparty-tested.png" alt="LAB TESTED"></div>
+                    <span class="cert-name" id="cert-3">歐盟實驗室認證</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Non-GMO_Project_Verified_logo.svg/512px-Non-GMO_Project_Verified_logo.svg.png" alt="NON GMO"></div>
+                    <span class="cert-name" id="cert-4">美國非轉基因<br>產品認證</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/U.S._Food_and_Drug_Administration_logo.svg/1200px-U.S._Food_and_Drug_Administration_logo.svg.png" alt="FDA 認證"></div>
+                    <span class="cert-name" id="cert-5">美國 FDA 註冊</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NSF_International_logo.svg/512px-NSF_International_logo.svg.png" alt="NSF 認證"></div>
+                    <span class="cert-name" id="cert-6">美國全國<br>衛生基金會</span>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5b1f0b093132c69460a8b9bf/1531853549241-I8S3M2N4S8T8Y8X8O8W2/cGMP-certified-logo.png" alt="cGMP 認證"></div>
+                    <span class="cert-name" id="cert-7">cGMP 優良製造</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌟 新增：海購電商獎金制度圖表區塊 (位於教學前) -->
+    <section class="container" id="bonus-section" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <h2 class="section-title" id="title-bonus">💰 全球海購電商・完美網狀裂變獎金制度</h2>
+        <p class="section-subtitle" id="subtitle-bonus">公平、公開、透明的全球永續分紅藍圖，人人皆可透過分享創造不菲收益</p>
+        <div class="bonus-system-container animate__animated animate__fadeIn">
+            <div class="bonus-img-wrapper">
+                <img id="bonus-main-img" src="StartPic/Star10_tw.png" alt="海購電商獎金制度圖表">
+            </div>
         </div>
     </section>
 
@@ -413,13 +535,7 @@
                 <div class="witness-item">
                     <div class="witness-meta">林先生 (45歲) · 台灣台北</div>
                     <p style="margin:0 0 10px 0; font-size:0.95rem; color:#E2E8F0;" id="w1-text">「服用 AKG 三個月後，精神狀態回到30歲！更不可思議的是，透過分享邀請碼，上個月我的海外被動分紅破了10萬！」</p>
-                    <div class="placeholder-img" style="height: 120px;">
-                        📷 [請在此放入：使用前/使用後 官方對照見證圖]
-                    </div>
-                </div>
-                <div class="witness-item">
-                    <div class="witness-meta">Sarah K. (52) · Los Angeles, USA</div>
-                    <p style="margin:0; font-size:0.95rem; color:#E2E8F0;" id="w2-text">"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week."</p>
+                    <div class="placeholder-img" style="height: 120px;">📷 [使用對照見證圖]</div>
                 </div>
             </div>
             <div class="event-box">
@@ -427,13 +543,6 @@
                 <div class="witness-item">
                     <p style="margin:0 0 8px 0; font-size:0.95rem;"><span class="event-tag" style="background:var(--accent-blue);">大會</span>全球星級領袖線上表揚大會</p>
                     <span style="font-size:0.8rem; color:#64748B; display:block; margin-bottom:10px;">⏱️ 2026-08-15 20:00 (GMT+8)</span>
-                    <div class="placeholder-img" style="height: 120px;">
-                        🎉 [請在此放入：官方全球連線大會/盛典精彩照片]
-                    </div>
-                </div>
-                <div class="witness-item">
-                    <p style="margin:0 0 8px 0; font-size:0.95rem;"><span class="event-tag" style="background:var(--accent-gold); color:#000;">福利</span>限時海購節：下單即贈雙倍團隊積分</p>
-                    <span style="font-size:0.8rem; color:#64748B;">⏱️ 2026-07-20 ~ 2026-07-27</span>
                 </div>
             </div>
         </div>
@@ -446,7 +555,7 @@
                 <div class="pulse-dot"></div> <span id="live-status">LIVE · 全球創富線上招商會議中</span>
             </div>
             <h2 style="margin-top:0; font-size: 2rem;" id="live-title">想了解如何一星直衝黑鑽？立刻進入即時視訊直播間！</h2>
-            <p style="color: #94A3B8; max-width: 700px; margin: 0 auto 30px auto;" id="live-desc">我們每天固定舉辦全球多語系線上招商與生醫講座，頂級黑鑽導師親自在線帶飛，幫你解答所有關於回春與網賺的秘密。</p>
+            <p style="color: #94A3B8; max-width: 700px; margin: 0 auto 30px auto;" id="live-desc">我們每天固定舉辦全球多語系線上招商與生醫講座，頂級黑鑽導師親自在線帶飛。</p>
             <a href="https://zoom.us" class="btn-cta" style="background: linear-gradient(90deg, #10B981 0%, #059669 100%); box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);" target="_blank" rel="noopener" id="live-btn">
                 點擊進入即時視訊會議室 ➡️
             </a>
@@ -495,27 +604,34 @@
                 vT6: "2030年你將長生不老？Google預言家曝驚人時間表！這項「奈米技術」將徹底改寫人類...",
 
                 titleProd: "⚡ 頂尖生醫明星商品精選 (官網同步 5 大核心)",
-                p1B: "Aureva Women", p1T: "支持能量代謝、紅血球形成及女性日常健康所需的整體營養平衡", p1D: "Higo Aureva Women™專為現代女性配方，結合植物萃取物、胺基酸、維生素與抗氧化劑，為女性日常健康提供全面的營養支持。設計用以維持荷爾蒙平衡、能量代謝、情緒健康及整體活力。", p1Go: "進入官方商城選購 ➔",
-                p2B: "ReGeneX Men", p2T: "有助於支持前列腺健康、日常代謝平衡及整體男性健康", p2D: "Higo ReGeneX Men™ 專為現代男性配方，結合植物萃取物、胺基酸、維生素與礦物質，為男性日常健康提供全面的營養支持。設計目的是幫助維持活力、新陳代謝平衡及整體健康，以應對當今快節奏的生活。", p2Go: "進入官方商城選購 ➔",
-                p3B: "GnCell", p3T: "富含β-葡聚醣和多醣，有助於支持免疫系統健康及日常健康平衡", p3D: "Higo GnCell™ 是一款綜合營養支持配方，結合植物性營養素、蘑菇萃取物及關鍵微量營養素，有助於支持免疫平衡、抗氧化保護、細胞健康及整體每日活力。專為現代健康與長期健康維護而設計。", p3Go: "進入官方商城選購 ➔",
-                p4B: "Higo AKG Women", p4T: "有助於支持細胞能量生成，維持每日活力與整體健康", p4D: "Higo AKG Women™專為現代女性配方，結合關鍵營養素，有助於支持能量代謝、抗氧化保護、荷爾蒙平衡及每日活力。專為滿足當今快節奏生活方式中女性的營養需求而設計。", p4Go: "進入官方商城選購 ➔",
-                p5B: "Higo AKG Men", p5T: "有助於支持細胞能量的產生，維持每日活力與整體身體功能", p5D: "Higo AKG Men™ 專為現代男性配方，結合多種關鍵營養素，幫助支持能量代謝、抗氧化保護及每日活力。專為滿足快節奏生活方式的營養需求而設計", p5Go: "進入官方商城選購 ➔",
+                p1B: "Aureva Women", p1T: "支持能量代謝、紅血球形成及女性日常健康所需的整體營養平衡", p1D: "Higo Aureva Women™專為現代女性配方，結合植物萃取物、胺基酸、維生素與抗氧化劑。", p1Go: "進入官方商城選購 ➔",
+                p2B: "ReGeneX Men", p2T: "有助於支持前列腺健康、日常代謝平衡及整體男性健康", p2D: "Higo ReGeneX Men™ 專為現代男性配方，結合植物萃取物、胺基酸、維生素與礦物質。", p2Go: "進入官方商城選購 ➔",
+                p3B: "GnCell", p3T: "富含β-葡聚醣 and 多醣，有助於支持免疫系統健康及日常健康平衡", p3D: "Higo GnCell™ 是一款綜合營養支持配方，結合植物性營養素、蘑菇萃取物及關鍵微量營養素。", p3Go: "進入官方商城選購 ➔",
+                p4B: "Higo AKG Women", p4T: "有助於支持細胞能量生成，維持每日活力與整體健康", p4D: "Higo AKG Women™專為現代女性配方，結合關鍵營養素，有助於支持能量代謝、抗氧化保護。", p4Go: "進入官方商城選購 ➔",
+                p5B: "Higo AKG Men", p5T: "有助於支持細胞能量的產生，維持每日活力與整體身體功能", p5D: "Higo AKG Men™ 專為現代男性配方，結合多種關鍵營養素，幫助支持能量代謝、抗氧化保護及每日活力。", p5Go: "進入官方商城選購 ➔",
+                
+                titleBonus: "💰 全球海購電商・完美網狀裂變獎金制度",
+                subtitleBonus: "公平、公開、透明的全球永續分紅藍圖，人人皆可透過分享創造不菲收益",
+                bonusImg: "StartPic/Star10_tw.png",
+
+                titleCert: "🏆 頂尖生醫・全球七大權威安全認證 🏆",
+                cert1: "美國製造認證", cert2: "清真潔淨認證", cert3: "歐盟實驗室認證", cert4: "美國非轉基因<br>產品認證", cert5: "美國 FDA 註冊", cert6: "美國全國<br>衛生基金會", cert7: "cGMP 優良製造",
+
                 titleTeach: "📖 傻瓜式三步爆發教學",
                 t1T: "Step 1. 領券與註冊", t1D: "點擊本站邀請連結，填寫基本資料並驗證信箱，1分鐘即可免費開通全球海購會員帳號，搶佔裂變矩陣最前端。",
                 t2T: "Step 2. 跨境商城購物", t2D: "登入後台進入跨境直購商城（自營商品專區 1025），挑選心儀的 AKG 科技商品，支援全球主流信用卡，海外直郵直送到家。",
                 t3T: "Step 3. 獲取分享邀請碼", t3D: "進入「我的資產」，複製你個人的專屬全球邀請碼。分享給想要健康與財富的朋友，立刻啟動網狀分紅收益！",
                 titleWit: "👥 全球會員真實見證", titleEve: "📢 最新官方活動資訊",
                 w1Text: "「服用 AKG 三個月後，精神狀態回到30歲！更不可思議的是，透過分享邀請碼，上個月我的海外被動分紅破了10萬！」",
-                w2Text: "\"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week.\"",
                 liveStatus: "LIVE · 全球創富線上招商會議中",
                 liveTitle: "想了解如何一星直衝黑鑽？立刻進入即時視訊直播間！",
-                liveDesc: "我們每天固定舉辦全球多語系線上招商與生醫講座，頂級黑鑽導師親自在線帶飛，幫你解答所有關於回春與網賺的秘密。",
-                liveBtn: "點擊進入即時視訊會議室 ➔",
+                liveDesc: "我們每天固定舉辦全球多語系線上招商與生醫講座，頂級黑鑽導師親自在線帶飛。",
+                liveBtn: "點擊進入即時視訊會議室 ➡️",
                 fTitle: "全球富豪與科技巨頭都在瘋狂佈局", fDesc: "這不是趨勢，這是正在發生的世紀變革。現在，這條捷徑就在你眼前。"
             },
             "zh-CN": {
                 seoTitle: "抗老化逆转人生：AKG海购圣经与跨境全球赚钱分红计划",
-                seoDesc: "启动细胞级抗老化，用科学逆转人生！深入解析全球热门 AKG 商品健康密码，并掌握跨境海购奖金制度。",
+                seoDesc: "启动细胞级 anti-aging，用科学逆转人生！深入解析全球热门 AKG 商品健康密码，并掌握跨境海购奖金制度。",
                 n1: "AKG海购圣经", n2: "全球奖金制度", n3: "黑钻速成攻略", n4: "明星商品", n5: "注册购物教学", n6: "即时会议室", nVideoNav: "重磅影音",
                 vPrefix: "全球已有", vSuffix: "位精英透过此通道逆转人生",
                 heroTitle: "逆转生物年龄与财富轨道，成就大富大慧人生！",
@@ -528,7 +644,7 @@
                 c3T: "🤝 大爱渡人救人 (传播) ➔", c3D: "把最顶尖的抗老福音带给世界。点击查看【一星直冲三星黑钻速成攻略】，运用核心战术成就福慧人生。", c3M: "查看黑钻攻略 ➔",
                 
                 vMainTitle: "🔮 改变世界观的巨头密码",
-                vMainSubtitle: "哈佛、剑桥与科技巨头 Google、贝佐斯正在联手揭开永生序幕",
+                vMainSubtitle: "哈佛、慢腾与科技巨头 Google、贝佐斯正在联手揭开永生序幕",
                 vT1: "哈佛教授震惊全球：老化竟是可治愈的「传染病」？活到120岁只是保底！",
                 vT2: "剑桥大学13天奇迹：人类正式攻克衰老？生老病死即将成为历史！",
                 vT3: "人类永生已打通？扫描大脑即刻上传！Eon Systems 震撼发布：首个拥有灵魂的数字生命！",
@@ -537,22 +653,29 @@
                 vT6: "2030年你将长生不老？Google预言家曝惊人时间表！这项「纳米技术」将彻底改写人类...",
 
                 titleProd: "⚡ 顶尖生医明星商品精选 (官网同步 5 大核心)",
-                p1B: "Aureva Women", p1T: "支持能量代谢、红血球形成及女性日常健康所需的整体 nutritional 平衡", p1D: "Higo Aureva Women™专为现代女性配方，结合植物萃取物、胺基酸、维生​​素与抗氧化剂，为女性日常健康提供全面的营养支持。设计用以维持荷尔蒙平衡、能量代谢、情绪健康及整体活力。", p1Go: "进入官方商城选购 ➔",
-                p2B: "ReGeneX Men", p2T: "有助于支持前列腺健康、日常代谢平衡及整体男性健康", p2D: "Higo ReGeneX Men™ 专为现代男性配方，结合植物萃取物、胺基酸、维生​​素与矿物质，为男性日常健康提供全面的营养支持。设计目的是帮助维持活力、新陈代谢平衡及整体健康，以应对当今快节奏的生活。", p2Go: "进入官方商城选购 ➔",
-                p3B: "GnCell", p3T: "富含β-glucan和多糖，有助于支持免疫系统健康及日常健康平衡", p3D: "Higo GnCell™ 是一款综合营养支持配方，结合植物性营养素、蘑菇提取物及关键微量营养素，有助于支持免疫平衡、抗氧化保护、细胞健康及整体每日活力。专为现代健康与长期健康维护而设计。", p3Go: "进入官方商城选购 ➔",
-                p4B: "Higo AKG Women", p4T: "有助于支持细胞能量生成，维持每日活力与整体健康", p4D: "Higo AKG Women™专为现代女性配方，结合关键营养素，有助于支持能量代谢、抗氧化保护、荷尔蒙平衡及每日活力。专为满足当今快节奏生活方式中女性的营养需求而设计。", p4Go: "进入官方商城选购 ➔",
-                p5B: "Higo AKG Men", p5T: "有助于支持细胞能量的产生，维持每日活力与整体身体功能", p5D: "Higo AKG Men™ 专为现代男性配方，结合多种关键营养素，帮助支持能量代谢、抗氧化保护及每日活力。专为满足快节奏生活方式的营养需求而设计", p5Go: "进入官方商城选购 ➔",
+                p1B: "Aureva Women", p1T: "支持能量代谢、红血球形成及女性日常健康所需的整体 nutritional 平衡", p1D: "Higo Aureva Women™专为现代女性配方，结合植物萃取物、胺基酸、维生​​素与抗氧化剂。", p1Go: "进入官方商城选购 ➔",
+                p2B: "ReGeneX Men", p2T: "有助于支持前列腺健康、日常代谢平衡及整体男性健康", p2D: "Higo ReGeneX Men™ 专为现代男性配方，结合植物萃取物、胺基酸、维生​​素与矿物质。", p2Go: "进入官方商城选购 ➔",
+                p3B: "GnCell", p3T: "富含β-glucan和多糖，有助于支持免疫系统健康及日常健康平衡", p3D: "Higo GnCell™ 是一款综合营养支持配方，结合植物性营养素、蘑菇提取物及关键微量营养素。", p3Go: "进入官方商城选购 ➔",
+                p4B: "Higo AKG Women", p4T: "有助于支持细胞能量生成，维持每日活力与整体健康", p4D: "Higo AKG Women™专为现代女性配方，结合关键营养素，有助于支持能量代谢。", p4Go: "进入官方商城选购 ➔",
+                p5B: "Higo AKG Men", p5T: "有助于支持细胞能量的产生，维持每日活力与整体身体功能", p5D: "Higo AKG Men™ 专為现代男性配方，结合多种关键营养素，帮助支持能量代谢。", p5Go: "进入官方商城选购 ➔",
+                
+                titleBonus: "💰 全球海购电商・完美网状裂变奖金制度",
+                subtitleBonus: "公平、公开、透明的全球永续分红蓝图，人人皆可透过分享创造不菲收益",
+                bonusImg: "StartPic/Star10_cn.png",
+
+                titleCert: "🏆 顶尖生医・全球七大权威安全认证 🏆",
+                cert1: "美国制造认证", cert2: "清真洁净认证", cert3: "欧盟实验室认证", cert4: "美国非转基因<br>产品认证", cert5: "美国 FDA 注册", cert6: "美国全国<br>卫生基金会", cert7: "cGMP 优良制造",
+
                 titleTeach: "📖 傻瓜式三步爆发教学",
-                t1T: "Step 1. 领券与注册", t1D: "点击本站邀请连结，填写基本资料并验证信箱，1分钟即可免费开通全球海购会员帐号，抢占裂变矩阵最前端。",
+                t1T: "Step 1. 领券与注册", t1D: "点击本站邀请连结，填写基本资料并验证信箱，1分钟即可免费开通全球海购会员帐户，抢占裂变矩阵最前端。",
                 t2T: "Step 2. 跨境商城购物", t2D: "登入后台进入跨境直购商城（自营商品专区 1025），挑选心仪的 AKG 科技商品，支援全球主流信用卡，海外直邮直送到家。",
                 t3T: "Step 3. 获取分享邀请码", t3D: "进入「我的资产」，复制你个人的专属全球邀请码。分享给想要健康与财富的朋友，立刻启动网状分红收益！",
                 titleWit: "👥 全球会员真实见证", titleEve: "📢 最新官方活动资讯",
                 w1Text: "「服用 AKG 三个月后，精神状态回到30岁！更不可思议的是，透过分享邀请码，上个月我的海外被動分红破了10萬！」",
-                w2Text: "\"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week.\"",
                 liveStatus: "LIVE · 全球创富线上招商会议中",
                 liveTitle: "想了解如何一星直冲黑钻？立刻进入即时视讯直播间！",
-                liveDesc: "我们每天固定举办全球多语系线上招商与生医讲座，顶级黑钻导师亲自在线带飞，帮你解答所有关于回春与网赚的秘密。",
-                liveBtn: "点击进入即时视讯会议室 ➔",
+                liveDesc: "我们每天固定举办全球多语系线上招商与生医讲座，顶级黑钻导师亲自在线带飞。",
+                liveBtn: "点击进入即时视讯会议室 ➡️",
                 fTitle: "全球富豪与科技巨头都在疯狂布局", fDesc: "这不是趋势，这是正在发生的世纪变革。现在，这条捷径就在你眼前。"
             },
             "en": {
@@ -565,9 +688,9 @@
                 btn1: "Claim Exclusive Invite Code ➡️ Secure Global Rights",
                 btn2: "Register Now to Secure Your Spot ➡️ Lock In Global Dividends First",
                 titleExplore: "Click a Section Below to Unlock Your Potential",
-                c1T: "⏳ Cellular Age Reversal ➔", c1D: "Science proves aging is treatable. Click to view [AKG Sourcing Bible] to discover how formulas rejuvenate cells.", c1M: "Read Sourcing Bible ➔",
-                c2T: "💰 Hyper Passive Income ➔", c2D: "Turn consumption into investment. Click to open [Global Compensation Plan] and learn how our matrix scales.", c2M: "Analyze Compensation ➔",
-                c3T: "🤝 Global Human Impact ➔", c3D: "Share the gospel of longevity. Click to read [Black Diamond Blueprint] to help others heal while building respect.", c3M: "View Strategy Blueprint ➔",
+                c1T: "⏳ Cellular Age Reversal ➔", c1D: "Science proves aging is treatable. Click to view [AKG Sourcing Bible].", c1M: "Read Sourcing Bible ➔",
+                c2T: "💰 Hyper Passive Income ➔", c2D: "Turn consumption into investment. Click to open [Global Compensation Plan].", c2M: "Analyze Compensation ➔",
+                c3T: "🤝 Global Human Impact ➔", c3D: "Share the gospel of longevity. Click to read [Black Diamond Blueprint].", c3M: "View Strategy Blueprint ➔",
                 
                 vMainTitle: "🔮 The World-Changing Codes of Tech Giants",
                 vMainSubtitle: "Harvard, Cambridge, Google, and Jeff Bezos are uniting to unveil the era of longevity.",
@@ -579,22 +702,29 @@
                 vT6: "Will You Stay Young Forever by 2030? Google Futurist Reveals Shocking Timeline! How Nanotechnology Rewrites Human Biology...",
 
                 titleProd: "⚡ Premium Bio-Tech Product Showcase (5 Core Products)",
-                p1B: "Aureva Women", p1T: "Supports energy metabolism, red blood cell formation, and overall nutritional balance for women's daily health.", p1D: "Higo Aureva Women™ is specially formulated for modern women, combining botanical extracts, amino acids, vitamins, and antioxidants to provide comprehensive nutritional support. Designed to maintain hormonal balance, energy metabolism, emotional well-being, and overall vitality.", p1Go: "Shop in Store ➔",
-                p2B: "ReGeneX Men", p2T: "Helps support prostate health, daily metabolic balance, and overall men's wellness.", p2D: "Higo ReGeneX Men™ is specifically formulated for modern men, combining plant extracts, amino acids, vitamins, and minerals to deliver comprehensive support. Designed to help maintain vitality, metabolic balance, and overall wellness for today's fast-paced lifestyle.", p2Go: "Shop in Store ➔",
-                p3B: "GnCell", p3T: "Rich in β-glucans and polysaccharides to support immune system health and daily wellness balance.", p3D: "Higo GnCell™ is an all-in-one nutritional support formula combining phytonutrients, mushroom extracts, and key micronutrients to promote immune balance, antioxidant protection, cellular health, and daily vitality. Engineered for modern wellness and long-term health maintenance.", p3Go: "Shop in Store ➔",
-                p4B: "Higo AKG Women", p4T: "Helps support cellular energy production, maintaining daily vitality and overall health.", p4D: "Higo AKG Women™ is tailored for modern women, combining key nutrients that support energy metabolism, antioxidant defense, hormonal balance, and daily stamina. Designed to satisfy the nutritional demands of women living in a fast-paced environment.", p4Go: "Shop in Store ➔",
-                p5B: "Higo AKG Men", p5T: "Helps support cellular energy production, maintaining daily vitality and overall bodily functions.", p5D: "Higo AKG Men™ is tailored for modern men, combining multiple critical nutrients to aid energy metabolism, antioxidant defense, and daily vigor. Formulated to meet the precise nutritional needs of active and demanding lifestyles.", p1Go: "Shop in Store ➔",
+                p1B: "Aureva Women", p1T: "Supports energy metabolism, red blood cell formation, and overall nutritional balance for women's daily health.", p1D: "Higo Aureva Women™ is specially formulated for modern women, combining botanical extracts, amino acids, vitamins, and antioxidants.", p1Go: "Shop in Store ➔",
+                p2B: "ReGeneX Men", p2T: "Helps support prostate health, daily metabolic balance, and overall men's wellness.", p2D: "Higo ReGeneX Men™ is specifically formulated for modern men, combining plant extracts, amino acids, vitamins, and minerals.", p2Go: "Shop in Store ➔",
+                p3B: "GnCell", p3T: "Rich in β-glucans and polysaccharides to support immune system health and daily wellness balance.", p3D: "Higo GnCell™ is an all-in-one nutritional support formula combining phytonutrients, mushroom extracts, and key micronutrients.", p3Go: "Shop in Store ➔",
+                p4B: "Higo AKG Women", p4T: "Helps support cellular energy production, maintaining daily vitality and overall health.", p4D: "Higo AKG Women™ is tailored for modern women, combining key nutrients that support energy metabolism, antioxidant defense.", p4Go: "Shop in Store ➔",
+                p5B: "Higo AKG Men", p5T: "Helps support cellular energy production, maintaining daily vitality and overall bodily functions.", p5D: "Higo AKG Men™ is tailored for modern men, combining multiple critical nutrients to aid energy metabolism, antioxidant defense.", p5Go: "Shop in Store ➔",
+                
+                titleBonus: "💰 Global E-Commerce Network Matrix Compensation Plan",
+                subtitleBonus: "A fair, robust, and completely sustainable international referral reward system.",
+                bonusImg: "StartPic/Star10_en.png",
+
+                titleCert: "🏆 World-Class Bio-Tech Safety Certifications 🏆",
+                cert1: "Made in USA Certified", cert2: "HALAL Certified", cert3: "EU Lab Tested", cert4: "Non-GMO Project<br>Verified", cert5: "FDA Registered", cert6: "NSF International<br>Standard", cert7: "cGMP Certified",
+
                 titleTeach: "📖 Step-by-Step Launch Blueprint",
                 t1T: "Step 1. Get Code & Register", t1D: "Click our invitation link, fill in details, verify email, and activate your international account within 60 seconds.",
                 t2T: "Step 2. Purchase on Global Mall", t2D: "Log in to access cross-border mall (Category 1025). Select your AKG items with secure worldwide credit cards and direct shipping.",
                 t3T: "Step 3. Share & Multiply", t3D: "Go to 'My Assets' to copy your unique global invite link. Share with health-seekers and unlock geometric matrix bonuses.",
                 titleWit: "👥 Global Success Testimonials", titleEve: "📢 Official News & Events",
                 w1Text: "「After 3 months of AKG, my energy levels feel like 30 again! Best of all, my monthly passive split surpassed $3,000 via sharing codes!」",
-                w2Text: "\"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week.\"",
                 liveStatus: "LIVE · Global Business Seminar in Progress",
                 liveTitle: "Want to scale from 1-Star to Black Diamond? Join the live webinar!",
-                liveDesc: "We host multi-language webinars daily. Top global mentors present live to show you the ultimate path to physical and financial wellness.",
-                liveBtn: "Enter Live Video Conference Room Now ➔",
+                liveDesc: "We host multi-language webinars daily. Top global mentors present live to show you the ultimate path.",
+                liveBtn: "Enter Live Video Conference Room Now ➡️",
                 fTitle: "Billionaires Are Heavily Investing Here", fDesc: "This is not a trend, it is a global shift. The ultimate path to abundance is right in front of you."
             },
             "ja": {
@@ -603,7 +733,7 @@
                 n1: "AKG海外購入聖書", n2: "グローバル報酬制度", n3: "ブラックダイヤ速成攻略", n4: "スター商品", n5: "登録・購入チュートリアル", n6: "リアルタイム会議室", nVideoNav: "重棒映像",
                 vPrefix: "世界で既に", vSuffix: "人のエリートがこのルートで人生を逆転させています",
                 heroTitle: "バイオ年齢と富の軌道を逆転させ、大富大慧の人生を掴め！",
-                heroSubtitle: "ハーバードの最先端バイオ科学AKG商品と、世界規模の海外購入爆発ボーナスを融合。若返り、稼ぎ、人を救いたいと願う人々がここに集う。",
+                heroSubtitle: "ハーバードの最先端バイオ科学AKG商品と、世界規模の海外購入爆発ボーナスを融合。",
                 btn1: "専用招待コードを今すぐ受け取る ➡️ グローバル代理権を獲得",
                 btn2: "今すぐ登録してポジションを確保・早い者勝ち ➡️ グローバル分配金を先取り",
                 titleExplore: "下のモジュールをクリックして、人生逆転のコードを探索",
@@ -612,8 +742,8 @@
                 c3T: "🤝 大いなる愛で人を救う (伝える) ➔", c3D: "世界に最先端のアンチエイジングの福音を届ける。【1つ星から一気に3つ星ブラックダイヤへの速成攻略】をチェックし、核心戦術で福慧人生を成就。", c3M: "ブラックダイヤ攻略を見る ➔",
                 
                 vMainTitle: "🔮 世界観を変える巨頭たちの暗号",
-                vMainSubtitle: "ハーバード、ケンブリッジ、そしてGoogleやベゾスなどのテック巨頭が連動して不老不死の序幕を開く",
-                vT1: "ハーバード教授が世界に衝撃：老化は実は治療可能な「感染症」？120歳まで生きるのはただの最低ライン！",
+                vMainSubtitle: "ハーバード、ケンブリッジ、指示してGoogleやベゾスなどのテック巨頭が連動して不老不死の序幕を開く",
+                vT1: "ハーバード教授が世界に衝撃：老化は実は治療可能な「病気」？120歳まで生きるのはただの最低ライン！",
                 vT2: "ケンブリッジ大学13日間の奇跡：人類は正式に老化を克服した？生老病死はまもなく歴史になる！",
                 vT3: "人類の永生はすでに開通？脳をスキャンして即座にアップロード！Eon Systemsが衝撃発表：魂を持つ初のデジタル生命！",
                 vT4: "ベゾスが30億ドルを投じた秘密：人類の寿命はまもなく100歳を突破する、永生の準備はできているか？",
@@ -621,22 +751,29 @@
                 vT6: "2030年に不老不死になる？Googleの預言者が驚きのタイムラインを暴露！この「ナノテクノロジー」が人類を塗り替える...",
 
                 titleProd: "⚡ 最先端バイオスター商品厳選 (公式サイト自社1025カテゴリ同期)",
-                p1B: "Aureva Women", p1T: "エネルギー代謝、赤血球形成、および女性の日常的な健康に必要な総合的な栄養バランスをサポート", p1D: "Higo Aureva Women™は現代女性のために特別に処方され、植物抽出物、アミノ酸、ビタミン、抗酸化物質を組み合わせ、女性の日常の健康を包括的にサポートします。ホルモンバランス、エネルギー代謝、情緒の安定、および全体的な活力を維持するように設計されています。", p1Go: "公式モールで購入する ➔",
-                p2B: "ReGeneX Men", p2T: "前立腺の健康、日常的な代謝バランス、および男性の総合的な健康の維持をサポート", p2D: "Higo ReGeneX Men™は現代男性のために特別に処方され、植物抽出物、アミノ酸、ビタミン、ミネラルを組み合わせ、男性の日常の健康を全面的にサポートします。活力を維持し、新陳代謝のバランスを整え、忙しい現代社会における健康維持を目的として設計されています。", p2Go: "公式モールで購入する ➔",
-                p3B: "GnCell", p3T: "β-グルカンと多糖類を豊富に含み、免疫システムの健康と日常の健康バランスをサポート", p3D: "Higo GnCell™は、植物性栄養素、キノコ抽出物、および主要な微量栄養素を組み合わせた総合的な栄養サポート処方です。免疫バランス、抗酸化保護、細胞の健康、および毎日の活力をサポートします。現代のヘルスケアと長期的な健康維持のために設計されています。", p3Go: "公式モールで購入する ➔",
-                p4B: "Higo AKG Women", p4T: "細胞エネルギーの生成をサポートし、毎日の活力と総合的な健康を維持", p4D: "Higo AKG Women™は現代女性のために処方され、重要な栄養素を組み合わせてエネルギー代謝、抗酸化保護、ホルモンバランス、および毎日の活力をサポートします。ペースの速い現代のライフスタイルにおける女性の栄養ニーズを満たすように設計されています。", p4Go: "公式モールで購入する ➔",
-                p5B: "Higo AKG Men", p5T: "細胞エネルギーの生成をサポートし、毎日の活力と総合的な身体機能を維持", p5D: "Higo AKG Men™は現代男性のために処方され、複数の重要な栄養素を組み合わせてエネルギー代謝、抗酸化保護、および毎日の活力をサポートします。忙しいライフスタイルの栄養ニーズを満たすために特別に設計されています。", p5Go: "公式モールで購入する ➔",
+                p1B: "Aureva Women", p1T: "エネルギー代謝、赤血球形成、および女性の日常的な健康に必要な総合的な栄養バランスをサポート", p1D: "Higo Aureva Women™は現代女性のために特別に処方され、植物抽出物、アミノ酸、ビタミン、抗酸化物質を組み合わせ、女性の日常の健康を包括的にサポートします。", p1Go: "公式モールで購入する ➔",
+                p2B: "ReGeneX Men", p2T: "前立腺の健康、日常的な代謝バランス、および男性の総合的な健康の維持をサポート", p2D: "Higo ReGeneX Men™は現代男性のために特別に処方され、植物抽出物、アミノ酸、ビタミン、ミネラルを組み合わせ、男性の日常の健康を全面的にサポートします。", p2Go: "公式モールで購入する ➔",
+                p3B: "GnCell", p3T: "β-グルカンと多糖類を豊富に含み、免疫システムの健康と日常の健康バランスをサポート", p3D: "Higo GnCell™は、植物性栄養素、キノコ抽出物、および主要な微量栄養素を組み合わせた総合的な栄養サポート処方です。", p3Go: "公式モールで購入する ➔",
+                p4B: "Higo AKG Women", p4T: "細胞エネルギーの生成をサポートし、毎日の活力と総合的な健康を維持", p4D: "Higo AKG Women™は現代女性のために処方され、重要な栄養素を組み合わせてエネルギー代謝、抗酸化保護、ホルモンバランス、および毎日の活力をサポートします。", p4Go: "公式モールで購入する ➔",
+                p5B: "Higo AKG Men", p5T: "細胞エネルギーの生成をサポートし、毎日の活力と総合的な身体機能を維持", p5D: "Higo AKG Men™は現代男性のために処方され、複数の重要な栄養素を組み合わせてエネルギー代謝、抗酸化保護、および毎日の活力をサポートします。", p5Go: "公式モールで購入する ➔",
+                
+                titleBonus: "💰 グローバル海外直販・完璧なネットワーク分配報酬制度",
+                subtitleBonus: "公平、公正、透明な世界的持続配当プラン。共有することで誰でも豊かな利益を得られます。",
+                bonusImg: "StartPic/Star10_jp.png",
+
+                titleCert: "🏆 世界最高峰のバイオ安全性・7大権威認証 🏆",
+                cert1: "米国製造（Made in USA）", cert2: "ハラール（HALAL）認証", cert3: "欧州独立研究所試験済", cert4: "非遺伝子組み換え<br>（Non-GMO）認証", cert5: "米国 FDA 施設登録", cert6: "米国公衆衛生<br>安全基金会（NSF）", cert7: "cGMP 適正製造基準",
+
                 titleTeach: "📖 初心者向け3ステップ爆発チュートリアル",
                 t1T: "ステップ1. 特典獲得と登録", t1D: "当サイトの招待リンクをクリックし、基本情報を入力してメール認証を行うだけで、1分で無料のグローバル海外購入会員アカウントが開設され、拡散マトリクスの最先端を確保できます。",
                 t2T: "ステップ2. クロスボーダー買い物", t2D: "バックオフィスにログイン後、直営ショップ（自社商品エリア1025）に入り、お好みのAKGテクノロジー商品を選択。世界の主要クレジットカードに対応し、海外から自宅へ直送されます。",
                 t3T: "ステップ3. 紹介コードの取得", t3D: "「マイ資産」に入り、あなた個人の専用グローバル招待コードをコピー。健康と富を求める友人にシェアして、すぐにネットワーク配当収益を始動させましょう！",
                 titleWit: "👥 グローバル会員のリアルな体験談", titleEve: "📢 最新の公式イベント情報",
                 w1Text: "「AKGを3ヶ月服用した後、精神状態が30代に戻りました！さらに驚くべきことに、紹介コードをシェアしたことで、先月の海外不労所得配当が10万（台湾ドル）を超えました！」",
-                w2Text: "\"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week.\"",
                 liveStatus: "LIVE ・ グローバル創富オンライン説明会開催中",
                 liveTitle: "1つ星からブラックダイヤへ直行する方法を知りたいですか？今すぐライブ配信ルームへ！",
-                liveDesc: "私たちは毎日定期的に多言語対応のオンライン説明会やバイオ医学講座を開催しています。トップのブラックダイヤ講師が直接オンラインで指導し、若返りとネットビジネスのすべての秘密を解き明かします。",
-                liveBtn: "クリックしてリアルタイム会議室に入る ➔",
+                liveDesc: "私たちは毎日定期的に多言語対応のオンライン説明会やバイオ医学講座を開催しています。",
+                liveBtn: "クリックしてリアルタイム会議室に入る ➡️",
                 fTitle: "世界の富豪やテック巨頭がこぞって参入中", fDesc: "これは一過性のトレンドではなく、現在進行中の世紀の変革です。今、その近道があなたの目の前にあります。"
             },
             "ko": {
@@ -663,22 +800,29 @@
                 vT6: "2030년에 불로장생한다? 구글 예언가가 놀라운 타임라인을 폭로! 이 '나노 기술'이 인류를 완전히 바꿀 것...",
 
                 titleProd: "⚡ 최첨단 바이오 스타 상품 엄선 (공식몰 자체 1025 카테고리 동기화)",
-                p1B: "Aureva Women", p1T: "에너지 대사, 적혈구 형성 및 여성의 일상 건강에 필요한 전반적인 영양 균형 지원", p1D: "Higo Aureva Women™은 현대 여성을 위해 특별히 배합되었으며, 식물 추출물, 아미노산, 비타민 및 항산화제를 결합하여 여성의 일상 건강에 포괄적인 영양 지원을 제공합니다. 호르몬 균형, 에너지 대사, 정서적 건강 및 전반적인 활력을 유지하도록 설계되었습니다.", p1Go: "공식 쇼핑몰에서 구매하기 ➔",
-                p2B: "ReGeneX Men", p2T: "전립선 건강, 일상적인 대사 균형 및 전반적인 남성 건강 유지 지원", p2D: "Higo ReGeneX Men™은 현대 남성을 위해 특별히 배합되었으며, 식물 추출물, 아미노산, 비타민 및 미네랄을 결합하여 남성의 일상 건강에 포괄적인 영양을 지원합니다. 바쁜 현대 사회에서 활력을 유지하고 신진대사 균형 및 전반적인 건강을 돕도록 설계되었습니다.", p2Go: "공식 쇼핑몰에서 구매하기 ➔",
-                p3B: "GnCell", p3T: "β-글루칸과 다당류가 풍부하여 면역 체계 건강 및 일상적인 건강 균형 지원", p3D: "Higo GnCell™은 식물성 영양소, 버섯 추출물 및 핵심 미량 영양소를 결합한 종합 영양 지원 배합입니다. 면역 균형, 항산화 보호, 세포 건강 및 일상 활력을 지원합니다. 현대적 건강 증진과 장기적인 건강 관리를 위해 설계되었습니다.", p3Go: "공식 쇼핑몰에서 구매하기 ➔",
-                p4B: "Higo AKG Women", p4T: "세포 에너지 생성을 지원하여 일상의 활력과 전반적인 건강 유지", p4D: "Higo AKG Women™은 현대 여성을 위해 배합되었으며, 핵심 영양소를 결합하여 에너지 대사, 항산화 보호, 호르몬 균형 및 일상의 활력을 돕습니다. 바쁜 라이프스타일을 살아가는 현대 여성의 영양 요구를 충족하도록 설계되었습니다.", p4Go: "공식 쇼핑몰에서 구매하기 ➔",
-                p5B: "Higo AKG Men", p5T: "세포 에너지 생성을 지원하여 일상의 활력과 전반적인 신체 기능 유지", p5D: "Higo AKG Men™은 현대 남성을 위해 배합되었으며, 다양한 핵심 영양소를 결합하여 에너지 대사, 항산화 보호 및 일상의 활력을 돕습니다. 바쁜 현대인의 라이프스타일에 맞춘 영양 요구를 충족하도록 특별히 설계되었습니다.", p5Go: "공식 쇼핑몰에서 구매하기 ➔",
+                p1B: "Aureva Women", p1T: "에너지 대사, 적혈구 형성 및 여성의 일상 건강에 필요한 전반적인 영양 균형 지원", p1D: "Higo Aureva Women™은 현대 여성을 위해 특별히 배합되었으며, 식물 추출물, 아미노산, 비타민 및 항산화제를 결합하여 여성의 일상 건강에 포괄적인 영양 지원을 제공합니다.", p1Go: "공식 쇼핑몰에서 구매하기 ➔",
+                p2B: "ReGeneX Men", p2T: "전립선 건강, 일상적인 대사 균형 및 전반적인 남성 건강 유지 지원", p2D: "Higo ReGeneX Men™은 현대 남성을 위해 특별히 배합되었으며, 식물 추출물, 아미노산, 비타민 및 미네랄을 결합하여 남성의 일상 건강에 포괄적인 영양을 지원합니다.", p2Go: "공식 쇼핑몰에서 구매하기 ➔",
+                p3B: "GnCell", p3T: "β-글루칸과 다당류가 풍부하여 면역 체계 건강 및 일상적인 건강 균형 지원", p3D: "Higo GnCell™은 식물성 영양소, 버섯 추출물 및 핵심 미량 영양소를 결합한 종합 영양 지원 배합입니다.", p3Go: "공식 쇼핑몰에서 구매하기 ➔",
+                p4B: "Higo AKG Women", p4T: "세포 에너지 생성을 지원하여 일상의 활력과 전반적인 건강 유지", p4D: "Higo AKG Women™은 현대 여성을 위해 배합되었으며, 핵심 영양소를 결합하여 에너지 대사, 안티옥시단트 보호, 호르몬 균형 및 일상의 활력을 돕습니다.", p4Go: "공식 쇼핑몰에서 구매하기 ➔",
+                p5B: "Higo AKG Men", p5T: "세포 에너지 생성을 지원하여 일상의 활력과 전반적인 신체 기능 유지", p5D: "Higo AKG Men™은 현대 남성을 위해 배합되었으며, 다양한 핵심 영양소를 결합하여 에너지 대사, 안티옥시단트 보호 및 일상의 활력을 돕습니다.", p5Go: "공식 쇼핑몰에서 구매하기 ➔",
+                
+                titleBonus: "💰 글로벌 해외 직구・완벽한 네트워크 매트릭스 보상 제도",
+                subtitleBonus: "공정하고 투명한 글로벌 지속 배당 시스템. 공유를 통해 누구든 탄탄한 인컴을 구축할 수 있습니다.",
+                bonusImg: "StartPic/Star10_kr.png",
+
+                titleCert: "🏆 글로벌 7대 생의학 권위 안전 인증 🏆",
+                cert1: "미국 제조 인증", cert2: "할랄(HALAL) 인증", cert3: "유럽 실험실 검증 완료", cert4: "비유전자변형<br>(Non-GMO) 인증", cert5: "미국 FDA 등록 시설", cert6: "미국 위생협회<br>(NSF) 표준 인증", cert7: "cGMP 우수 제조 기준",
+
                 titleTeach: "📖 초간단 3단계 폭발적 비즈니스 가이드",
                 t1T: "Step 1. 쿠폰 수령 및 회원가입", t1D: "본 사이트의 초대 링크를 클릭하고 기본 정보를 입력 후 이메일을 인증하면, 1분 만에 글로벌 직구 회원 계정이 무료로 개설되어 매트릭스의 최전방을 선점할 수 있습니다.",
                 t2T: "Step 2. 크로스보더 쇼핑몰 쇼핑", t2D: "마이페이지 로그인 후 크로스보더 직구 쇼핑몰(자체 상품 카테고리 1025)로 이동하여 원하는 AKG 테크 상품을 선택하세요. 전 세계 주요 신용카드를 지원하며, 해외 직배송으로 집까지 안전하게 배송됩니다.",
                 t3T: "Step 3. 추천인 초대 코드 획득", t3D: "「나의 자산」 메뉴로 이동하여 개인 전용 글로벌 초대 코드를 복사하세요. 건강과 부를 원하는 친구들에게 공유하고 네트워크 분할 배당 수익을 즉시 가동시키십시오!",
                 titleWit: "👥 글로벌 회원들의 생생한 후기", titleEve: "📢 최신 공식 이벤트 정보",
                 w1Text: "「AKG를 복용한 지 3개월 만에 정신이 30대로 돌아간 것 같습니다! 더 놀라운 것은 초대 코드를 공유했더니 지난달 저의 해외 파이프라인 배당 수입이 10만 대만달러를 돌파했다는 점입니다!」",
-                w2Text: "\"AKG is a miracle! My skin texture improved, and the global compensation model is flawlessly paying out every week.\"",
                 liveStatus: "LIVE · 글로벌 창부 온라인 설명회 진행 중",
                 liveTitle: "1성에서 블랙 다이아몬드로 즉시 올라가는 법을 알고 싶으신가요? 지금 실시간 스트리밍 룸으로 들어오세요!",
-                liveDesc: "저희는 매일 정기적으로 다국어 온라인 사업 설명회와 바이오 의학 세미나를 개최합니다. 최고 등급의 블랙 다이아몬드 멘토들이 실시간으로 가이드하며 젊음과 온라인 수익 창출의 모든 비밀을 풀어드립니다.",
-                liveBtn: "클릭하여 실시간 회의실 입장 ➔",
+                liveDesc: "저희는 매일 정기적으로 다국어 온라인 사업 설명회와 바이오 의학 세미나를 개최합니다.",
+                liveBtn: "클릭하여 실시간 회의실 입장 ➡️",
                 fTitle: "글로벌 부호들과 테크 거물들이 미친 듯이 투자하는 곳", fDesc: "이것은 트렌드가 아니라 지금 일어나고 있는 세기의 변혁입니다. 지금 그 지름길이 당신 눈앞에 있습니다."
             }
         };
@@ -726,13 +870,26 @@
             document.getElementById('p4-b').innerText = data.p4B; document.getElementById('p4-t').innerText = data.p4T; document.getElementById('p4-d').innerText = data.p4D; document.getElementById('p4-goto').innerText = data.p4Go;
             document.getElementById('p5-b').innerText = data.p5B; document.getElementById('p5-t').innerText = data.p5T; document.getElementById('p5-d').innerText = data.p5D; document.getElementById('p5-goto').innerText = data.p5Go;
 
+            document.getElementById('title-bonus').innerText = data.titleBonus;
+            document.getElementById('subtitle-bonus').innerText = data.subtitleBonus;
+            document.getElementById('bonus-main-img').src = data.bonusImg;
+
+            document.getElementById('title-cert').innerText = data.titleCert;
+            document.getElementById('cert-1').innerHTML = data.cert1;
+            document.getElementById('cert-2').innerHTML = data.cert2;
+            document.getElementById('cert-3').innerHTML = data.cert3;
+            document.getElementById('cert-4').innerHTML = data.cert4;
+            document.getElementById('cert-5').innerHTML = data.cert5;
+            document.getElementById('cert-6').innerHTML = data.cert6;
+            document.getElementById('cert-7').innerHTML = data.cert7;
+
             document.getElementById('title-teach').innerText = data.titleTeach;
             document.getElementById('t1-t').innerText = data.t1T; document.getElementById('t1-d').innerText = data.t1D;
             document.getElementById('t2-t').innerText = data.t2T; document.getElementById('t2-d').innerText = data.t2D;
             document.getElementById('t3-t').innerText = data.t3T; document.getElementById('t3-d').innerText = data.t3D;
 
             document.getElementById('title-wit').innerText = data.titleWit; document.getElementById('title-eve').innerText = data.titleEve;
-            document.getElementById('w1-text').innerText = data.w1Text; document.getElementById('w2-text').innerText = data.w2Text;
+            document.getElementById('w1-text').innerText = data.w1Text; 
             document.getElementById('live-status').innerText = data.liveStatus; document.getElementById('live-title').innerText = data.liveTitle;
             document.getElementById('live-desc').innerText = data.liveDesc; document.getElementById('live-btn').innerText = data.liveBtn;
 
