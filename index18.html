@@ -180,14 +180,6 @@
 
 
 
-
-
-
-
-
-
-
-
         /* 2. 通用區塊佈局 */
         .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
         .section-title {
@@ -1450,6 +1442,9 @@
             document.getElementById('final-desc').innerText = data.fDesc;
             
             document.getElementById('hero-title2').innerText = data.heroTitle2;
+
+            // ✨ 動態切換 body class，控制跑馬燈圖片切換顯示
+            document.body.className = 'lang-' + lang;
         }
 
         function setCookie(name, value, days) { let expires = ""; if (days) { let date = new Date(); date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); expires = "; expires=" + date.toUTCString(); } document.cookie = name + "=" + (value || "")  + expires + "; path=/"; }
