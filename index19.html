@@ -587,7 +587,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <div>005</div>
+        <div>000001</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -1725,6 +1725,91 @@
 
         let count = 4821; setInterval(() => { count += Math.floor(Math.random() * 3) + 1; document.getElementById('visitor-count').innerText = count.toLocaleString(); }, 3000);
     </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const originalSelect = document.getElementById("langSelect");
+        if (!originalSelect) return;
+
+        // 1. 隱藏原本的 select
+        originalSelect.style.display = "none";
+
+        // 國旗圖片對照表
+        const flags = {
+            'zh-TW': 'https://flagcdn.com/w20/tw.png',
+            'zh-CN': 'https://flagcdn.com/w20/cn.png',
+            'en': 'https://flagcdn.com/w20/us.png',
+            'ja': 'https://flagcdn.com/w20/jp.png',
+            'ko': 'https://flagcdn.com/w20/kr.png'
+        };
+
+        // 2. 建立替代容器
+        const wrapper = document.createElement("div");
+        wrapper.className = "relative inline-block text-sm";
+
+        // 取得預設選中的選項
+        const currentVal = originalSelect.value || 'zh-TW';
+        const currentText = originalSelect.options[originalSelect.selectedIndex].text;
+
+        // 建立按鈕與下拉選單 HTML
+        wrapper.innerHTML = `
+            <button type="button" id="customLangBtn" class="flex items-center justify-between w-[160px] px-[10px] py-[8px] bg-white rounded-[4px] border border-gray-300 shadow-sm cursor-pointer">
+            <div class="flex items-center gap-2">
+                <img id="customLangFlag" src="${flags[currentVal]}" class="w-[20px] h-auto rounded-[2px]">
+                <span id="customLangText" class="font-medium text-gray-700">${currentText}</span>
+            </div>
+            <span class="text-xs text-gray-400">▼</span>
+            </button>
+
+            <div id="customLangMenu" class="hidden absolute left-0 top-[105%] z-50 flex flex-col w-[160px] px-[10px] py-[6px] bg-white rounded-[4px] shadow-lg border border-gray-100 gap-[2px]">
+            ${Array.from(originalSelect.options).map(opt => `
+                <div data-value="${opt.value}" class="custom-option flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700">
+                <img src="${flags[opt.value]}" class="w-[20px] h-auto rounded-[2px]">
+                <span>${opt.text}</span>
+                </div>
+            `).join('')}
+            </div>
+        `;
+
+        // 插入到原本 select 的後面
+        originalSelect.parentNode.insertBefore(wrapper, originalSelect.nextSibling);
+
+        // 3. 事件繫結：開關選單
+        const btn = wrapper.querySelector("#customLangBtn");
+        const menu = wrapper.querySelector("#customLangMenu");
+
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            menu.classList.toggle("hidden");
+        });
+
+        // 4. 事件繫結：點擊選項
+        wrapper.querySelectorAll(".custom-option").forEach(item => {
+            item.addEventListener("click", function () {
+            const val = this.getAttribute("data-value");
+            const text = this.querySelector("span").innerText;
+            const flagSrc = flags[val];
+
+            // 更新畫面顯示
+            wrapper.querySelector("#customLangFlag").src = flagSrc;
+            wrapper.querySelector("#customLangText").innerText = text;
+            menu.classList.add("hidden");
+
+            // 同步更新原本的 select 值，並觸發 changeLanguage
+            originalSelect.value = val;
+            if (typeof changeLanguage === "function") {
+                changeLanguage(val);
+            }
+            });
+        });
+
+        // 點擊外部自動關閉
+        document.addEventListener("click", () => menu.classList.add("hidden"));
+        });
+    </script>
+
+
 
 
     <script>
