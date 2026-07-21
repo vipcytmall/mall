@@ -589,7 +589,7 @@
 
     <!--  國旗下拉        -->
     <style>
-        /* 容器    */
+        /* 容器 */
         .lang-dropdown-wrapper {
         position: relative;
         display: inline-block;
@@ -597,71 +597,75 @@
         user-select: none;
         }
 
-        /* 按鈕本體 */
+        /* 主按鈕：深色膠囊形 (Pill shape) */
         .lang-dropdown-btn {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 160px;
-        padding: 8px 12px;
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        width: 165px;
+        padding: 8px 16px;
+        background-color: #1e293b; /* 深藍灰底色 */
+        border: 1px solid #334155;
+        border-radius: 9999px; /* 完全膠囊圓角 */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .lang-dropdown-btn:hover {
-        border-color: #cbd5e1;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        background-color: #334155;
+        border-color: #64748b;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.25); /* 微微藍光 */
+        transform: translateY(-1px);
         }
 
         .lang-selected-info {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         font-size: 14px;
         font-weight: 500;
-        color: #334155;
+        color: #f8fafc; /* 亮白文字 */
         }
 
+        /* 國旗圖示：圓角微陰影 */
         .lang-flag-img {
         width: 20px;
         height: 14px;
         object-fit: cover;
-        border-radius: 2px;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         }
 
+        /* 箭頭樣式與旋轉動畫 */
         .lang-arrow {
-        font-size: 10px;
+        font-size: 9px;
         color: #94a3b8;
-        transition: transform 0.2s ease;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s;
         }
 
-        /* 選單展開時箭頭旋轉 */
         .lang-dropdown-wrapper.active .lang-arrow {
         transform: rotate(180deg);
+        color: #60a5fa; /* 展開時變亮藍色 */
         }
 
-        /* 下拉選單選單 (預設隱藏 + 動畫準備) */
+        /* 下拉選單：深色浮空卡片 (帶弧度圓角) */
         .lang-dropdown-menu {
         position: absolute;
-        top: calc(100% + 6px);
+        top: calc(100% + 8px);
         left: 0;
-        width: 160px;
-        background-color: #ffffff;
-        border: 1px solid #f1f5f9;
-        border-radius: 8px;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        width: 175px;
+        background-color: #0f172a; /* 更深底色突顯層次 */
+        border: 1px solid #334155;
+        border-radius: 18px; /* 圓潤選單外框 */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
         padding: 6px;
         z-index: 99999;
         
-        /* 隱藏狀態 */
+        /* 開關平滑彈出動畫 */
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-8px);
+        transform: translateY(-10px) scale(0.96);
         transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -669,27 +673,28 @@
         .lang-dropdown-wrapper.active .lang-dropdown-menu {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         }
 
-        /* 選項 Hover 效果 */
+        /* 選項美化 */
         .lang-option {
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 8px 10px;
+        gap: 10px;
+        padding: 9px 12px;
         font-size: 14px;
-        color: #475569;
-        border-radius: 6px;
+        font-weight: 500;
+        color: #cbd5e1;
+        border-radius: 9999px; /* 選項 Hover 時也是膠囊圓角 */
         cursor: pointer;
-        transition: background-color 0.15s ease;
+        transition: all 0.15s ease;
         }
 
+        /* 選項 Hover 狀態 */
         .lang-option:hover {
-        background-color: #f1f5f9;
-        color: #1e293b;
+        background-color: #1e293b;
+        color: #60a5fa; /* Hover 亮藍色 */
         }
-
     </style>
 
 
@@ -704,7 +709,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <div>000004</div>
+        <div>000005</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -1829,33 +1834,30 @@
 
     <!--  國旗下拉 -->
     <script>
-        // 切換選單顯示/隱藏
+        // 切換選單顯示/隱藏        
         function toggleLangDropdown(event) {
-            event.stopPropagation(); // 防止冒泡導致點擊立刻關閉
-            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
-            wrapper.classList.toggle('active');
+        event.stopPropagation();
+        const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+        wrapper.classList.toggle('active');
         }
 
         // 選擇語言並自動收合
         function selectLang(val, text, flagUrl) {
-            // 更新畫面顯示
-            document.getElementById('selectedFlag').src = flagUrl;
-            document.getElementById('selectedText').innerText = text;
+        document.getElementById('selectedFlag').src = flagUrl;
+        document.getElementById('selectedText').innerText = text;
 
-            // 收合選單
-            const wrapper = document.querySelector('.lang-dropdown-wrapper');
-            if (wrapper) wrapper.classList.remove('active');
+        const wrapper = document.querySelector('.lang-dropdown-wrapper');
+        if (wrapper) wrapper.classList.remove('active');
 
-            // 執行你原本的語言變更邏輯
-            if (typeof changeLanguage === 'function') {
-                changeLanguage(val);
-            }
+        if (typeof changeLanguage === 'function') {
+            changeLanguage(val);
+        }
         }
 
-        // 點擊頁面任何其他地方時，強制收合選單
+        // 點擊外面自動關閉
         document.addEventListener('click', function () {
-            const wrapper = document.querySelector('.lang-dropdown-wrapper');
-            if (wrapper) wrapper.classList.remove('active');
+        const wrapper = document.querySelector('.lang-dropdown-wrapper');
+        if (wrapper) wrapper.classList.remove('active');
         });
 
     </script>
