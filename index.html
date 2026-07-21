@@ -212,7 +212,18 @@
         body.lang-zh-CN .marquee-zh-CN,
         body.lang-en .marquee-en,
         body.lang-ja .marquee-ja,
-        body.lang-ko .marquee-ko {
+        body.lang-ko .marquee-ko,
+        body.lang-ms .marquee-ms,    /*  th、vi、id、ru、my、hi、mn、km、lo */
+        body.lang-th .marquee-th,
+        body.lang-vi .marquee-vi,
+        body.lang-id .marquee-id,
+        body.lang-ru .marquee-ru,
+        body.lang-my .marquee-my,
+        body.lang-hi .marquee-hi,
+        body.lang-mn .marquee-mn,
+        body.lang-km .marquee-km,
+        body.lang-lo .marquee-lo
+        {
             display: block;
         }
 
@@ -709,7 +720,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <!-- <div>000006</div> -->
+        <div>000012</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -719,15 +730,7 @@
             <a href="#bonus-section" id="n-bonus-nav">獎金制度圖表</a>
             <a href="#tutorials" id="n-5">註冊購物教學</a>
             <a href="#live" id="n-6">即時會議室</a>
-        </div>
-        <!-- <select class="lang-selector" onchange="changeLanguage(this.value)" id="langSelect">
-            <option value="zh-TW">繁體中文</option>
-            <option value="zh-CN">简体中文</option>
-            <option value="en">English</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-        </select> -->
-      
+        </div>      
 
 
         <div class="lang-dropdown-wrapper">
@@ -742,7 +745,7 @@
 
             <!-- 下拉選單選單 -->
             <div class="lang-dropdown-menu" id="langMenu">                
-                <div class="lang-option" onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')">
+                <!-- <div class="lang-option" onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')">
                     <img src="https://flagcdn.com/w20/cn.png" class="lang-flag-img" alt="CN">
                     <span>简体中文</span>
                 </div>
@@ -761,8 +764,150 @@
                 <div class="lang-option" onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')">
                     <img src="https://flagcdn.com/w20/jp.png" class="lang-flag-img" alt="JP">
                     <span>日本語</span>
-                </div>
+                </div>    -->
                 
+                
+
+                <!-- 1. 簡體中文 -->
+                <div class="lang-option"
+                    onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')">
+                    <img src="https://flagcdn.com/w20/cn.png"
+                        class="lang-flag-img"
+                        alt="CN">
+                    <span>简体中文</span>
+                </div>
+
+                <!-- 2. English -->
+                <div class="lang-option"
+                    onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')">
+                    <img src="https://flagcdn.com/w20/us.png"
+                        class="lang-flag-img"
+                        alt="US">
+                    <span>English</span>
+                </div>
+
+                <!-- 3. 繁體中文 -->
+                <div class="lang-option"
+                    onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')">
+                    <img src="https://flagcdn.com/w20/hk.png"
+                        class="lang-flag-img"
+                        alt="HK">
+                    <span>繁體中文</span>
+                </div>
+
+                <!-- 4. 韓文 -->
+                <div class="lang-option"
+                    onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')">
+                    <img src="https://flagcdn.com/w20/kr.png"
+                        class="lang-flag-img"
+                        alt="KR">
+                    <span>한국어</span>
+                </div>
+
+                <!-- 5. 日文 -->
+                <div class="lang-option"
+                    onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')">
+                    <img src="https://flagcdn.com/w20/jp.png"
+                        class="lang-flag-img"
+                        alt="JP">
+                    <span>日本語</span>
+                </div>
+
+                <!-- 6. 馬來文 -->
+                <div class="lang-option"
+                    onclick="selectLang('ms', 'Malay', 'https://flagcdn.com/w20/my.png')">
+                    <img src="https://flagcdn.com/w20/my.png"
+                        class="lang-flag-img"
+                        alt="MY">
+                    <span>Malay</span>
+                </div>
+
+                <!-- 7. 泰文 -->
+                <div class="lang-option"
+                    onclick="selectLang('th', 'ภาษาไทย', 'https://flagcdn.com/w20/th.png')">
+                    <img src="https://flagcdn.com/w20/th.png"
+                        class="lang-flag-img"
+                        alt="TH">
+                    <span>ภาษาไทย</span>
+                </div>
+
+                <!-- 8. 越南文 -->
+                <div class="lang-option"
+                    onclick="selectLang('vi', 'Tiếng Việt', 'https://flagcdn.com/w20/vn.png')">
+                    <img src="https://flagcdn.com/w20/vn.png"
+                        class="lang-flag-img"
+                        alt="VN">
+                    <span>Tiếng Việt</span>
+                </div>
+
+                <!-- 9. 印尼文 -->
+                <div class="lang-option"
+                    onclick="selectLang('id', 'Indonesia', 'https://flagcdn.com/w20/id.png')">
+                    <img src="https://flagcdn.com/w20/id.png"
+                        class="lang-flag-img"
+                        alt="ID">
+                    <span>Indonesia</span>
+                </div>
+
+                <!-- 10. 俄文 -->
+                <div class="lang-option"
+                    onclick="selectLang('ru', 'Русский', 'https://flagcdn.com/w20/ru.png')">
+                    <img src="https://flagcdn.com/w20/ru.png"
+                        class="lang-flag-img"
+                        alt="RU">
+                    <span>Русский</span>
+                </div>
+
+                <!-- 11. 緬甸文 -->
+                <div class="lang-option"
+                    onclick="selectLang('my', 'မြန်မာဘာသာ', 'https://flagcdn.com/w20/mm.png')">
+                    <img src="https://flagcdn.com/w20/mm.png"
+                        class="lang-flag-img"
+                        alt="MM">
+                    <span>မြန်မာဘာသာ</span>
+                </div>
+
+                <!-- 12. 印地文 -->
+                <div class="lang-option"
+                    onclick="selectLang('hi', 'हिन्दी', 'https://flagcdn.com/w20/in.png')">
+                    <img src="https://flagcdn.com/w20/in.png"
+                        class="lang-flag-img"
+                        alt="IN">
+                    <span>हिन्दी</span>
+                </div>
+
+                <!-- 13. 蒙古文 -->
+                <div class="lang-option"
+                    onclick="selectLang('mn', 'Монгол', 'https://flagcdn.com/w20/mn.png')">
+                    <img src="https://flagcdn.com/w20/mn.png"
+                        class="lang-flag-img"
+                        alt="MN">
+                    <span>Монгол</span>
+                </div>
+
+                <!-- 14. 高棉文 -->
+                <div class="lang-option"
+                    onclick="selectLang('km', 'ភាសាខ្មែរ', 'https://flagcdn.com/w20/kh.png')">
+                    <img src="https://flagcdn.com/w20/kh.png"
+                        class="lang-flag-img"
+                        alt="KH">
+                    <span>ភាសាខ្មែរ</span>
+                </div>
+
+                <!-- 15. 寮文 -->
+                <div class="lang-option"
+                    onclick="selectLang('lo', 'ພາສາລາວ', 'https://flagcdn.com/w20/la.png')">
+                    <img src="https://flagcdn.com/w20/la.png"
+                        class="lang-flag-img"
+                        alt="LA">
+                    <span>ພາສາລາວ</span>
+                </div>
+
+
+
+
+
+
             </div>
         </div>
 
@@ -1010,6 +1155,414 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- 馬來語 (ms) -->
+        <div class="lang-marquee marquee-ms">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/ms/page-01.png" alt="ms-page-01" onerror="this.onerror=null;this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/ms/page-02.png" alt="ms-page-02" onerror="this.onerror=null;this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/ms/page-03.png" alt="ms-page-03" onerror="this.onerror=null;this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/ms/page-04.png" alt="ms-page-04" onerror="this.onerror=null;this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/ms/page-05.png" alt="ms-page-05" onerror="this.onerror=null;this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/ms/page-06.png" alt="ms-page-06" onerror="this.onerror=null;this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/ms/page-07.png" alt="ms-page-07" onerror="this.onerror=null;this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/ms/page-08.png" alt="ms-page-08" onerror="this.onerror=null;this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/ms/page-09.png" alt="ms-page-09" onerror="this.onerror=null;this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/ms/page-10.png" alt="ms-page-10" onerror="this.onerror=null;this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/ms/page-11.png" alt="ms-page-11" onerror="this.onerror=null;this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/ms/page-12.png" alt="ms-page-12" onerror="this.onerror=null;this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/ms/page-13.png" alt="ms-page-13" onerror="this.onerror=null;this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/ms/page-14.png" alt="ms-page-14" onerror="this.onerror=null;this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/ms/page-15.png" alt="ms-page-15" onerror="this.onerror=null;this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/ms/page-01.png" alt="ms-page-01" onerror="this.onerror=null;this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/ms/page-02.png" alt="ms-page-02" onerror="this.onerror=null;this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/ms/page-03.png" alt="ms-page-03" onerror="this.onerror=null;this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/ms/page-04.png" alt="ms-page-04" onerror="this.onerror=null;this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/ms/page-05.png" alt="ms-page-05" onerror="this.onerror=null;this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/ms/page-06.png" alt="ms-page-06" onerror="this.onerror=null;this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/ms/page-07.png" alt="ms-page-07" onerror="this.onerror=null;this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/ms/page-08.png" alt="ms-page-08" onerror="this.onerror=null;this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/ms/page-09.png" alt="ms-page-09" onerror="this.onerror=null;this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/ms/page-10.png" alt="ms-page-10" onerror="this.onerror=null;this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/ms/page-11.png" alt="ms-page-11" onerror="this.onerror=null;this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/ms/page-12.png" alt="ms-page-12" onerror="this.onerror=null;this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/ms/page-13.png" alt="ms-page-13" onerror="this.onerror=null;this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/ms/page-14.png" alt="ms-page-14" onerror="this.onerror=null;this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/ms/page-15.png" alt="ms-page-15" onerror="this.onerror=null;this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 泰語 (th) -->
+        <div class="lang-marquee marquee-th">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/th/page-01.png" alt="th-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/th/page-02.png" alt="th-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/th/page-03.png" alt="th-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/th/page-04.png" alt="th-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/th/page-05.png" alt="th-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/th/page-06.png" alt="th-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/th/page-07.png" alt="th-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/th/page-08.png" alt="th-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/th/page-09.png" alt="th-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/th/page-10.png" alt="th-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/th/page-11.png" alt="th-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/th/page-12.png" alt="th-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/th/page-13.png" alt="th-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/th/page-14.png" alt="th-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/th/page-15.png" alt="th-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/th/page-01.png" alt="th-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/th/page-02.png" alt="th-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/th/page-03.png" alt="th-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/th/page-04.png" alt="th-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/th/page-05.png" alt="th-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/th/page-06.png" alt="th-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/th/page-07.png" alt="th-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/th/page-08.png" alt="th-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/th/page-09.png" alt="th-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/th/page-10.png" alt="th-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/th/page-11.png" alt="th-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/th/page-12.png" alt="th-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/th/page-13.png" alt="th-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/th/page-14.png" alt="th-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/th/page-15.png" alt="th-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 越南語 (vi) -->
+        <div class="lang-marquee marquee-vi">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/vi/page-01.png" alt="vi-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/vi/page-02.png" alt="vi-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/vi/page-03.png" alt="vi-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/vi/page-04.png" alt="vi-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/vi/page-05.png" alt="vi-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/vi/page-06.png" alt="vi-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/vi/page-07.png" alt="vi-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/vi/page-08.png" alt="vi-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/vi/page-09.png" alt="vi-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/vi/page-10.png" alt="vi-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/vi/page-11.png" alt="vi-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/vi/page-12.png" alt="vi-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/vi/page-13.png" alt="vi-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/vi/page-14.png" alt="vi-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/vi/page-15.png" alt="vi-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/vi/page-01.png" alt="vi-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/vi/page-02.png" alt="vi-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/vi/page-03.png" alt="vi-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/vi/page-04.png" alt="vi-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/vi/page-05.png" alt="vi-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/vi/page-06.png" alt="vi-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/vi/page-07.png" alt="vi-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/vi/page-08.png" alt="vi-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/vi/page-09.png" alt="vi-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/vi/page-10.png" alt="vi-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/vi/page-11.png" alt="vi-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/vi/page-12.png" alt="vi-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/vi/page-13.png" alt="vi-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/vi/page-14.png" alt="vi-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/vi/page-15.png" alt="vi-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 印尼語 (id) -->
+        <div class="lang-marquee marquee-id">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/id/page-01.png" alt="id-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/id/page-02.png" alt="id-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/id/page-03.png" alt="id-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/id/page-04.png" alt="id-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/id/page-05.png" alt="id-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/id/page-06.png" alt="id-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/id/page-07.png" alt="id-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/id/page-08.png" alt="id-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/id/page-09.png" alt="id-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/id/page-10.png" alt="id-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/id/page-11.png" alt="id-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/id/page-12.png" alt="id-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/id/page-13.png" alt="id-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/id/page-14.png" alt="id-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/id/page-15.png" alt="id-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/id/page-01.png" alt="id-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/id/page-02.png" alt="id-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/id/page-03.png" alt="id-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/id/page-04.png" alt="id-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/id/page-05.png" alt="id-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/id/page-06.png" alt="id-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/id/page-07.png" alt="id-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/id/page-08.png" alt="id-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/id/page-09.png" alt="id-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/id/page-10.png" alt="id-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/id/page-11.png" alt="id-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/id/page-12.png" alt="id-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/id/page-13.png" alt="id-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/id/page-14.png" alt="id-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/id/page-15.png" alt="id-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 俄語 (ru) -->
+        <div class="lang-marquee marquee-ru">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/ru/page-01.png" alt="ru-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/ru/page-02.png" alt="ru-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/ru/page-03.png" alt="ru-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/ru/page-04.png" alt="ru-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/ru/page-05.png" alt="ru-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/ru/page-06.png" alt="ru-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/ru/page-07.png" alt="ru-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/ru/page-08.png" alt="ru-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/ru/page-09.png" alt="ru-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/ru/page-10.png" alt="ru-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/ru/page-11.png" alt="ru-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/ru/page-12.png" alt="ru-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/ru/page-13.png" alt="ru-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/ru/page-14.png" alt="ru-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/ru/page-15.png" alt="ru-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/ru/page-01.png" alt="ru-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/ru/page-02.png" alt="ru-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/ru/page-03.png" alt="ru-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/ru/page-04.png" alt="ru-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/ru/page-05.png" alt="ru-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/ru/page-06.png" alt="ru-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/ru/page-07.png" alt="ru-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/ru/page-08.png" alt="ru-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/ru/page-09.png" alt="ru-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/ru/page-10.png" alt="ru-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/ru/page-11.png" alt="ru-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/ru/page-12.png" alt="ru-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/ru/page-13.png" alt="ru-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/ru/page-14.png" alt="ru-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/ru/page-15.png" alt="ru-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 緬甸語 (my) -->
+        <div class="lang-marquee marquee-my">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/my/page-01.png" alt="my-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/my/page-02.png" alt="my-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/my/page-03.png" alt="my-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/my/page-04.png" alt="my-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/my/page-05.png" alt="my-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/my/page-06.png" alt="my-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/my/page-07.png" alt="my-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/my/page-08.png" alt="my-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/my/page-09.png" alt="my-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/my/page-10.png" alt="my-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/my/page-11.png" alt="my-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/my/page-12.png" alt="my-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/my/page-13.png" alt="my-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/my/page-14.png" alt="my-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/my/page-15.png" alt="my-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/my/page-01.png" alt="my-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/my/page-02.png" alt="my-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/my/page-03.png" alt="my-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/my/page-04.png" alt="my-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/my/page-05.png" alt="my-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/my/page-06.png" alt="my-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/my/page-07.png" alt="my-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/my/page-08.png" alt="my-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/my/page-09.png" alt="my-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/my/page-10.png" alt="my-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/my/page-11.png" alt="my-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/my/page-12.png" alt="my-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/my/page-13.png" alt="my-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/my/page-14.png" alt="my-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/my/page-15.png" alt="my-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 印地語 (hi) -->
+        <div class="lang-marquee marquee-hi">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/hi/page-01.png" alt="hi-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/hi/page-02.png" alt="hi-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/hi/page-03.png" alt="hi-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/hi/page-04.png" alt="hi-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/hi/page-05.png" alt="hi-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/hi/page-06.png" alt="hi-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/hi/page-07.png" alt="hi-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/hi/page-08.png" alt="hi-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/hi/page-09.png" alt="hi-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/hi/page-10.png" alt="hi-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/hi/page-11.png" alt="hi-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/hi/page-12.png" alt="hi-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/hi/page-13.png" alt="hi-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/hi/page-14.png" alt="hi-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/hi/page-15.png" alt="hi-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/hi/page-01.png" alt="hi-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/hi/page-02.png" alt="hi-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/hi/page-03.png" alt="hi-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/hi/page-04.png" alt="hi-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/hi/page-05.png" alt="hi-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/hi/page-06.png" alt="hi-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/hi/page-07.png" alt="hi-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/hi/page-08.png" alt="hi-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/hi/page-09.png" alt="hi-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/hi/page-10.png" alt="hi-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/hi/page-11.png" alt="hi-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/hi/page-12.png" alt="hi-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/hi/page-13.png" alt="hi-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/hi/page-14.png" alt="hi-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/hi/page-15.png" alt="hi-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 蒙古語 (mn) -->
+        <div class="lang-marquee marquee-mn">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/mn/page-01.png" alt="mn-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/mn/page-02.png" alt="mn-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/mn/page-03.png" alt="mn-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/mn/page-04.png" alt="mn-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/mn/page-05.png" alt="mn-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/mn/page-06.png" alt="mn-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/mn/page-07.png" alt="mn-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/mn/page-08.png" alt="mn-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/mn/page-09.png" alt="mn-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/mn/page-10.png" alt="mn-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/mn/page-11.png" alt="mn-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/mn/page-12.png" alt="mn-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/mn/page-13.png" alt="mn-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/mn/page-14.png" alt="mn-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/mn/page-15.png" alt="mn-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/mn/page-01.png" alt="mn-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/mn/page-02.png" alt="mn-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/mn/page-03.png" alt="mn-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/mn/page-04.png" alt="mn-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/mn/page-05.png" alt="mn-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/mn/page-06.png" alt="mn-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/mn/page-07.png" alt="mn-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/mn/page-08.png" alt="mn-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/mn/page-09.png" alt="mn-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/mn/page-10.png" alt="mn-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/mn/page-11.png" alt="mn-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/mn/page-12.png" alt="mn-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/mn/page-13.png" alt="mn-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/mn/page-14.png" alt="mn-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/mn/page-15.png" alt="mn-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 高棉語 (km) -->
+        <div class="lang-marquee marquee-km">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/km/page-01.png" alt="km-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/km/page-02.png" alt="km-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/km/page-03.png" alt="km-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/km/page-04.png" alt="km-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/km/page-05.png" alt="km-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/km/page-06.png" alt="km-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/km/page-07.png" alt="km-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/km/page-08.png" alt="km-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/km/page-09.png" alt="km-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/km/page-10.png" alt="km-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/km/page-11.png" alt="km-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/km/page-12.png" alt="km-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/km/page-13.png" alt="km-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/km/page-14.png" alt="km-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/km/page-15.png" alt="km-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/km/page-01.png" alt="km-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/km/page-02.png" alt="km-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/km/page-03.png" alt="km-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/km/page-04.png" alt="km-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/km/page-05.png" alt="km-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/km/page-06.png" alt="km-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/km/page-07.png" alt="km-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/km/page-08.png" alt="km-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/km/page-09.png" alt="km-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/km/page-10.png" alt="km-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/km/page-11.png" alt="km-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/km/page-12.png" alt="km-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/km/page-13.png" alt="km-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/km/page-14.png" alt="km-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/km/page-15.png" alt="km-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+        <!-- 寮語 (lo) -->
+        <div class="lang-marquee marquee-lo">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <img src="pic/indextop/lo/page-01.png" alt="lo-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/lo/page-02.png" alt="lo-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/lo/page-03.png" alt="lo-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/lo/page-04.png" alt="lo-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/lo/page-05.png" alt="lo-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/lo/page-06.png" alt="lo-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/lo/page-07.png" alt="lo-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/lo/page-08.png" alt="lo-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/lo/page-09.png" alt="lo-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/lo/page-10.png" alt="lo-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/lo/page-11.png" alt="lo-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/lo/page-12.png" alt="lo-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/lo/page-13.png" alt="lo-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/lo/page-14.png" alt="lo-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/lo/page-15.png" alt="lo-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+                <div class="marquee-group" aria-hidden="true">
+                    <img src="pic/indextop/lo/page-01.png" alt="lo-page-01" onerror="this.src='pic/indextop/en/page-01.png'">
+                    <img src="pic/indextop/lo/page-02.png" alt="lo-page-02" onerror="this.src='pic/indextop/en/page-02.png'">
+                    <img src="pic/indextop/lo/page-03.png" alt="lo-page-03" onerror="this.src='pic/indextop/en/page-03.png'">
+                    <img src="pic/indextop/lo/page-04.png" alt="lo-page-04" onerror="this.src='pic/indextop/en/page-04.png'">
+                    <img src="pic/indextop/lo/page-05.png" alt="lo-page-05" onerror="this.src='pic/indextop/en/page-05.png'">
+                    <img src="pic/indextop/lo/page-06.png" alt="lo-page-06" onerror="this.src='pic/indextop/en/page-06.png'">
+                    <img src="pic/indextop/lo/page-07.png" alt="lo-page-07" onerror="this.src='pic/indextop/en/page-07.png'">
+                    <img src="pic/indextop/lo/page-08.png" alt="lo-page-08" onerror="this.src='pic/indextop/en/page-08.png'">
+                    <img src="pic/indextop/lo/page-09.png" alt="lo-page-09" onerror="this.src='pic/indextop/en/page-09.png'">
+                    <img src="pic/indextop/lo/page-10.png" alt="lo-page-10" onerror="this.src='pic/indextop/en/page-10.png'">
+                    <img src="pic/indextop/lo/page-11.png" alt="lo-page-11" onerror="this.src='pic/indextop/en/page-11.png'">
+                    <img src="pic/indextop/lo/page-12.png" alt="lo-page-12" onerror="this.src='pic/indextop/en/page-12.png'">
+                    <img src="pic/indextop/lo/page-13.png" alt="lo-page-13" onerror="this.src='pic/indextop/en/page-13.png'">
+                    <img src="pic/indextop/lo/page-14.png" alt="lo-page-14" onerror="this.src='pic/indextop/en/page-14.png'">
+                    <img src="pic/indextop/lo/page-15.png" alt="lo-page-15" onerror="this.src='pic/indextop/en/page-15.png'">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </div>
     
 
@@ -1271,31 +1824,31 @@
             <div class="cert-title" id="title-cert">🏆 頂尖生醫・全球七大權威安全認證 🏆</div>
             <div class="cert-grid">
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5c5453e0f4ebb7433066976f/1554228796683-9K7IK3Y48I28F1B3E3E3/Made-In-USA-Logo.png" alt="Made in USA"></div>
+                    <div class="cert-img-box"><img src="pic/ck/1.png" alt="Made in USA"></div>
                     <span class="cert-name" id="cert-1">美國製造認證</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Halal_logo.svg/512px-Halal_logo.svg.png" alt="HALAL 認證"></div>
+                    <div class="cert-img-box"><img src="pic/ck/2.png" alt="HALAL 認證"></div>
                     <span class="cert-name" id="cert-2">清真潔淨認證</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5c088a53e74c22bd51bdf2a4/1569430155097-J5N8LIF2J8L8X6U6W4T2/Thirdparty-tested.png" alt="LAB TESTED"></div>
+                    <div class="cert-img-box"><img src="pic/ck/3.png" alt="LAB TESTED"></div>
                     <span class="cert-name" id="cert-3">歐盟實驗室認證</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Non-GMO_Project_Verified_logo.svg/512px-Non-GMO_Project_Verified_logo.svg.png" alt="NON GMO"></div>
+                    <div class="cert-img-box"><img src="pic/ck/4.png" alt="NON GMO"></div>
                     <span class="cert-name" id="cert-4">美國非轉基因<br>產品認證</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/U.S._Food_and_Drug_Administration_logo.svg/1200px-U.S._Food_and_Drug_Administration_logo.svg.png" alt="FDA 認證"></div>
+                    <div class="cert-img-box"><img src="pic/ck/5.png" alt="FDA 認證"></div>
                     <span class="cert-name" id="cert-5">美國 FDA 註冊</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/NSF_International_logo.svg/512px-NSF_International_logo.svg.png" alt="NSF 認證"></div>
+                    <div class="cert-img-box"><img src="pic/ck/6.png" alt="NSF 認證"></div>
                     <span class="cert-name" id="cert-6">美國全國<br>衛生基金會</span>
                 </div>
                 <div class="cert-item">
-                    <div class="cert-img-box"><img src="https://images.squarespace-cdn.com/content/v1/5b1f0b093132c69460a8b9bf/1531853549241-I8S3M2N4S8T8Y8X8O8W2/cGMP-certified-logo.png" alt="cGMP 認證"></div>
+                    <div class="cert-img-box"><img src="pic/ck/7.png" alt="cGMP 認證"></div>
                     <span class="cert-name" id="cert-7">cGMP 優良製造</span>
                 </div>
             </div>
@@ -1704,8 +2257,541 @@
                 liveBtn: "클릭하여 실시간 회의실 입장 ➡️",
                 fTitle: "글로벌 부호들과 테크 거물들이 미친 듯이 투자하는 곳", fDesc: "이것은 트렌드가 아니라 지금 일어나고 있는 세기의 변혁입니다. 지금 그 지름길이 당신 눈앞에 있습니다.",
                 heroTitle2: "장수 암호가 발견되었습니다! 150세까지 사는 것은 꿈이 아닙니다!"
+            },
+
+
+            // ms、th、vi、id、ru、my、hi、mn、km、lo
+            /* ==========================================
+            1. ms (Bahasa Melayu / 馬來語)
+            ========================================== */
+            "ms": {
+                seoTitle: "Pembalikan Penuaan & Ubah Hidup: Kitab Beli-Belah AKG & Pelan Dividend Global",
+                seoDesc: "Aktifkan pembalikan penuaan di peringkat sel dengan sains! Fahami rahsia kesihatan produk AKG popular dan kuasai sistem bonus rentas sempadan.",
+                n1: "Kitab Beli-Belah AKG", n2: "Sistem Bonus Global", n3: "Panduan Pantas Black Diamond", n4: "Produk Terkenal", n5: "Tutorial Daftar & Beli", n6: "Bilik Mesyuarat Langsung", nVideoNav: "Video Penting",
+                vPrefix: "Lebih daripada", vSuffix: "orang elit global telah mengubah hidup mereka melalui saluran ini",
+                heroTitle: "Lakukan Pembalikan Umur Biologi & Laluan Kekayaan untuk Mencapai Kehidupan Hebat!",
+                heroSubtitle: "Mengintegrasikan sains bioperubatan AKG Harvard dan bonus pembelian rentas sempadan untuk mereka yang ingin kelihatan muda, menjana pendapatan, dan membantu orang lain.",
+                btn1: "Dapatkan Kod Jemputan Eksklusif ➡️ Rebut Hak Agensi Global",
+                btn2: "Daftar & Kunci Posisi Sekarang ➡️ Kunci Dividen Global",
+                titleExplore: "Klik Modul Di Bawah untuk Meneroka Rahsia Membalikkan Kehidupan",
+                c1T: "⏳ Pembalikan Umur Biologi (Kelihatan Muda) ➔", c1D: "Sains membuktikan penuaan boleh diterbalikkan! Klik [Kitab Beli-Belah AKG] untuk memahami bagaimana kapsul premium membaiki mitokondria dari dalam sel.", c1M: "Baca Kitab Beli-Belah ➔",
+                c2T: "💰 Gandakan Kekayaan (Penjana Pendapatan) ➔", c2D: "Penggunaan adalah pelaburan! Klik [Analisis Sistem Bonus Global] untuk mempelajari pembahagian bonus rentas sempadan dan bina pendapatan pasif.", c2M: "Kaji Sistem Bonus ➔",
+                c3T: "🤝 Kasih Sayang Membantu Sesama (Penyebaran) ➔", c3D: "Bawa berita baik anti-penuaan kepada dunia. Klik [Panduan Pantas 1 Star ke 3 Star Black Diamond] untuk menggunakan strategi teras.", c3M: "Lihat Panduan Black Diamond ➔",
+                vMainTitle: "🔮 Rahsia Gergasi yang Mengubah Pandangan Dunia",
+                vMainSubtitle: "Harvard, Cambridge, Google, dan Bezos bekerjasama untuk membuka era kehidupan berpanjangan",
+                vT1: "Profesor Harvard mengejutkan dunia: Penuaan adalah penyakit yang boleh dirawat? Hidup hingga 120 tahun hanyalah permulaan!",
+                vT2: "Keajaiban 13 hari Universiti Cambridge: Adakah manusia berjaya menewaskan penuaan?",
+                vT3: "Pintu kehidupan abadi dibuka? Imbas otak dan muat naik serta-merta! Eon Systems mengumumkan kehidupan digital pertama dengan jiwa!",
+                vT4: "Rahsia Bezos melabur $3 bilion: Jangka hayat manusia akan melebihi 100 tahun, adakah anda bersedia?",
+                vT5: "Suntikan 2035 ini, adakah anda berani? 💉 Ramalan Kurzweil: Manusia bakal menghadapi keabadian atau kemusnahan!",
+                vT6: "Adakah anda tidak akan tua menjelang 2030? Peramal Google mendedahkan jadual masa yang mengejutkan!",
+                titleProd: "⚡ Produk Bioperubatan Terkemuka (5 Teras Utama)",
+                p1B: "Aureva Women", p1T: "Menyokong metabolisme tenaga, pembentukan sel darah merah, dan keseimbangan nutrisi wanita harian", p1D: "Higo Aureva Women™ diformulasikan khas untuk wanita moden dengan gabungan ekstrak tumbuhan, asid amino, dan vitamin.", p1Go: "Beli di Kedai Rasmi ➔",
+                p2B: "ReGeneX Men", p2T: "Menyokong kesihatan prostat, keseimbangan metabolisme, dan kesihatan lelaki secara keseluruhan", p2D: "Higo ReGeneX Men™ diformulasikan khas untuk lelaki moden dengan ekstrak tumbuhan, asid amino, dan mineral.", p2Go: "Beli di Kedai Rasmi ➔",
+                p3B: "GnCell", p3T: "Kaya dengan Beta-Glukan dan polisakarida untuk menyokong sistem imun dan kesihatan harian", p3D: "Higo GnCell™ adalah formula sokongan nutrisi komprehensif dengan fitonutrien dan ekstrak cendawan.", p3Go: "Beli di Kedai Rasmi ➔",
+                p4B: "Higo AKG Women", p4T: "Menyokong penghasilan tenaga sel, mengekalkan vitaliti harian dan kesihatan keseluruhan", p4D: "Higo AKG Women™ membantu menyokong metabolisme tenaga dan perlindungan antioksidan untuk wanita.", p4Go: "Beli di Kedai Rasmi ➔",
+                p5B: "Higo AKG Men", p5T: "Menyokong penghasilan tenaga sel, mengekalkan vitaliti harian dan fungsi badan", p5D: "Higo AKG Men™ menggabungkan nutrisi kunci untuk menyokong metabolisme tenaga dan perlindungan antioksidan lelaki.", p5Go: "Beli di Kedai Rasmi ➔",
+                titleBonus: "💰 E-Dagang Global & Sistem Bonus Pembahagian Rangkaian",
+                subtitleBonus: "Pelan dividen global yang adil, terbuka, dan telus. Semua orang boleh menjana pendapatan dengan berkongsi",
+                bonusImg: "StartPic/Star10_ms.png",
+                titleCert: "🏆 Bioperubatan Terkemuka · 7 Pensijilan Keselamatan Global 🏆",
+                cert1: "Buatan USA", cert2: "Sijil Halal", cert3: "Makmal EU", cert4: "Produk Bebas GMO<br>USA", cert5: "Pendaftaran FDA USA", cert6: "Yayasan Sanitasi<br>Kebangsaan USA", cert7: "Pengilangan Baik cGMP",
+                titleTeach: "📖 Panduan 3 Langkah Mudah",
+                subtitleTeach: "Ikuti panduan visual untuk membuka kunci kekayaan dan kesihatan rentas sempadan",
+                t1T: "Langkah 1. Memohon Akaun Percuma", t1D: "Klik pautan pendaftaran, isi maklumat asas untuk mendapatkan akaun eksklusif anda dan kunci posisi global",
+                t2T: "Langkah 2. Beli Produk untuk Mengaktifkan Akaun", t2D: "Log masuk dan beli produk secara terus untuk mengaktifkan akaun, dapatkan pautan rujukan global dan hak perniagaan",
+                t3T: "Langkah 3. Kongsi & Mula Menjana Kekayaan", t3D: "Mula berkongsi, aktifkan pendapatan pasif, dan cipta laluan kekayaan yang berterusan!",
+                lblTut1: "Tonton Tutorial Daftar", lblTut2: "Tonton Tutorial Beli", lblTut3: "Tonton Tutorial Promosi",
+                go1: "⚡ GO Ke Pendaftaran", go2: "⚡ GO Ke Kedai", go3: "⚡ GO Ke Promosi",
+                titleWit: "👥 Testimoni Ahli Global", titleEve: "📢 Berita Acara Rasmi Terkini",
+                w1Text: "「Selepas mengambil AKG selama 3 bulan, tenaga saya kembali seperti umur 30 tahun! Yang lebih mengagumkan, bonus pembahagian luar negara saya melebihi $3,000 bulan lepas!」",
+                liveStatus: "SIARAN LANGSUNG · Mesyuarat Peluang Perniagaan Global",
+                liveTitle: "Ingin tahu bagaimana untuk capai Black Diamond dengan pantas? Sertai bilik siaran langsung sekarang!",
+                liveDesc: "Kami menganjurkan seminar bioperubatan dan perniagaan dalam pelbagai bahasa setiap hari bersama mentor Black Diamond.",
+                liveBtn: "Klik untuk Masuk Bilik Mesyuarat Langsung ➡️",
+                fTitle: "Org Kaya & Gergasi Teknologi Global Sedang Menyusun Strategi Ini", fDesc: "Ini bukan sekadar trend, ini adalah revolusi abad ini yang sedang berlaku. Peluang ini kini di hadapan anda.",
+                heroTitle2: "Kod Kelanjutan Usia Telah Ditemui! Hidup Hingga 150 Tahun Bukan Lagi Mimpi!"
+            },
+
+            /* ==========================================
+            2. th (ไทย / 泰語)
+            ========================================== */
+            "th": {
+                seoTitle: "ย้อนวัยเปลี่ยนชีวิต: คัมภีร์ช้อปปิ้ง AKG ข้ามพรมแดน & แผนปันผลสร้างรายได้ทั่วโลก",
+                seoDesc: "เปิดใช้งานการย้อนวัยในระดับเซลล์ เปลี่ยนชีวิตด้วยวิทยาศาสตร์! เจาะลึกรหัสสุขภาพ AKG และเชี่ยวชาญระบบโบนัสข้ามพรมแดน",
+                n1: "คัมภีร์ช้อปปิ้ง AKG", n2: "ระบบโบนัสทั่วโลก", n3: "คู่มือพิชิตเพชรดำ", n4: "สินค้ายอดนิยม", n5: "วิธีลงทะเบียนและสั่งซื้อ", n6: "ห้องประชุมออนไลน์", nVideoNav: "วิดีโอไฮไลท์",
+                vPrefix: "ทั่วโลกมีผู้บริหารระดับสูงกว่า", vSuffix: "คน เปลี่ยนชีวิตผ่านเส้นทางนี้แล้ว",
+                heroTitle: "ย้อนอายุชีวภาพและวิถีความมั่งคั่ง สร้างชีวิตอันมั่งคั่งและชาญฉลาด!",
+                heroSubtitle: "การรวมกันของวิทยาศาสตร์ชีวการแพทย์ AKG จากฮาร์วาร์ด และโบนัสการช้อปปิ้งข้ามพรมแดน สำหรับผู้ที่ต้องการย้อนวัย สร้างรายได้ และช่วยเหลือผู้อื่น",
+                btn1: "รับรหัสเชิญชวนพิเศษทันที ➡️ สคว้าสิทธิ์ตัวแทนทั่วโลก",
+                btn2: "ลงทะเบียนจองตำแหน่งทันที ➡️ ล็อกเงินปันผลทั่วโลกก่อนใคร",
+                titleExplore: "คลิกโมดูลด้านล่างเพื่อสำรวจรหัสการย้อนวัยและเปลี่ยนชีวิต",
+                c1T: "⏳ ย้อนอายุชีวภาพ (คืนความเยาว์วัย) ➔", c1D: "นักวิทยาศาสตร์พิสูจน์แล้วว่าความชราสามารถย้อนกลับได้! คลิกเข้าสู่ [คัมภีร์ช้อปปิ้ง AKG] เพื่อดูวิธีฟื้นฟูไมโทคอนเดรียจากภายในเซลล์", c1M: "อ่านคัมภีร์ช้อปปิ้ง ➔",
+                c2T: "💰 พลิกขีดจำกัดความมั่งคั่ง (สร้างรายได้) ➔", c2D: "การบริโภคคือการลงทุน! คลิกเข้าสู่ [วิเคราะห์ระบบโบนัสทั่วโลก] เพื่อถอดรหัสปันผลเครือข่ายข้ามพรมแดน และสร้างรายได้แบบพาสซีฟ", c2M: "ถอดรหัสระบบโบนัส ➔",
+                c3T: "🤝 ความรักอันยิ่งใหญ่ช่วยเหลือผู้คน (การส่งต่อ) ➔", c3D: "นำข่าวดีเรื่องการย้อนวัยสู่โลก คลิกดู [คู่มือทางลัดจาก 1 ดาวสู่ 3 ดาวเพชรดำ] ใช้กลยุทธ์หลักเพื่อสร้างชีวิตที่เปี่ยมด้วยพรและความสุข", c3M: "ดูคู่มือเพชรดำ ➔",
+                vMainTitle: "🔮 รหัสลับยักษ์ใหญ่ที่เปลี่ยนมุมมองโลก",
+                vMainSubtitle: "ฮาร์วาร์ด เคมบริดจ์ และยักษ์ใหญ่เทคโนโลยีอย่าง Google และ Bezos กำลังร่วมมือกันเปิดฉากยุคแห่งชีวิตอมตะ",
+                vT1: "ศาสตราจารย์ฮาร์วาร์ดทำโลกตกตะลึง: ความชราเป็นโรคที่รักษาได้? การมีอายุถึง 120 ปีเป็นเพียงแค่จุดเริ่มต้น!",
+                vT2: "ปาฏิหาริย์ 13 วันของมหาวิทยาลัยเคมบริดจ์: มนุษย์เอาชนะความชราอย่างเป็นทางการ?",
+                vT3: "เส้นทางสู่อมตะเปิดแล้ว? สแกนสมองและอัปโหลดทันที! Eon Systems เปิดตัวสิ่งมีชีวิตดิจิทัลที่มีดวงวิญญาณตัวแรก!",
+                vT4: "ความลับเบื้องหลังเงิน 3 พันล้านดอลลาร์ของ Bezos: อายุขัยของมนุษย์กำลังจะทะลุ 100 ปี คุณพร้อมหรือยัง?",
+                vT5: "เข็มฉีดยาปี 2035 คุณกล้าฉีดไหม? 💉 คำทำนายของ Kurzweil: มนุษย์กำลังจะเผชิญกับความเป็นอมตะหรือการล่มสลาย!",
+                vT6: "ปี 2030 คุณจะไม่แก่ลงอีกต่อไป? นักทำนายของ Google เปิดเผยไทม์ไลน์สุดทึ่ง!",
+                titleProd: "⚡ สินค้าชีวการแพทย์ชั้นนำ (5 ผลิตภัณฑ์หลัก)",
+                p1B: "Aureva Women", p1T: "สนับสนุนการเผาผลาญพลังงาน การสร้างเม็ดเลือดแดง และความสมดุลทางโภชนาการประจำวันของผู้หญิง", p1D: "Higo Aureva Women™ สูตรเฉพาะสำหรับผู้หญิงยุคใหม่ รวมสารสกัดจากพืช กรดอะมิโน วิตามิน และสารต้านอนุมูลอิสระ", p1Go: "ไปที่ร้านค้าอย่างเป็นทางการ ➔",
+                p2B: "ReGeneX Men", p2T: "ช่วยสนับสนุนสุขภาพต่อมลูกหมาก สมดุลการเผาผลาญ และสุขภาพโดยรวมของผู้ชาย", p2D: "Higo ReGeneX Men™ สูตรเฉพาะสำหรับผู้ชายยุคใหม่ รวมสารสกัดจากพืช กรดอะมิโน วิตามิน และแร่ธาตุ", p2Go: "ไปที่ร้านค้าอย่างเป็นทางการ ➔",
+                p3B: "GnCell", p3T: "อุดมด้วยเบต้ากลูแคนและโพลีแซคคาไรด์ ช่วยสนับสนุนระบบภูมิคุ้มกันและสุขภาพดีในทุกๆ วัน", p3D: "Higo GnCell™ สูตรสนับสนุนโภชนาการครบถ้วน รวมสารอาหารจากพืช สารสกัดจากเห็ด และสารอาหารรองสำคัญ", p3Go: "ไปที่ร้านค้าอย่างเป็นทางการ ➔",
+                p4B: "Higo AKG Women", p4T: "ช่วยสนับสนุนการสร้างพลังงานในระดับเซลล์ รักษาความสดชื่นและสุขภาพโดยรวม", p4D: "Higo AKG Women™ ช่วยสนับสนุนการเผาผลาญพลังงานและการปกป้องจากอนุมูลอิสระสำหรับผู้หญิง", p4Go: "ไปที่ร้านค้าอย่างเป็นทางการ ➔",
+                p5B: "Higo AKG Men", p5T: "ช่วยสนับสนุนการสร้างพลังงานในระดับเซลล์ รักษากำลังวังชาและการทำงานของร่างกาย", p5D: "Higo AKG Men™ รวมสารอาหารสำคัญหลายชนิดเพื่อช่วยสนับสนุนการเผาผลาญพลังงานและการปกป้องจากอนุมูลอิสระ", p5Go: "ไปที่ร้านค้าอย่างเป็นทางการ ➔",
+                titleBonus: "💰 อีคอมเมิร์ซช้อปปิ้งข้ามพรมแดนทั่วโลก · ระบบโบนัสปันผลเครือข่ายสมบูรณ์แบบ",
+                subtitleBonus: "แผนเงินปันผลยั่งยืนระดับโลกที่ยุติธรรม เปิดเผย และโปร่งใส ทุกคนสามารถสร้างรายได้ผ่านการแชร์",
+                bonusImg: "StartPic/Star10_th.png",
+                titleCert: "🏆 ชีวการแพทย์ชั้นนำ · 7 การรับรองความปลอดภัยระดับโลก 🏆",
+                cert1: "ผลิตในสหรัฐอเมริกา", cert2: "การรับรองฮาลาล", cert3: "ห้องปฏิบัติการสหภาพยุโรป", cert4: "รับรองผลิตภัณฑ์<br>Non-GMO สหรัฐฯ", cert5: "ลงทะเบียน FDA สหรัฐฯ", cert6: "มูลนิธิอนามัยแห่งชาติ<br>สหรัฐอเมริกา (NSF)", cert7: "มาตรฐานการผลิต cGMP",
+                titleTeach: "📖 คู่มือ 3 ขั้นตอนฉบับเข้าใจง่าย",
+                subtitleTeach: "ปฏิบัติตามคำแนะนำภาพ เพื่อเปิดปลดล็อกความมั่งคั่งและสุขภาพข้ามพรมแดนอย่างง่ายดาย",
+                t1T: "ขั้นตอนที่ 1 ลงทะเบียนบัญชีฟรี", t1D: "คลิกลิงก์ลงทะเบียน กรอกข้อมูลพื้นฐานเพื่อขอรับบัญชีส่วนตัวและล็อกตำแหน่งในเครือข่ายทั่วโลกทันที",
+                t2T: "ขั้นตอนที่ 2 สั่งซื้อสินค้าเพื่อเปิดใช้งานบัญชี", t2D: "เข้าสู่ระบบและสั่งซื้อสินค้าข้ามพรมแดนเพื่อเปิดใช้งานบัญชี รับลิงก์แนะนำระดับโลกและสิทธิ์การดำเนินธุรกิจ",
+                t3T: "ขั้นตอนที่ 3 แบ่งปันโปรโมตและเริ่มเส้นทางสู่ความมั่งคั่ง", t3D: "เริ่มแชร์และโปรโมต เปิดรับรายได้แบบพาสซีฟ สร้างเส้นทางสู่ความมั่งคั่งอย่างไม่ขาดสาย!",
+                lblTut1: "ชมวิดีโอสอนลงทะเบียน", lblTut2: "ชมวิดีโอสอนสั่งซื้อ", lblTut3: "ชมวิดีโอสอนการโปรโมต",
+                go1: "⚡ GO ไปที่หน้าลงทะเบียน", go2: "⚡ GO ไปที่ร้านค้า", go3: "⚡ GO ไปที่การโปรโมต",
+                titleWit: "👥 เสียงตอบรับจริงจากสมาชิกทั่วโลก", titleEve: "📢 ข่าวสารและกิจกรรมล่าสุดอย่างเป็นทางการ",
+                w1Text: "「หลังจากทาน AKG เป็นเวลา 3 เดือน พลังงานของฉันกลับมาเหมือนอายุ 30 ปี! และที่น่าเหลือเชื่อคือ เดือนที่แล้วเงินปันผลจากต่างประเทศของฉันทะลุ 100,000 บาทจากการแชร์รหัสเชิญ!」",
+                liveStatus: "ถ่ายทอดสด · การประชุมอธิบายธุรกิจออนไลน์ทั่วโลก",
+                liveTitle: "อยากทราบวิธีเลื่อนระดับเป็นเพชรดำอย่างรวดเร็วใช่ไหม? เข้าสู่ห้องถ่ายทอดสดทันที!",
+                liveDesc: "เราจัดสัมมนาธุรกิจและชีวการแพทย์หลายภาษาออนไลน์ทุกวัน โดยมีโค้ชเพชรดำระดับท็อปพาคุณเติบโตออนไลน์",
+                liveBtn: "คลิกเพื่อเข้าสู่ห้องประชุมวิดีโอสด ➡️",
+                fTitle: "มหาเศรษฐีและยักษ์ใหญ่เทคโนโลยีทั่วโลกกำลังเร่งวางรากฐาน", fDesc: "นี่ไม่ใช่แค่เทรนด์ แต่มันคือการเปลี่ยนแปลงแห่งยุคสมัยที่กำลังเกิดขึ้น ลัดนี้อยู่ตรงหน้าคุณแล้ว",
+                heroTitle2: "พบรหัสผ่านสู่อายุยืนแล้ว! การมีอายุถึง 150 ปีไม่ใช่แค่ฝันอีกต่อไป!"
+            },
+
+            /* ==========================================
+            3. vi (Tiếng Việt / 越南語)
+            ========================================== */
+            "vi": {
+                seoTitle: "Đảo Ngược Lão Hóa & Thay Đổi Cuộc Đời: Kinh Thánh Mua Sắm AKG & Kế Hoạch Cổ Tức Toàn Cầu",
+                seoDesc: "Kích hoạt khả năng đảo ngược lão hóa ở cấp độ tế bào bằng khoa học! Tìm hiểu mật mã sức khỏe AKG và nắm bắt hệ thống thưởng xuyên biên giới.",
+                n1: "Kinh Thánh Mua Sắm AKG", n2: "Hệ Thống Thưởng Toàn Cầu", n3: "Bí Kíp Kim Cương Đen", n4: "Sản Phẩm Nổi Bật", n5: "Hướng Dẫn Đăng Ký & Mua Hàng", n6: "Phòng Họp Trực Tuyến", nVideoNav: "Video Nổi Bật",
+                vPrefix: "Đã có hơn", vSuffix: "tiểu anh tài toàn cầu thay đổi cuộc đời thông qua con đường này",
+                heroTitle: "Đảo Ngược Tuổi Sinh Học & Quỹ Đạo Giàu Có, Kiến Tạo Cuộc Đời Thịnh Vượng!",
+                heroSubtitle: "Tích hợp khoa học sinh học AKG hàng đầu từ Harvard và tiền thưởng mua sắm xuyên biên giới, kết nối những người khao khát trẻ hóa, làm giàu và giúp đỡ cộng đồng.",
+                btn1: "Nhận Mã Mời Riêng Ngay ➡️ Giành Quyền Đại Lý Toàn Cầu",
+                btn2: "Đăng Ký Giữ Chỗ Ngay ➡️ Khóa Ngay Tiền Cổ Tức Toàn Cầu",
+                titleExplore: "Nhấp Vào Các Modul Bên Dưới Để Khám Phá Mật Mã Đảo Ngược Cuộc Đời",
+                c1T: "⏳ Đảo Ngược Tuổi Sinh Học (Trẻ Hóa) ➔", c1D: "Khoa học đã chứng minh lão hóa có thể đảo ngược! Nhấp vào [Kinh Thánh Mua Sắm AKG] để hiểu cách các viên uống cao cấp sửa chữa ty thể từ bên trong tế bào.", c1M: "Đọc Kinh Thánh Mua Sắm ➔",
+                c2T: "💰 Bứt Phá Giới Hạn Giàu Có (Kiếm Tiền) ➔", c2D: "Tiêu dùng chính là đầu tư! Nhấp vào [Phân Tích Hệ Thống Thưởng Toàn Cầu] để khám phá chia sẻ cổ tức mạng lưới xuyên biên giới và tạo thu nhập thụ động.", c2M: "Khám Phá Hệ Thống Thưởng ➔",
+                c3T: "🤝 Lan Tỏa Tình Yêu & Cứu Giúp Mọi Người (Trực Tiếp) ➔", c3D: "Mang tin mừng chống lão hóa đến thế giới. Nhấp xem [Bí Kíp Đạt Kim Cương Đen Từ 1 Sao Đến 3 Sao] để áp dụng chiến thuật cốt lõi.", c3M: "Xem Bí Kíp Kim Cương Đen ➔",
+                vMainTitle: "🔮 Mật Mã Của Các Gã Khổng Lồ Thay Đổi Thế Giới",
+                vMainSubtitle: "Harvard, Cambridge cùng các gã khổng lồ công nghệ Google, Bezos đang bắt tay mở ra kỷ nguyên trường sinh",
+                vT1: "Giáo sư Harvard gây sốc toàn cầu: Lão hóa là một 'căn bệnh' có thể chữa khỏi? Sống đến 120 tuổi chỉ là mức cơ bản!",
+                vT2: "Kỳ tích 13 ngày của Đại học Cambridge: Con người chính thức đánh bại sự lão hóa?",
+                vT3: "Con đường trường sinh đã mở? Quét bộ não và tải lên ngay lập tức! Eon Systems công bố sự sống kỹ thuật số đầu tiên có linh hồn!",
+                vT4: "Bí mật đằng sau 3 tỷ USD của Bezos: Tuổi thọ con người sắp vượt mốc 100 tuổi, bạn đã sẵn sàng chưa?",
+                vT5: "Mũi tiêm năm 2035 này bạn có dám tiêm không? 💉 Dự ngôn của Kurzweil: Con người đón nhận sự trường sinh hay hủy diệt!",
+                vT6: "Năm 2030 bạn sẽ không còn bị già đi? Nhà dự báo của Google tiết lộ mốc thời gian đáng kinh ngạc!",
+                titleProd: "⚡ Sản Phẩm Sinh Học Hàng Đầu (5 Dòng Sản Phẩm Cốt Lõi)",
+                p1B: "Aureva Women", p1T: "Hỗ trợ chuyển hóa năng lượng, tạo hồng cầu và cân bằng dinh dưỡng hàng ngày cho phụ nữ", p1D: "Higo Aureva Women™ công thức dành riêng cho phụ nữ hiện đại, kết hợp chiết xuất thực vật, axit amin, vitamin và chất chống oxy hóa.", p1Go: "Đến Cửa Hàng Chính Thức ➔",
+                p2B: "ReGeneX Men", p2T: "Hỗ trợ sức khỏe tuyến tiền liệt, cân bằng chuyển hóa và sức khỏe toàn diện cho nam giới", p2D: "Higo ReGeneX Men™ công thức dành riêng cho nam giới hiện đại, kết hợp chiết xuất thực vật, axit amin, vitamin và khoáng chất.", p2Go: "Đến Cửa Hàng Chính Thức ➔",
+                p3B: "GnCell", p3T: "Giàu Beta-Glucan và Polysaccharide, hỗ trợ sức khỏe hệ miễn dịch và cân bằng sức khỏe hàng ngày", p3D: "Higo GnCell™ là công thức hỗ trợ dinh dưỡng toàn diện, kết hợp dưỡng chất thực vật và chiết xuất nấm.", p3Go: "Đến Cửa Hàng Chính Thức ➔",
+                p4B: "Higo AKG Women", p4T: "Hỗ trợ sản sinh năng lượng tế bào, duy trì sức sống hàng ngày và sức khỏe tổng thể", p4D: "Higo AKG Women™ giúp hỗ trợ chuyển hóa năng lượng và bảo vệ chống oxy hóa cho nữ giới.", p4Go: "Đến Cửa Hàng Chính Thức ➔",
+                p5B: "Higo AKG Men", p5T: "Hỗ trợ sản sinh năng lượng tế bào, duy trì sức sống hàng ngày và chức năng cơ thể", p5D: "Higo AKG Men™ kết hợp nhiều dưỡng chất then chốt giúp hỗ trợ chuyển hóa năng lượng và chống oxy hóa.", p5Go: "Đến Cửa Hàng Chính Thức ➔",
+                titleBonus: "💰 Thương Mại Điện Tử Xuyên Biên Giới · Hệ Thống Thưởng Phân Nhánh Hoàn Hảo",
+                subtitleBonus: "Kế hoạch cổ tức toàn cầu công bằng, công khai và minh bạch. Ai cũng có thể tạo thu nhập lớn thông qua chia sẻ",
+                bonusImg: "StartPic/Star10_vi.png",
+                titleCert: "🏆 Y Sinh Hàng Đầu · 7 Chứng Nhận An Toàn Uy Tín Toàn Cầu 🏆",
+                cert1: "Sản Xuất Tại Mỹ", cert2: "Chứng Nhận Halal", cert3: "Phòng Thí Nghiệm EU", cert4: "Chứng Nhận Không GMO<br>Mỹ", cert5: "Đăng Ký FDA Mỹ", cert6: "Quỹ Vệ Sinh National<br>USA (NSF)", cert7: "Tiêu Chuẩn cGMP",
+                titleTeach: "📖 Hướng Dẫn 3 Bước Đơn Giản",
+                subtitleTeach: "Theo hướng dẫn hình ảnh để dễ dàng mở ra cánh cửa giàu có và sức khỏe xuyên biên giới",
+                t1T: "Bước 1. Đăng Ký Tài Khoản Miễn Phí", t1D: "Nhấp vào liên kết đăng ký, điền thông tin cơ bản để nhận tài khoản riêng và giữ vị trí đầu trong mạng lưới toàn cầu",
+                t2T: "Bước 2. Mua Sản Phẩm Để Kích Hoạt Tài Khoản", t2D: "Đăng nhập và mua sản phẩm trực tiếp để kích hoạt tài khoản, nhận liên kết giới thiệu toàn cầu và quyền kinh doanh",
+                t3T: "Bước 3. Chia Sẻ Bắt Đầu Con Đường Giàu Có", t3D: "Bắt đầu chia sẻ quảng bá, kích hoạt thu nhập thụ động và tạo ra con đường làm giàu không ngừng!",
+                lblTut1: "Xem Hướng Dẫn Đăng Ký", lblTut2: "Xem Hướng Dẫn Mua Hàng", lblTut3: "Xem Hướng Dẫn Quảng Bá",
+                go1: "⚡ GO Đến Đăng Ký", go2: "⚡ GO Đến Cửa Hàng", go3: "⚡ GO Đến Quảng Bá",
+                titleWit: "👥 Nhân Chứng Thực Tế Từ Hội Viên Toàn Cầu", titleEve: "📢 Thông Tin Sự Kiện Chính Thức Mới Nhất",
+                w1Text: "「Sau khi dùng AKG 3 tháng, năng lượng của tôi đã trở lại như tuổi 30! Đáng kinh ngạc hơn, tháng trước cổ tức nước ngoài của tôi đã vượt quá 100 triệu nhờ chia sẻ mã mời!」",
+                liveStatus: "TRỰC TIẾP · Hội Nghị Chiêu Thương Trực Tuyến Toàn Cầu",
+                liveTitle: "Bạn muốn biết làm thế nào để đạt Kim Cương Đen nhanh chóng? Vào phòng phát trực tiếp ngay!",
+                liveDesc: "Chúng tôi tổ chức các buổi thảo luận y sinh và kinh doanh đa ngôn ngữ hàng ngày, hướng dẫn bởi các lãnh đạo Kim Cương Đen.",
+                liveBtn: "Nhấp Để Vào Phòng Họp Trực Tuyến ➡️",
+                fTitle: "Giới Giàu Có & Gergasi Công Nghệ Toàn Cầu Đang Tích Cực Đầu Tư", fDesc: "Đây không phải là xu hướng, đây là cuộc cách mạng thế kỷ đang diễn ra. Con đường tắt này đang ở ngay trước mắt bạn.",
+                heroTitle2: "Mật Mã Trường Thọ Đã Được Tìm Thấy! Sống Đến 150 Tuổi Không Còn Là Mơ Mộng!"
+            },
+
+            /* ==========================================
+            4. id (Bahasa Indonesia / 印尼語)
+            ========================================== */
+            "id": {
+                seoTitle: "Pembalikan Penuaan & Ubah Hidup: Kitab Belanja AKG & Rencana Dividen Global",
+                seoDesc: "Aktifkan pembalikan penuaan di tingkat sel dengan sains! Pahami kode kesehatan produk AKG populer dan kuasai sistem bonus lintas batas.",
+                n1: "Kitab Belanja AKG", n2: "Sistem Bonus Global", n3: "Panduan Cepat Black Diamond", n4: "Produk Unggulan", n5: "Tutorial Daftar & Beli", n6: "Ruang Rapat Langsung", nVideoNav: "Video Unggulan",
+                vPrefix: "Lebih dari", vSuffix: "orang elit global telah mengubah hidup mereka melalui jalur ini",
+                heroTitle: "Balikkan Usia Biologis & Jalur Kekayaan, Capai Kehidupan Luar Biasa!",
+                heroSubtitle: "Mengintegrasikan sains biomedis AKG Harvard dan bonus belanja lintas batas bagi mereka yang ingin awet muda, menghasilkan uang, dan membantu sesama.",
+                btn1: "Dapatkan Kode Undangan Eksklusif ➡️ Ambil Hak Agen Global",
+                btn2: "Daftar & Ambil Posisi Sekarang ➡️ Kunci Dividen Global",
+                titleExplore: "Klik Modul Di Bawah untuk Mengeksplorasi Rahasia Membalikkan Kehidupan",
+                c1T: "⏳ Pembalikan Usia Biologis (Awet Muda) ➔", c1D: "Sains membuktikan penuaan dapat dibalikkan! Klik [Kitab Belanja AKG] untuk memahami bagaimana kapsul premium memperbaiki mitokondria dari dalam sel.", c1M: "Baca Kitab Belanja ➔",
+                c2T: "💰 Lipat Gandakan Kekayaan (Penghasil Uang) ➔", c2D: "Konsumsi adalah investasi! Klik [Analisis Sistem Bonus Global] untuk mempelajari pembagian bonus lintas batas dan bangun pendapatan pasif.", c2M: "Pelajari Sistem Bonus ➔",
+                c3T: "🤝 Cinta Kasih Membantu Sesama (Penyebaran) ➔", c3D: "Bawa kabar baik anti-penuaan ke dunia. Klik [Panduan Cepat 1 Star ke 3 Star Black Diamond] untuk menggunakan strategi inti.", c3M: "Lihat Panduan Black Diamond ➔",
+                vMainTitle: "🔮 Rahasia Raksasa yang Mengubah Pandangan Dunia",
+                vMainSubtitle: "Harvard, Cambridge, Google, dan Bezos bekerja sama untuk membuka era kehidupan abadi",
+                vT1: "Profesor Harvard mengejutkan dunia: Penuaan adalah penyakit yang bisa disembuhkan? Hidup hingga 120 tahun hanya permulaan!",
+                vT2: "Keajaiban 13 hari Universitas Cambridge: Manusia resmi mengalahkan penuaan?",
+                vT3: "Jalan menuju keabadian terbuka? Pindai otak dan unggah seketika! Eon Systems mengumumkan kehidupan digital pertama dengan jiwa!",
+                vT4: "Rahasia investasi $3 miliar Bezos: Jangka hidup manusia akan melebihi 100 tahun, apakah Anda siap?",
+                vT5: "Suntikan tahun 2035 ini beranikah Anda? 💉 Prediksi Kurzweil: Manusia akan menghadapi keabadian atau kehancuran!",
+                vT6: "Tahun 2030 Anda tidak akan tua lagi? Ramalan Google mengungkap lini masa yang mengejutkan!",
+                titleProd: "⚡ Produk Biomedis Unggulan (5 Produk Utama)",
+                p1B: "Aureva Women", p1T: "Mendukung metabolisme energi, pembentukan sel darah merah, dan keseimbangan nutrisi harian wanita", p1D: "Higo Aureva Women™ diformulasikan khusus untuk wanita modern dengan kombinasi ekstrak tumbuhan, asam amino, dan vitamin.", p1Go: "Beli di Toko Resmi ➔",
+                p2B: "ReGeneX Men", p2T: "Mendukung kesehatan prostat, keseimbangan metabolisme, dan kesehatan pria secara keseluruhan", p2D: "Higo ReGeneX Men™ diformulasikan khusus untuk pria modern dengan ekstrak tumbuhan, asam amino, dan mineral.", p2Go: "Beli di Toko Resmi ➔",
+                p3B: "GnCell", p3T: "Kaya akan Beta-Glukan dan polisakarida untuk mendukung sistem kekebalan tubuh dan kesehatan harian", p3D: "Higo GnCell™ adalah formula dukungan nutrisi komprehensif dengan fitonutrisi dan ekstrak jamur.", p3Go: "Beli di Toko Resmi ➔",
+                p4B: "Higo AKG Women", p4T: "Mendukung produksi energi sel, menjaga vitalitas harian dan kesehatan secara keseluruhan", p4D: "Higo AKG Women™ membantu mendukung metabolisme energi dan perlindungan antioksidan untuk wanita.", p4Go: "Beli di Toko Resmi ➔",
+                p5B: "Higo AKG Men", p5T: "Mendukung produksi energi sel, menjaga vitalitas harian dan fungsi tubuh", p5D: "Higo AKG Men™ menggabungkan nutrisi kunci untuk mendukung metabolisme energi dan perlindungan antioksidan pria.", p5Go: "Beli di Toko Resmi ➔",
+                titleBonus: "💰 E-Commerce Lintas Batas Global · Sistem Bonus Pembagian Jaringan Sempurna",
+                subtitleBonus: "Rencana dividen global yang adil, terbuka, dan transparan. Semua orang bisa menghasilkan uang dengan berbagi",
+                bonusImg: "StartPic/Star10_id.png",
+                titleCert: "🏆 Biomedis Terkemuka · 7 Sertifikasi Keamanan Global 🏆",
+                cert1: "Buatan USA", cert2: "Sertifikat Halal", cert3: "Laboratorium EU", cert4: "Sertifikat Non-GMO<br>USA", cert5: "Registrasi FDA USA", cert6: "Yayasan Sanitasi<br>Nasional USA (NSF)", cert7: "Standar cGMP",
+                titleTeach: "📖 Panduan 3 Langkah Mudah",
+                subtitleTeach: "Ikuti panduan visual untuk membuka kunci kekayaan dan kesehatan lintas batas dengan mudah",
+                t1T: "Langkah 1. Daftar Akun Gratis", t1D: "Klik tautan pendaftaran, isi data dasar untuk mendapatkan akun eksklusif dan kunci posisi di jaringan global",
+                t2T: "Langkah 2. Beli Produk untuk Mengaktifkan Akun", t2D: "Masuk dan beli produk secara langsung untuk mengaktifkan akun, dapatkan tautan rujukan global dan hak bisnis",
+                t3T: "Langkah 3. Bagikan & Mulai Menuju Kekayaan", t3D: "Mulai berbagi, aktifkan pendapatan pasif, dan ciptakan jalur kekayaan yang terus mengalir!",
+                lblTut1: "Tonton Tutorial Daftar", lblTut2: "Tonton Tutorial Beli", lblTut3: "Tonton Tutorial Promosi",
+                go1: "⚡ GO Ke Pendaftaran", go2: "⚡ GO Ke Toko", go3: "⚡ GO Ke Promosi",
+                titleWit: "👥 Testimoni Anggota Global", titleEve: "📢 Berita Acara Resmi Terkini",
+                w1Text: "「Setelah mengonsumsi AKG selama 3 bulan, energi saya kembali seperti usia 30 tahun! Yang luar biasa, bonus dividen luar negeri saya melebihi Rp 50 juta bulan lalu!」",
+                liveStatus: "SIARAN LANGSUNG · Pertemuan Peluang Bisnis Global",
+                liveTitle: "Ingin tahu cara cepat mencapai Black Diamond? Masuk ke ruang siaran langsung sekarang!",
+                liveDesc: "Kami menyelenggarakan seminar bisnis dan biomedis dalam berbagai bahasa setiap hari bersama mentor Black Diamond.",
+                liveBtn: "Klik untuk Masuk Ruang Rapat Langsung ➡️",
+                fTitle: "Orang Kaya & Raksasa Teknologi Global Sedang Berinvestasi Besar-besaran", fDesc: "Ini bukan sekadar tren, ini adalah revolusi abad ini yang sedang terjadi. Jalan pintas ini ada di hadapan Anda.",
+                heroTitle2: "Kode Panjang Umur Telah Ditemukan! Hidup Hingga 150 Tahun Bukan Lagi Mimpi!"
+            },
+
+            /* ==========================================
+            5. ru (Русский / 俄語)
+            ========================================== */
+            "ru": {
+                seoTitle: "Омоложение и Изменение Жизни: Библия AKG и Глобальная Дивидендная Программа",
+                seoDesc: "Запустите омоложение на клеточном уровне с помощью науки! Раскройте секреты здоровья AKG и освойте трансграничную бонусную систему.",
+                n1: "Библия Покупок AKG", n2: "Глобальная Бонусная Система", n3: "Гид по Статусу Black Diamond", n4: "Популярные Товары", n5: "Обучение Регистрации и Покупкам", n6: "Онлайн Конференц-Зал", nVideoNav: "Главные Видео",
+                vPrefix: "Более", vSuffix: "мировых лидеров уже изменили свою жизнь благодаря этому пути",
+                heroTitle: "Поверните вспять биологический возраст и финансовую траекторию!",
+                heroSubtitle: "Объединяя передовые биомедицинские технологии AKG Гарварда и трансграничные бонусы для тех, кто стремится к молодости, богатству и помощи людям.",
+                btn1: "Получить Эксклюзивный Код ➡️ Стать Глобальным Агентом",
+                btn2: "Зарегистрироваться и Занять Место ➡️ Зафиксировать Глобальные Дивиденды",
+                titleExplore: "Нажмите на модули ниже, чтобы раскрыть секреты омоложения и успеха",
+                c1T: "⏳ Омоложение и Биологический Возраст ➔", c1D: "Старение обратимо! Перейдите в [Библию Покупок AKG], чтобы узнать, как премиальные капсулы восстанавливают митохондрии изнутри клеток.", c1M: "Читать Библию Покупок ➔",
+                c2T: "💰 Финансовый Прорыв и Доход ➔", c2D: "Покупки — это инвестиции! Ознакомьтесь с [Анализом Бонусной Системы], чтобы изучить трансграничные дивиденды и создать пассивный доход.", c2M: "Изучить Бонусную Систему ➔",
+                c3T: "🤝 Помощь Людям и Миссия ➔", c3D: "Несите весть об омоложении миру. Откройте [Гид по Быстрому Достижению Black Diamond], чтобы применить ключевые стратегии.", c3M: "Смотреть Гид Black Diamond ➔",
+                vMainTitle: "🔮 Секреты Гигантов, Меняющих Мир",
+                vMainSubtitle: "Гарвард, Кембридж, Google и Джефф Безос объединяются, чтобы открыть эру бессмертия",
+                vT1: "Профессор Гарварда шокировал мир: Старение — это излечимая «болезнь»? Жить до 120 лет — это только начало!",
+                vT2: "13-дневное чудо Кембриджа: Человечество официально победило старение?",
+                vT3: "Путь к бессмертию открыт? Сканирование мозга и загрузка! Eon Systems представляет цифровую жизнь с душой!",
+                vT4: "Секрет 3 миллиардов долларов Безоса: Продолжительность жизни превысит 100 лет, вы готовы?",
+                vT5: "Укол 2035 года: решитесь ли вы? 💉 Пророчество Курцвейла: Бессмертие или гибель!",
+                vT6: "В 2030 году вы перестанете стареть? Футуролог Google раскрыл потрясающие сроки!",
+                titleProd: "⚡ Передовые Биомедицинские Продукты (5 Ключевых Формул)",
+                p1B: "Aureva Women", p1T: "Поддержка энергетического обмена, кроветворения и ежедневного здоровья женщин", p1D: "Higo Aureva Women™ разработана для современных женщин, combining растительные экстракты, аминокислоты и витамины.", p1Go: "Перейти в Магазин ➔",
+                p2B: "ReGeneX Men", p2T: "Поддержка здоровья предстательной железы, обмена веществ и мужского здоровья", p2D: "Higo ReGeneX Men™ создана для мужчин с использованием растительных экстрактов, аминокислот и минералов.", p2Go: "Перейти в Магазин ➔",
+                p3B: "GnCell", p3T: "Богат бета-глюканами и полисахаридами для поддержки иммунной системы и здоровья", p3D: "Higo GnCell™ — комплексная формула с фитонутриентами и экстрактами грибов.", p3Go: "Перейти в Магазин ➔",
+                p4B: "Higo AKG Women", p4T: "Поддержка выработки клеточной энергии, жизненной силы и общего здоровья", p4D: "Higo AKG Women™ помогает поддерживать энергетический обмен и антиоксидантную защиту женщин.", p4Go: "Перейти в Магазин ➔",
+                p5B: "Higo AKG Men", p5T: "Поддержка выработки клеточной энергии, ежедневной активности и функций организма", p5D: "Higo AKG Men™ объединяет ключевые питательные вещества для энергии и антиоксидантной защиты.", p5Go: "Перейти в Магазин ➔",
+                titleBonus: "💰 Глобальная Электронная Коммерция · Сетевая Бонусная Система",
+                subtitleBonus: "Честная и прозрачная программа дивидендов. Каждый может зарабатывать, делясь информацией",
+                bonusImg: "StartPic/Star10_ru.png",
+                titleCert: "🏆 Передовая Биомедицина · 7 Мировых Сертификатов Безопасности 🏆",
+                cert1: "Сделано в США", cert2: "Сертификат Халяль", cert3: "Лаборатория ЕС", cert4: "Сертификат Без ГМО<br>США", cert5: "Регистрация FDA США", cert6: "Национальный Фонд<br>Санитарии США (NSF)", cert7: "Стандарт cGMP",
+                titleTeach: "📖 Простая Инструкция в 3 Шага",
+                subtitleTeach: "Следуйте визуальному руководству, чтобы открыть путь к здоровью и финансовой свободе",
+                t1T: "Шаг 1. Бесплатная Регистрация", t1D: "Перейдите по ссылке, заполните данные и закрепите за собой место в глобальной сети",
+                t2T: "Шаг 2. Активация Аккаунта Покупкой", t2D: "Совершите покупку для активации аккаунта, получения реферальной ссылки и бизнес-прав",
+                t3T: "Шаг 3. Делитесь и Зарабатывайте", t3D: "Начните делиться информацией, активируйте пассивный доход и стройте свой успешный бизнес!",
+                lblTut1: "Урок по Регистрации", lblTut2: "Урок по Покупкам", lblTut3: "Урок по Продвижению",
+                go1: "⚡ GO К Регистрации", go2: "⚡ GO В Магазин", go3: "⚡ GO К Продвижению",
+                titleWit: "👥 Отзывы Участников Со Всего Мира", titleEve: "📢 Официальные Новости и Мероприятия",
+                w1Text: "「После 3 месяцев приема AKG я чувствую себя на 30 лет! А благодаря партнерской программе мои дивиденды за прошлый месяц превысили 3000$!」",
+                liveStatus: "ПРЯМОЙ ЭФИР · Глобальная Онлайн Конференция",
+                liveTitle: "Хотите узнать, как быстро получить статус Black Diamond? Подключайтесь к эфиру!",
+                liveDesc: "Ежедневно мы проводим многоязычные онлайн-презентации и биомедицинские лекции от топовых лидеров.",
+                liveBtn: "Войти в Онлайн Конференц-Зал ➡️",
+                fTitle: "Мировые Миллиардеры и Техногиганты Инвестируют в Это", fDesc: "Это не просто тренд, это революция века. Ваш путь к успеху прямо перед вами.",
+                heroTitle2: "Секрет Долголетия Раскрыт! Жить До 150 Лет — Это Реальность!"
+            },
+
+            /* ==========================================
+            6. my (မြန်မာစာ / 緬甸語)
+            ========================================== */
+            "my": {
+                seoTitle: "အသက်အရွယ်ပြန်လည်ငယ်ရွယ်စေခြင်းနှင့် ဘဝအပြောင်းအလဲ: AKG စေျးဝယ်လမ်းညွှန်နှင့် ကမ္ဘာလုံးဆိုင်ရာ အမြတ်ဝေစုအစီအစဉ်",
+                seoDesc: "ဆဲလ်အဆင့် အသက်အရွယ်ပြန်လည်ငယ်ရွယ်စေမှုကို သိပ္ပံနည်းကျ စတင်လိုက်ပါ။ AKG ကျန်းမာရေး လျှို့ဝှက်ချက်များကို လေ့လာပြီး နယ်စပ်ဖြတ်ကျော် ဘောနပ်စ်စနစ်ကို ပိုင်ဆိုင်လိုက်ပါ။",
+                n1: "AKG ဈေးဝယ်လမ်းညွှန်", n2: "ကမ္ဘာလုံးဆိုင်ရာ ဘောနပ်စ်စနစ်", n3: "Black Diamond လမ်းညွှန်", n4: "လူကြိုက်များထုတ်ကုန်များ", n5: "စာရင်းသွင်း/ဝယ်ယူနည်း", n6: "တိုက်ရိုက်အစည်းအဝေးခန်း", nVideoNav: "ဗီဒီယိုများ",
+                vPrefix: "ကမ္ဘာအနှံ့တွင်လူပေါင်း", vSuffix: "ဦးကျော်သည် ဤလမ်းကြောင်းမှတစ်ဆင့် ဘဝကို ပြောင်းလဲခဲ့ပြီးပါပြီ",
+                heroTitle: "ဇီဝအသက်အရွယ်နှင့် ဓနဥစ္စာလမ်းကြောင်းကို ပြောင်းလဲပြီး အောင်မြင်သောဘဝကို တည်ဆောက်ပါ!",
+                heroSubtitle: "ဟာဗားဒ် ထိပ်တန်း ဇီဝဆေးဝါးသိပ္ပံ AKG ထုတ်ကုန်များနှင့် နယ်စပ်ဖြတ်ကျော် ဘောနပ်စ်များကို ပေါင်းစပ်ထားပါသည်။",
+                btn1: "သီးသန့်ဖိတ်ခေါ်ကုဒ် ရယူမည် ➡️ ကမ္ဘာလုံးဆိုင်ရာ ကိုယ်စားလှယ်ရယူမည်",
+                btn2: "ယခုပင် စာရင်းသွင်းမည် ➡️ ကမ္ဘာလုံးဆိုင်ရာ အမြတ်ဝေစု ရယူမည်",
+                titleExplore: "ဘဝပြောင်းလဲမှု လျှို့ဝှက်ချက်များကို လေ့လာရန် အောက်ပါအပိုင်းများကို နှိပ်ပါ",
+                c1T: "⏳ အသက်အရွယ်ပြန်လည်ငယ်ရွယ်စေခြင်း ➔", c1D: "အိုမင်းရင့်ရော်မှုကို ပြန်လည်ငယ်ရွယ်စေနိုင်ကြောင်း သိပ္ပံပညာရှင်များ သက်သေပြခဲ့ပြီးပါပြီ! [AKG ဈေးဝယ်လမ်းညွှန်] သို့ ဝင်ရောက်လေ့လာပါ။", c1M: "လမ်းညွှန်ဖတ်ရှုမည် ➔",
+                c2T: "💰 ဓနဥစ္စာ တိုးပွားစေခြင်း ➔", c2D: "သုံးစွဲခြင်းသည် ရင်းနှီးမြှုပ်နှံမှုဖြစ်သည်! [ကမ္ဘာလုံးဆိုင်ရာ ဘောနပ်စ်စနစ်] ကို လေ့လာပြီး အလှည့်ကျဝင်ငွေ ဖန်တီးပါ။", c2M: "ဘောနပ်စ်စနစ် လေ့လာမည် ➔",
+                c3T: "🤝 အခြားသူများကို ကူညီစောင့်ရှောက်ခြင်း ➔", c3D: "အသက်ရှည်ကျန်းမာရေး သတင်းကောင်းကို ကမ္ဘာသို့ မျှဝေပါ။ [Black Diamond လမ်းညွှန်] ကို ကြည့်ရှုပါ။", c3M: "Black Diamond လမ်းညွှန်ကြည့်မည် ➔",
+                vMainTitle: "🔮 ကမ္ဘာ့ထိပ်သီးများ၏ လျှို့ဝှက်ချက်",
+                vMainSubtitle: "ဟာဗားဒ်၊ ကိန်းဘရစ်ချ်နှင့် Google၊ Bezos တို့ ပူးပေါင်း၍ ထာဝရအသက်ရှင်မှု ခေတ်ကို ဖွင့်လှစ်နေသည်",
+                vT1: "ဟာဗားဒ်ပါမောက္ခ၏ ကြေညာချက်: အိုမင်းခြင်းသည် ကုသနိုင်သော ရောဂါတစ်ခုလား? အသက် ၁၂၀ အထိ နေထိုင်ခြင်းသည် စတင်မှုမျှသာ!",
+                vT2: "ကိန်းဘရစ်ချ်တက္ကသိုလ်၏ ၁၃ ရက်တာ အံ့ဖွယ်: လူသားများ အိုမင်းခြင်းကို အနိုင်ယူလိုက်ပြီလား?",
+                vT3: "ထာဝရအသက်ရှင်မှု လမ်းကြောင်း ပွင့်သွားပြီလား? ဦးနှောက်ကို စကန်ဖတ်၍ ဒေတာတင်ဆင်ခြင်း!",
+                vT4: "Bezos ၏ ဒေါ်လာ ၃ ဘီလီယံ ရင်းနှီးမြှုပ်နှံမှု လျှို့ဝှက်ချက်: အသက် ၁၀၀ အထိ နေထိုင်ရန် ပြင်ဆင်ပြီးပြီလား?",
+                vT5: "၂၀၃၅ ခုနှစ်၏ ထိုးဆေး: Kurzweil ၏ ဟောကိန်း!",
+                vT6: "၂၀၃၀ တွင် သင် အိုမင်းတော့မည် မဟုတ်ပါလား? Google ၏ ခန့်မှန်းချက်!",
+                titleProd: "⚡ ထိပ်တန်း ဇီဝဆေးဝါး ထုတ်ကုန်များ (၅ မျိုး)",
+                p1B: "Aureva Women", p1T: "အမျိုးသမီးများ၏ စွမ်းအင်နှင့် ကျန်းမာရေးညီညွတ်မှုကို အထောက်အကူပြုသည်", p1D: "Higo Aureva Women™ ခေတ်မီအမျိုးသမီးများအတွက် အထူးထုတ်လုပ်ထားပါသည်။", p1Go: "တရားဝင်စတိုးသို့ သွားမည် ➔",
+                p2B: "ReGeneX Men", p2T: "အမျိုးသားများ၏ ပရော့စတိတ်နှင့် ခန္ဓာကိုယ်ကျန်းမာရေးကို အထောက်အကူပြုသည်", p2D: "Higo ReGeneX Men™ ခေတ်မီအမျိုးသားများအတွက် အထူးထုတ်လုပ်ထားပါသည်။", p2Go: "တရားဝင်စတိုးသို့ သွားမည် ➔",
+                p3B: "GnCell", p3T: "ခုခံအားစနစ်နှင့် နေ့စဉ်ကျန်းမာရေးကို အထောက်အကူပြုသည်", p3D: "Higo GnCell™ အာဟာရပြည့်ဝသော ထုတ်ကုန်ဖြစ်ပါသည်။", p3Go: "တရားဝင်စတိုးသို့ သွားမည် ➔",
+                p4B: "Higo AKG Women", p4T: "ဆဲလ်စွမ်းအင် ထုတ်လုပ်မှုကို အထောက်အကူပြုသည်", p4D: "Higo AKG Women™ အမျိုးသမီးများ၏ စွမ်းအင်နှင့် ကျန်းမာရေးအတွက် ထုတ်လုပ်ထားပါသည်။", p4Go: "တရားဝင်စတိုးသို့ သွားမည် ➔",
+                p5B: "Higo AKG Men", p5T: "ဆဲလ်စွမ်းအင်နှင့် ခန္ဓာကိုယ်လုပ်ဆောင်ချက်များကို အထောက်အကူပြုသည်", p5D: "Higo AKG Men™ အမျိုးသားများ၏ စွမ်းအင်နှင့် ကျန်းမာရေးအတွက် ထုတ်လုပ်ထားပါသည်။", p5Go: "တရားဝင်စတိုးသို့ သွားမည် ➔",
+                titleBonus: "💰 ကမ္ဘာလုံးဆိုင်ရာ ကွန်ရက် ဘောနပ်စ်စနစ်",
+                subtitleBonus: "တရားမျှတပြီး ပွင့်လင်းမြင်သာသော အမြတ်ဝေစု အစီအစဉ်",
+                bonusImg: "StartPic/Star10_my.png",
+                titleCert: "🏆 ကမ္ဘာ့အဆင့်မီ ဘေးကင်းလုံခြုံရေး ထောက်ခံချက် ၇ မျိုး 🏆",
+                cert1: "အမေရိကန်ထုတ်", cert2: "ဟလာလ်ထောက်ခံချက်", cert3: "ဥရောပဓာတ်ခွဲခန်း", cert4: "Non-GMO ထောက်ခံချက်", cert5: "အမေရိကန် FDA စာရင်းသွင်း", cert6: "NSF ထောက်ခံချက်", cert7: "cGMP စံချိန်မီ",
+                titleTeach: "📖 အဆင့် ၃ ဆင့် လမ်းညွှန်",
+                subtitleTeach: "ဓနဥစ္စာနှင့် ကျန်းမာရေးလမ်းကြောင်းကို လွယ်ကူစွာ စတင်ပါ",
+                t1T: "အဆင့် ၁ အခမဲ့ အကောင့်ဖွင့်ပါ", t1D: "စာရင်းသွင်းရန် လင့်ခ်ကို နှိပ်၍ အကောင့်ဖွင့်ပါ",
+                t2T: "အဆင့် ၂ ပစ္စည်းဝယ်ယူ၍ အကောင့်စတင်ပါ", t2D: "ပစ္စည်းဝယ်ယူပြီး လုပ်ငန်းလုပ်ပိုင်ခွင့် ရယူပါ",
+                t3T: "အဆင့် ၃ မျှဝေ၍ ဝင်ငွေရှာပါ", t3D: "စတင်မျှဝေပြီး အလှည့်ကျဝင်ငွေများ ရယူပါ!",
+                lblTut1: "စာရင်းသွင်းနည်း ကြည့်မည်", lblTut2: "ဝယ်ယူနည်း ကြည့်မည်", lblTut3: "မျှဝေနည်း ကြည့်မည်",
+                go1: "⚡ GO စာရင်းသွင်းရန်", go2: "⚡ GO စတိုးသို့", go3: "⚡ GO မျှဝေရန်",
+                titleWit: "👥 အဖွဲ့ဝင်များ၏ အတွေ့အကြုံများ", titleEve: "📢 နောက်ဆုံးရ သတင်းအချက်အလက်များ",
+                w1Text: "「AKG ကို ၃ လသောက်သုံးပြီးနောက် အသက် ၃၀ အရွယ်လို အင်အားပြည့်ဝလာခဲ့ပါတယ်! ပြီးခဲ့တဲ့လက အမြတ်ဝေစု ဒေါ်လာ ၃၀၀၀ ကျော် ရရှိခဲ့ပါတယ်!」",
+                liveStatus: "တိုက်ရိုက်လွှင့် · ကမ္ဘာလုံးဆိုင်ရာ အွန်လိုင်းအစည်းအဝေး",
+                liveTitle: "Black Diamond အဆင့်သို့ မြန်ဆန်စွာ မည်သို့တက်လှမ်းမလဲ? တိုက်ရိုက်ကြည့်ရှုပါ!",
+                liveDesc: "ကျွန်ုပ်တို့သည် နေ့စဉ် ဘာသာစကားမျိုးစုံဖြင့် အွန်လိုင်းဆွေးနွေးပွဲများ ကျင်းပလျက်ရှိပါသည်။",
+                liveBtn: "တိုက်ရိုက်အစည်းအဝေးသို့ ဝင်ရောက်မည် ➡️",
+                fTitle: "ကမ္ဘာ့သန်းကြွယ်သူဌေးများ ရင်းနှီးမြှုပ်နှံနေကြပြီ", fDesc: "ဒါဟာ ခေတ်ရေစီးကြောင်းတစ်ခု မဟုတ်ပါဘူး၊ အမှန်တကယ် ဖြစ်ပျက်နေတာပါ။",
+                heroTitle2: "အသက်ရှည်ကျန်းမာရေး လျှို့ဝှက်ချက်ကို ရှာဖွေတွေ့ရှိပြီ! အသက် ၁၅၀ အထိ နေထိုင်ခြင်းသည် အိမ်မက် မဟုတ်တော့ပါ!"
+            },
+
+            /* ==========================================
+            7. hi (हिन्दी / 印地語)
+            ========================================== */
+            "hi": {
+                seoTitle: "एंटी-एजिंग और जीवन परिवर्तन: AKG शॉपिंग गाइड और वैश्विक लाभांश योजना",
+                seoDesc: "विज्ञान के साथ सेलुलर स्तर पर एंटी-एजिंग को सक्रिय करें! AKG स्वास्थ्य रहस्यों को समझें और सीमा पार बोनस प्रणाली में महारत हासिल करें।",
+                n1: "AKG शॉपिंग गाइड", n2: "ग्लोबल बोनस सिस्टम", n3: "ब्लैक डायमंड गाइड", n4: "लोकप्रिय उत्पाद", n5: "पंजीकरण और खरीद ट्यूटोरियल", n6: "लाइव मीटिंग रूम", nVideoNav: "प्रमुख वीडियो",
+                vPrefix: "दुनिया भर में", vSuffix: "से अधिक दिग्गजों ने इस रास्ते से अपना जीवन बदला है",
+                heroTitle: "जैविक आयु और धन के मार्ग को बदलें, एक महान जीवन प्राप्त करें!",
+                heroSubtitle: "हार्वर्ड के शीर्ष बायोमेडिकल AKG उत्पादों और वैश्विक खरीदारी बोनस को मिलाकर जीवन बदलने का अवसर।",
+                btn1: "विशेष आमंत्रण कोड प्राप्त करें ➡️ वैश्विक एजेंसी अधिकार लें",
+                btn2: "अभी पंजीकरण करें ➡️ वैश्विक लाभांश सुरक्षित करें",
+                titleExplore: "जीवन बदलने के रहस्यों को तलाशने के लिए नीचे दिए गए मॉड्यूल पर क्लिक करें",
+                c1T: "⏳ जैविक आयु को उलटें (युवा दिखें) ➔", c1D: "वैज्ञानिकों ने साबित किया है कि उम्र बढ़ना उल्टा हो सकता है! [AKG शॉपिंग गाइड] में विस्तार से पढ़ें।", c1M: "शॉपिंग गाइड पढ़ें ➔",
+                c2T: "💰 धन की सीमा को बढ़ाएं (कमाई) ➔", c2D: "खपत ही निवेश है! [ग्लोबल बोनस सिस्टम विश्लेषण] पर क्लिक करें और निष्क्रिय आय बनाएं।", c2M: "बोनस सिस्टम समझें ➔",
+                c3T: "🤝 मानवता की सेवा (प्रचार) ➔", c3D: "दुनिया तक एंटी-एजिंग की अच्छी खबर पहुंचाएं। [1-स्टार से 3-स्टार ब्लैक डायमंड गाइड] देखें।", c3M: "ब्लैक डायमंड गाइड देखें ➔",
+                vMainTitle: "🔮 दुनिया बदलने वाले दिग्गजों का रहस्य",
+                vMainSubtitle: "हार्वर्ड, कैम्ब्रिज, गूगल और बेजोस अमरता के युग की शुरुआत कर रहे हैं",
+                vT1: "हार्वर्ड प्रोफेसर का दावा: उम्र बढ़ना एक इलाज योग्य 'बीमारी' है? 120 साल तक जीना सिर्फ शुरुआत है!",
+                vT2: "कैम्ब्रिज विश्वविद्यालय का 13-दिवसीय चमत्कार: क्या इंसानों ने उम्र बढ़ने पर विजय पा ली है?",
+                vT3: "अमरता का रास्ता साफ? दिमाग को स्कैन करके अपलोड करें! Eon Systems की डिजिटल लाइफ!",
+                vT4: "बेजोस के 3 अरब डॉलर का रहस्य: इंसान की उम्र 100 साल से अधिक होने वाली है!",
+                vT5: "2035 का यह इंजेक्शन: कुर्ज़वील की भविष्यवाणी!",
+                vT6: "2030 में आप बूढ़े नहीं होंगे? गूगल भविष्यवक्ता का बड़ा खुलासा!",
+                titleProd: "⚡ शीर्ष बायोमेडिकल उत्पाद (5 प्रमुख उत्पाद)",
+                p1B: "Aureva Women", p1T: "महिलाओं के दैनिक पोषण और ऊर्जा चयापचय का समर्थन करता है", p1D: "Higo Aureva Women™ आधुनिक महिलाओं के लिए विशेष रूप से तैयार किया गया है।", p1Go: "आधिकारिक स्टोर पर जाएं ➔",
+                p2B: "ReGeneX Men", p2T: "पुरुषों के प्रोस्टेट स्वास्थ्य और चयापचय का समर्थन करता है", p2D: "Higo ReGeneX Men™ आधुनिक पुरुषों के लिए एक विशेष फॉर्मूला है।", p2Go: "आधिकारिक स्टोर पर जाएं ➔",
+                p3B: "GnCell", p3T: "इम्यून सिस्टम और दैनिक स्वास्थ्य का समर्थन करता है", p3D: "Higo GnCell™ एक संपूर्ण पोषण सहायता फॉर्मूला है।", p3Go: "आधिकारिक स्टोर पर जाएं ➔",
+                p4B: "Higo AKG Women", p4T: "सेलुलर ऊर्जा उत्पादन और जीवन शक्ति का समर्थन करता है", p4D: "Higo AKG Women™ महिलाओं की ऊर्जा और एंटी-ऑक्सीडेंट सुरक्षा के लिए है।", p4Go: "आधिकारिक स्टोर पर जाएं ➔",
+                p5B: "Higo AKG Men", p5T: "सेलुलर ऊर्जा उत्पादन और शारीरिक कार्यों का समर्थन करता है", p5D: "Higo AKG Men™ पुरुषों के चयापचय और ऊर्जा के लिए आवश्यक पोषक तत्व प्रदान करता है।", p5Go: "आधिकारिक स्टोर पर जाएं ➔",
+                titleBonus: "💰 वैश्विक नेटवर्क बोनस प्रणाली",
+                subtitleBonus: "निष्पक्ष, पारदर्शी और टिकाऊ वैश्विक लाभांश योजना",
+                bonusImg: "StartPic/Star10_hi.png",
+                titleCert: "🏆 7 वैश्विक सुरक्षा प्रमाणन 🏆",
+                cert1: "मेड इन USA", cert2: "हलाल प्रमाणित", cert3: "यूरोपीय संघ लैब", cert4: "नॉन-जीएमओ प्रमाणित", cert5: "यूएस FDA पंजीकृत", cert6: "NSF प्रमाणित", cert7: "cGMP मानक",
+                titleTeach: "📖 आसान 3-चरण मार्गदर्शिका",
+                subtitleTeach: "स्वास्थ्य और धन के द्वार खोलने के लिए सरल चरणों का पालन करें",
+                t1T: "चरण 1. मुफ्त खाता बनाएं", t1D: "पंजीकरण लिंक पर क्लिक करें और अपनी स्थिति सुरक्षित करें",
+                t2T: "चरण 2. उत्पाद खरीदें और खाता सक्रिय करें", t2D: "उत्पाद खरीदें और व्यापार अधिकार प्राप्त करें",
+                t3T: "चरण 3. साझा करें और कमाएं", t3D: "साझा करना शुरू करें और निष्क्रिय आय अर्जित करें!",
+                lblTut1: "पंजीकरण ट्यूटोरियल", lblTut2: "खरीद ट्यूटोरियल", lblTut3: "प्रचार ट्यूटोरियल",
+                go1: "⚡ GO पंजीकरण करें", go2: "⚡ GO स्टोर पर जाएं", go3: "⚡ GO प्रचार करें",
+                titleWit: "👥 वैश्विक सदस्यों की समीक्षाएं", titleEve: "📢 नवीनतम आधिकारिक समाचार",
+                w1Text: "「3 महीने तक AKG लेने के बाद, मेरी ऊर्जा 30 साल की उम्र जैसी महसूस होती है! पिछले महीने लाभांश $3,000 से अधिक था!」",
+                liveStatus: "लाइव · वैश्विक ऑनलाइन व्यवसाय बैठक",
+                liveTitle: "ब्लैक डायमंड रैंक तक तेजी से कैसे पहुंचे? लाइव देखें!",
+                liveDesc: "हम रोजाना कई भाषाओं में ऑनलाइन सेमिनार आयोजित करते हैं।",
+                liveBtn: "लाइव मीटिंग में शामिल हों ➡️",
+                fTitle: "दुनिया के अरबपति और टेक दिग्गज इसमें निवेश कर रहे हैं", fDesc: "यह केवल एक प्रवृत्ति नहीं है, यह एक क्रांति है।",
+                heroTitle2: "दीर्घायु का रहस्य मिल गया है! 150 वर्ष तक जीना अब सपना नहीं है!"
+            },
+
+            /* ==========================================
+            8. mn (Mongolian / 蒙古語)
+            ========================================== */
+            "mn": {
+                seoTitle: "Насыг ухрааж амьдралыг өөрчлөх нь: AKG Худалдан авалтын хөтөч ба Глобал ногдол ашгийн төлөвлөгөө",
+                seoDesc: "Эсийн түвшинд насыг ухраах шинжлэх ухааныг идэвхжүүл! AKG эрүүл мэндийн нууцыг тайлж, хил дамнасан бонусын системийг эзэмш.",
+                n1: "AKG Худалдан авалтын хөтөч", n2: "Глобал бонусын систем", n3: "Black Diamond заавар", n4: "Онцлох бүтээгдэхүүн", n5: "Бүртгүүлэх ба заавар", n6: "Шууд уулзалтын өрөө", nVideoNav: "Онцлох видео",
+                vPrefix: "Дэлхий даяар", vSuffix: "гаруй манлайлагчид энэхүү замаар амьдралаа өөрчилсөн",
+                heroTitle: "Биологийн нас ба баялгийн замыг өөрчилж, гайхалтай амьдралыг бүтээ!",
+                heroSubtitle: "Харвардын биотехнологийн AKG бүтээгдэхүүн ба хил дамнасан бонусын системийг нэгтгэсэн боломж.",
+                btn1: "Урилгын код авах ➡️ Дэлхийн дилерийн эрх авах",
+                btn2: "Одоо бүртгүүлэх ➡️ Глобал ногдол ашгийг баталгаажуулах",
+                titleExplore: "Амьдралыг өөрчлөх нууцыг мэдэхийн тулд доорх модулиуд дээр дарна уу",
+                c1T: "⏳ Биологийн насыг ухраах ➔", c1D: "Хөгшрөлтийг ухрааж болохыг эрдэмтэд нотолсон! [AKG Худалдан авалтын хөтөч]-өөс дэлгэрэнгүйг уншина уу.", c1M: "Хөтөч унших ➔",
+                c2T: "💰 Баялгийг нэмэгдүүлэх ➔", c2D: "Хэрэглээ бол хөрөнгө оруулалт! [Глобал бонусын систем]-ийг судлаж, идэвхгүй орлого бүрдүүлнэ үү.", c2M: "Бонусын систем судлах ➔",
+                c3T: "🤝 Бусдад туслах мисс ➔", c3D: "Залуужих мэдээг дэлхийд түгээе. [Black Diamond заавар]-ыг үзнэ үү.", c3M: "Black Diamond заавар үзэх ➔",
+                vMainTitle: "🔮 Дэлхийг өөрчилж буй гигантуудын нууц",
+                vMainSubtitle: "Харвард, Кембриж, Google, Безос нар мөнхийн залуу насны эрин үеийг нээж байна",
+                vT1: "Харвардын профессор: Хөгшрөлт бол эмчлэгдэх боломжтой «өвчин» үү? 120 наслах нь зөвхөн эхлэл!",
+                vT2: "Кембрижийн их сургуулийн 13 өдрийн гайхамшиг: Хүн төрөлхтөн хөгшрөлтийг ялав уу?",
+                vT3: "Мөнхийн амьдралын зам нээгдэв үү? Тархийг уншуулж мэдээлэл оруулах технологи!",
+                vT4: "Безосын 3 тэрбум долларын нууц: Хүний нас 100 гарахад та бэлэн үү?",
+                vT5: "2035 оны тарилга: Курцвейлийн зөгнөл!",
+                vT6: "2030 онд та хөгшрөхөө болино гэж үү? Google-ийн судалгаа!",
+                titleProd: "⚡ Биотехнологийн шилдэг бүтээгдэхүүнүүд (5 гол бүтээгдэхүүн)",
+                p1B: "Aureva Women", p1T: "Эмэгтэйчүүдийн бодис солилцоо, эрүүл мэндийг дэмжинэ", p1D: "Higo Aureva Women™ нь орчин үеийн эмэгтэйчүүдэд зориулагдсан.", p1Go: "Албан ёсны дэлгүүр ➔",
+                p2B: "ReGeneX Men", p2T: "Эрэгтэйчүүдийн түрүү булчирхай ба эрүүл мэндийг дэмжинэ", p2D: "Higo ReGeneX Men™ нь эрэгтэйчүүдэд зориулсан тусгай томьёо юм.", p2Go: "Албан ёсны дэлгүүр ➔",
+                p3B: "GnCell", p3T: "Дархлааны систем ба өдөр тутмын эрүүл мэндийг дэмжинэ", p3D: "Higo GnCell™ нь иж бүрэн тэжээлийн дэмжлэг юм.", p3Go: "Албан ёсны дэлгүүр ➔",
+                p4B: "Higo AKG Women", p4T: "Эсийн энергийг дэмжиж, залуу насыг хадгална", p4D: "Higo AKG Women™ нь эмэгтэйчүүдийн эрүүл мэндэд зориулагдсан.", p4Go: "Албан ёсны дэлгүүр ➔",
+                p5B: "Higo AKG Men", p5T: "Эсийн энерги ба биеийн үйл ажиллагааг дэмжинэ", p5D: "Higo AKG Men™ нь эрэгтэйчүүдийн бодис солилцоог дэмжинэ.", p5Go: "Албан ёсны дэлгүүр ➔",
+                titleBonus: "💰 Глобал сүлжээний бонусын систем",
+                subtitleBonus: "Шударга, нээлттэй, тогтвортой ногдол ашгийн төлөвлөгөө",
+                bonusImg: "StartPic/Star10_mn.png",
+                titleCert: "🏆 Дэлхийн аюулгүй байдлын 7 батламж 🏆",
+                cert1: "АНУ-д үйлдвэрлэв", cert2: "Халал сертификат", cert3: "Европын Холбооны лаб", cert4: "Non-GMO батламж", cert5: "АНУ-ын FDA бүртгэл", cert6: "NSF сертификат", cert7: "cGMP стандарт",
+                titleTeach: "📖 Хялбар 3 алхамт заавар",
+                subtitleTeach: "Эрүүл мэнд ба баялгийн үүдийг нээх хялбар алхмууд",
+                t1T: "Алхам 1. Үнэгүй бүртгүүлэх", t1D: "Бүртгүүлэх холбоос дээр дарж байршлаа баталгаажуулна уу",
+                t2T: "Алхам 2. Худалдан авалт хийж идэвхжүүлэх", t2D: "Бүтээгдэхүүн авч бизнэс эрхлэх эрхээ нээнэ үү",
+                t3T: "Алхам 3. Хуваалцаж орлого олох", t3D: "Хуваалцаж эхлэн идэвхгүй орлого олоорой!",
+                lblTut1: "Бүртгүүлэх заавар", lblTut2: "Худалдан авах заавар", lblTut3: "Түгээх заавар",
+                go1: "⚡ GO Бүртгүүлэх", go2: "⚡ GO Дэлгүүр хэсэх", go3: "⚡ GO Түгээх",
+                titleWit: "👥 Гишүүдийн сэтгэгдэл", titleEve: "📢 Сүүлийн үеийн мэдээлэл",
+                w1Text: "「AKG-г 3 сар хэрэглэсний дараа эрч хүч маань 30 настай шиг болсон! Өнгөрсөн сарын ногдол ашиг 3000 ам.доллар давсан!」",
+                liveStatus: "ШУУД · Глобал онлайн уулзалт",
+                liveTitle: "Black Diamond цолонд хэрхэн хурдан хүрэх вэ? Шууд үзэх!",
+                liveDesc: "Бид өдөр бүр олон хэлээр онлайн семинар зохион байгуулдаг.",
+                liveBtn: "Шууд уулзалтад оролцох ➡️",
+                fTitle: "Дэлхийн тэрбумтан ба технологийн гигантууд хөрөнгө оруулж байна", fDesc: "Энэ бол зүгээр нэг тренд биш, энэ бол хувьсгал юм.",
+                heroTitle2: "Урт наслах нууц олдлоо! 150 хүртэл наслах нь мөрөөдөл биш!"
+            },
+
+            /* ==========================================
+            9. km (ភាសាខ្មែរ / 高棉語)
+            ========================================== */
+            "km": {
+                seoTitle: "ការបង្វែរវ័យ & ប្តូរជីវិត: សៀវភៅទិញទំនិញ AKG & ផែនការបែងចែកប្រាក់ចំណេញសកល",
+                seoDesc: "បើកដំណើរការការបង្វែរវ័យនៅកម្រិតកោសិកាដោយវិទ្យាសាស្ត្រ! យល់ដឹងពីកូដសុខភាព AKG និងគ្រប់គ្រងប្រព័ន្ធប្រាក់រង្វាន់ឆ្លងដែន।",
+                n1: "សៀវភៅទិញទំនិញ AKG", n2: "ប្រព័ន្ធប្រាក់រង្វាន់សកល", n3: "មគ្គុទ្ទេសក៍ Black Diamond", n4: "ផលិតផលល្បីៗ", n5: "របៀបចុះឈ្មោះ និងទិញ", n6: "បន្ទប់ប្រជុំផ្ទាល់", nVideoNav: "វីដេអូសំខាន់ៗ",
+                vPrefix: "មនុស្សឆ្នើមជាង", vSuffix: "នាក់នៅជុំវិញពិភពលោកបានផ្លាស់ប្តូរជីវិតតាមរយៈផ្លូវនេះ",
+                heroTitle: "បង្វែរអាយុជីវសាស្ត្រ និងគន្លងទ្រព្យសម្បត្តិ ដើម្បីបង្កើតជីវិតដ៏អស្ចារ្យ!",
+                heroSubtitle: "ការរួមបញ្ចូលគ្នានៃវិទ្យាសាស្ត្រជីវវេជ្ជសាស្ត្រ AKG របស់ Harvard និងប្រាក់រង្វាន់ទិញទំនិញឆ្លងដែន।",
+                btn1: "ទទួលយកកូដអញ្ជើញពិសេស ➡️ ចាប់យកសិទ្ធិភ្នាក់ងារសកល",
+                btn2: "ចុះឈ្មោះយកតំណែងភ្លាមៗ ➡️ ចាប់យកប្រាក់ចំណេញសកល",
+                titleExplore: "ចុចលើម៉ូឌុលខាងក្រោមដើម្បីស្វែងយល់ពីកូដបង្វែរជីវិត",
+                c1T: "⏳ បង្វែរអាយុជីវសាស្ត្រ (ក្មេងជាងវ័យ) ➔", c1D: "វិទ្យាសាស្ត្របានបញ្ជាក់ថាភាពចាស់អាចបង្វែរបាន! ចុចចូលទៅ [សៀវភៅទិញទំនិញ AKG] ដើម្បីស្វែងយល់បន្ថែម।", c1M: "អានសៀវភៅទិញទំនិញ ➔",
+                c2T: "💰 បង្កើនដែនកំណត់ទ្រព្យសម្បត្តិ (រកប្រាក់) ➔", c2D: "ការប្រើប្រាស់គឺជាការវិនិយោគ! ចុច [វិភាគប្រព័ន្ធប្រាក់រង្វាន់សកល] ដើម្បីបង្កើតប្រាក់ចំណូលសកម្ម।", c2M: "សិក្សាប្រព័ន្ធប្រាក់រង្វាន់ ➔",
+                c3T: "🤝 ក្តីស្រឡាញ់ជួយមនុស្ស (ការចែករំលែក) ➔", c3D: "នាំយកដំណឹងល្អនៃការបង្វែរវ័យទៅកាន់ពិភពលោក។ មើល [មគ្គុទ្ទេសក៍ Black Diamond]।", c3M: "មើលមគ្គុទ្ទេសក៍ ➔",
+                vMainTitle: "🔮 កូដសម្ងាត់របស់ក្រុមហ៊ុនយក្សដែលផ្លាស់ប្តូរពិភពលោក",
+                vMainSubtitle: "Harvard, Cambridge, Google និង Bezos កំពុងចាប់ដៃគ្នាបើកយុគសម័យជីវិតអមតៈ",
+                vT1: "សាស្ត្រាចារ្យ Harvard: ភាពចាស់គឺជា 'ជំងឺ' អាចព្យាបាលបាន? រស់នៅដល់ ១២០ ឆ្នាំគ្រាន់តែជាការចាប់ផ្តើម!",
+                vT2: "អព្ភូតហេតុ ១៣ ថ្ងៃរបស់សាកលវិទ្យាល័យ Cambridge: មនុស្សជាតិយកឈ្នះភាពចាស់?",
+                vT3: "ផ្លូវទៅកាន់ជីវិតអមតៈត្រូវបានបើក? ស្កែនខួរក្បាល និងអាប់ឡូតទិន្នន័យ!",
+                vT4: "សម្ងាត់ پشت ۳ ពាន់លានដុល្លាររបស់ Bezos: អាយុកាលមនុស្សជិតដល់ ១០០ ឆ្នាំហើយ!",
+                vT5: "ការចាក់ថ្នាំឆ្នាំ ២០៣៥: ការទស្សន៍ទាយរបស់ Kurzweil!",
+                vT6: "ឆ្នាំ ២០៣០ អ្នកនឹងមិនចាស់ទៀតទេ? ការព្យាករណ៍របស់ Google!",
+                titleProd: "⚡ ផលិតផលជីវវេជ្ជសាស្ត្រកំពូល (៥ ផលិតផលចម្បង)",
+                p1B: "Aureva Women", p1T: "គាំទ្រការរំលាយអាហារ និងសុខភាពស្ត្រីប្រចាំថ្ងៃ", p1D: "Higo Aureva Women™ ត្រូវបានផ្សំឡើងជាពិសេសសម្រាប់ស្ត្រីសម័យថ្មី।", p1Go: "ទៅកាន់ហាងផ្លូវការ ➔",
+                p2B: "ReGeneX Men", p2T: "គាំទ្រសុខភាពប្រូស្តាត និងសុខភាពបុរស", p2D: "Higo ReGeneX Men™ ត្រូវបានផ្សំឡើងសម្រាប់បុរសសម័យថ្មី।", p2Go: "ទៅកាន់ហាងផ្លូវការ ➔",
+                p3B: "GnCell", p3T: "គាំទ្រប្រព័ន្ធការពាររាងកាយ និងសុខភាពប្រចាំថ្ងៃ", p3D: "Higo GnCell™ គឺជាការគាំទ្រអាហាររូបត្ថម្ភគ្រប់ជ្រុងជ្រោយ।", p3Go: "ទៅកាន់ហាងផ្លូវការ ➔",
+                p4B: "Higo AKG Women", p4T: "គាំទ្រការផលិតថាមពលកោសិកា និងកម្លាំងរាងកាយ", p4D: "Higo AKG Women™ ជួយគាំទ្រថាមពល និងការការពារប្រឆាំងអុកស៊ីតកម្ម।", p4Go: "ទៅកាន់ហាងផ្លូវការ ➔",
+                p5B: "Higo AKG Men", p5T: "គាំទ្រថាមពលកោសិកា និងមុខងាររាងកាយ", p5D: "Higo AKG Men™ រួមបញ្ចូលសារធាតុចិញ្ចឹមសំខាន់ៗសម្រាប់បុរស।", p5Go: "ទៅកាន់ហាងផ្លូវការ ➔",
+                titleBonus: "💰 ប្រព័ន្ធប្រាក់រង្វាន់បណ្តាញសកល",
+                subtitleBonus: "ផែនការប្រាក់ចំណេញសកលដែលមានយុត្តិធម៌ និងតម្លាភាព",
+                bonusImg: "StartPic/Star10_km.png",
+                titleCert: "🏆 ការទទួលស្គាល់សុវត្ថិភាពសកលទាំង ៧ 🏆",
+                cert1: "ផលិតនៅអាមេរិក", cert2: "វិញ្ញាបនបត្រ Halal", cert3: "មន្ទីរពិសោធន៍ EU", cert4: "វិញ្ញាបនបត្រ Non-GMO", cert5: "ការចុះបញ្ជី FDA អាមេរិក", cert6: "ការទទួលស្គាល់ NSF", cert7: "ស្តង់ដារ cGMP",
+                titleTeach: "📖 មគ្គុទ្ទេសក៍ ៣ ជំហានងាយៗ",
+                subtitleTeach: "ធ្វើតាមការណែនាំដើម្បីបើកទ្វារទ្រព្យសម្បត្តិ និងសុខភាព",
+                t1T: "ជំហានទី ១ ចុះឈ្មោះគណនីឥតគិតថ្លៃ", t1D: "ចុចលីងចុះឈ្មោះ រៀបចំគណនី និងយកតំណែងរបស់អ្នក",
+                t2T: "ជំហានទី ២ ទិញផលិតផលដើម្បីបើកគណនី", t2D: "ទិញផលិតផលដើម្បីទទួលបានសិទ្ធិអាជីវកម្ម",
+                t3T: "ជំហានទី ៣ ចែករំលែក និងចាប់ផ្តើម រកប្រាក់", t3D: "ចាប់ផ្តើមចែករំលែក និងបង្កើតប្រាក់ចំណូល!",
+                lblTut1: "មើលវីដេអូចុះឈ្មោះ", lblTut2: "មើលវីដេអូទិញទំនិញ", lblTut3: "មើលវីដេអូចែករំលែក",
+                go1: "⚡ GO ទៅកាន់ការចុះឈ្មោះ", go2: "⚡ GO ទៅកាន់ហាង", go3: "⚡ GO ទៅកាន់ការចែករំលែក",
+                titleWit: "👥 បទពិសោធន៍ពិតពីសមាជិក", titleEve: "📢 ព័ត៌មានផ្លូវការថ្មីៗ",
+                w1Text: "「បន្ទាប់ពីប្រើ AKG រយៈពេល ៣ ខែ ថាមពលរបស់ខ្ញុំបានត្រឡប់មកដូចអាយុ ៣០ ឆ្នាំ! ហើយប្រាក់ចំណេញខែមុនលើសពី $3,000!」",
+                liveStatus: "ផ្ទាល់ · ការប្រជុំអាជីវកម្មអនឡាញសកល",
+                liveTitle: "ចង់ដឹងពីរបៀបឡើងឋានៈ Black Diamond ឆាប់រហ័ស? ចូលមើលការផ្សាយផ្ទាល់!",
+                liveDesc: "យើងមានការសិក្ខាសាលាអនឡាញជាច្រើនភាសារៀងរាល់ថ្ងៃ।",
+                liveBtn: "ចូលរួមការប្រជុំផ្ទាល់ ➡️",
+                fTitle: "អ្នកមាន និងក្រុមហ៊ុនបច្ចេកវិទ្យាកំពុងវិនិយោគ", fDesc: "នេះមិនមែនគ្រាន់តែជានិន្នាការទេ វាគឺជាបដិវត្តន៍।",
+                heroTitle2: "រកឃើញសម្ងាត់អាយុវែងហើយ! ការរស់នៅដល់ ១៥០ ឆ្នាំមិនមែនជាសុបិនទៀតទេ!"
+            },
+
+            /* ==========================================
+            10. lo (ພາສາລາວ / 寮語)
+            ========================================== */
+            "lo": {
+                seoTitle: "ຍ້ອນໄວ & ປ່ຽນແປງຊີວິດ: ຄໍາພີຊັອບປິ້ງ AKG & ແຜນປັນຜົນກໍາໄລທົ່ວໂລກ",
+                seoDesc: "ເປີດໃຊ້ການຍ້ອນໄວໃນລະດັບເຊວດ້ວຍວິທະຍາສາດ! ຮຽນຮູ້ລະຫັດສຸຂະພາບ AKG ແລະ ຄົ້ນພົບລະບົບໂບນັດຂ້າມແດນ.",
+                n1: "ຄໍາພີຊັອບປິ້ງ AKG", n2: "ລະບົບໂບນັດທົ່ວໂລກ", n3: "ຄູ່ມື Black Diamond", n4: "ສິນຄ້າຍອດຮິດ", n5: "ວິທີລົງທະບຽນ & ຊື້", n6: "ຫ້ອງປະຊຸມອອນໄລນ໌", nVideoNav: "ວິດີໂອໄຮໄລ້",
+                vPrefix: "ທົ່ວໂລກມີຜູ້ນໍາກວ່າ", vSuffix: "ຄົນ ປ່ຽນແປງຊີວິດຜ່ານເສັ້ນທາງນີ້ແລ້ວ",
+                heroTitle: "ຍ້ອນອາຍຸຊີວະພາບ ແລະ ເສັ້ນທາງຄວາມຮັ່ງມີ ເພື່ອຊີວິດທີ່ຍິ່ງໃຫຍ່!",
+                heroSubtitle: "ການລວມຕົວຂອງວິທະຍາສາດ AKG ຈາກ Harvard ແລະ ໂບນັດການຊື້ຂ້າມແດນ ສໍາລັບຜູ້ທີ່ຕ້ອງການຍ້ອນໄວ ແລະ ສ້າງລາຍໄດ້.",
+                btn1: "ຮັບລະຫັດເຊີນພິເສດທັນທີ ➡️ ຄວ້າສິດໂຕແທນທົ່ວໂລກ",
+                btn2: "ລົງທະບຽນຈອງຕໍາແໜ່ງທັນທີ ➡️ ລັອກເງິນປັນຜົນທົ່ວໂລກ",
+                titleExplore: "ຄລິກໂມດູນລຸ່ມນີ້ເພື່ອຄົ້ນຫາລະຫັດການຍ້ອນໄວປ່ຽນຊີວິດ",
+                c1T: "⏳ ຍ້ອນອາຍຸຊີວະພາບ (ກັບມາໜຸ່ມ) ➔", c1D: "ວິທະຍາສາດພິສູດແລ້ວວ່າຄວາມເຖົ້າສາມາດຍ້ອນກັບໄດ້! ຄລິກເຂົ້າ [ຄໍາພີຊັອບປິ້ງ AKG] ເພື່ອສຶກສາເພີ່ມເຕີມ.", c1M: "ອ່ານຄໍາພີຊັອບປິ້ງ ➔",
+                c2T: "💰 ຂະຫຍາຍຂີດຈໍາກັດຄວາມຮັ່ງມີ (ສ້າງລາຍໄດ້) ➔", c2D: "ການຊື້ຄືການລົງທຶນ! ຄລິກເຂົ້າ [ວິເຄາະລະບົບໂບນັດທົ່ວໂລກ] ເພື່ອສ້າງລາຍໄດ້ແບບພາດຊີບ.", c2M: "ສຶກສາລະບົບໂບນັດ ➔",
+                c3T: "🤝 ສົ່ງຕໍ່ຄວາມຮັກແພງ (ການແບ່ງປັນ) ➔", c3D: "ນໍາຂ່າວດີການຍ້ອນໄວສູ່ໂລກ. ເບິ່ງ [ຄູ່ມື Black Diamond] ເພື່ອໃຊ້ກົນລະຍຸດສໍາຄັນ.", c3M: "ເບິ່ງຄູ່ມື ➔",
+                vMainTitle: "🔮 ລະຫັດລັບຂອງຍັກໃຫຍ່ທີ່ປ່ຽນແປງໂລກ",
+                vMainSubtitle: "Harvard, Cambridge, Google ແລະ Bezos ກໍາລັງຮ່ວມມືກັນເປີດຍຸກແຫ່ງຊີວິດອະມະຕະ",
+                vT1: "ສາດສະດາຈານ Harvard: ຄວາມເຖົ້າແມ່ນ 'ພະຍາດ' ທີ່ປົວໄດ້? ຢູ່ເຖິງ 120 ປີແມ່ນພຽງ点ເລີ່ມຕົ້ນ!",
+                vT2: "ປາຕິຫານ 13 ວັນຂອງມະຫາວິທະຍາໄລ Cambridge: ມະນຸດຊະນະຄວາມເຖົ້າແລ້ວບໍ?",
+                vT3: "ເສັ້ນທາງສູ່ຊີວິດອະມະຕະເປີດແລ້ວ? ສະແກນສົມອງ ແລະ ອັບໂຫຼດຂໍ້ມູນ!",
+                vT4: "ຄວາມລັບ 3 ພັນລ້ານໂດລາຂອງ Bezos: ອາຍຸມະນຸດຈະກາຍ 100 ປີ!",
+                vT5: "ຢາສີດປີ 2035: ຄໍາທໍານວາຍຂອງ Kurzweil!",
+                vT6: "ປີ 2030 ທ່ານຈະບໍ່ເຖົ້າອີກຕໍ່ໄປ? ຄໍາທໍານວາຍຂອງ Google!",
+                titleProd: "⚡ ສິນຄ້າຊີວະເວຊຊັ້ນນໍາ (5 ຜະລິດຕະພັນຫຼັກ)",
+                p1B: "Aureva Women", p1T: "ສະໜັບສະໜູນການເຜົາຜານພະລັງງານ ແລະ ສຸຂະພາບແມ່ຍິງ", p1D: "Higo Aureva Women™ ສູດພິເສດສໍາລັບແມ່ຍິງຍຸກໃໝ່.", p1Go: "ໄປທີ່ຮ້ານຄ້າທາງການ ➔",
+                p2B: "ReGeneX Men", p2T: "ສະໜັບສະໜູນສຸຂະພາບຕໍ່ມລູກໝາກ ແລະ ສຸຂະພາບຜູ້ຊາຍ", p2D: "Higo ReGeneX Men™ ສູດພິເສດສໍາລັບຜູ້ຊາຍຍຸກໃໝ່.", p2Go: "ໄປທີ່ຮ້ານຄ້າທາງການ ➔",
+                p3B: "GnCell", p3T: "ສະໜັບສະໜູນລະບົບພູມຄຸ້ມກັນ ແລະ ສຸຂະພາບປະຈໍາວັນ", p3D: "Higo GnCell™ ໃຫ້ການສະໜັບສະໜູນທາງໂພຊະນາການຢ່າງຄົບຖ້ວນ.", p3Go: "ໄປທີ່ຮ້ານຄ້າທາງການ ➔",
+                p4B: "Higo AKG Women", p4T: "ສະໜັບສະໜູນການສ້າງພະລັງງານເຊວ ແລະ ຮັກສາຄວາມສົດຊື່ນ", p4D: "Higo AKG Women™ ຊ່ວຍສະໜັບສະໜູນພະລັງງານ ແລະ ຕ້ານອະນຸມູນອິດສະຫຼະ.", p4Go: "ໄປທີ່ຮ້ານຄ້າທາງການ ➔",
+                p5B: "Higo AKG Men", p5T: "ສະໜັບສະໜູນພະລັງງານເຊວ ແລະ ການທໍາງານຂອງຮ່າງກາຍ", p5D: "Higo AKG Men™ ລວມສານອາຫານສໍາຄັນສໍາລັບຜູ້ຊາຍ.", p5Go: "ໄປທີ່ຮ້ານຄ້າທາງການ ➔",
+                titleBonus: "💰 ລະບົບໂບນັດເຄືອຂ່າຍທົ່ວໂລກ",
+                subtitleBonus: "ແຜນປັນຜົນກໍາໄລທີ່ຍຸຕິທໍາ ແລະ ໂປ່ງໃສ",
+                bonusImg: "StartPic/Star10_lo.png",
+                titleCert: "🏆 7 ມາດຕະຖານຄວາມປອດໄພລະດັບໂລກ 🏆",
+                cert1: "ຜະລິດຢູ່ອາເມລິກາ", cert2: "ໃບຮັບຮອງ ຮາລານ", cert3: "ຫ້ອງທົດລອງ EU", cert4: "ໃບຮັບຮອງ Non-GMO", cert5: "ລົງທະບຽນ FDA ອາເມລິກາ", cert6: "ໃບຮັບຮອງ NSF", cert7: "ມາດຕະຖານ cGMP",
+                titleTeach: "📖 ຄູ່ມື 3 ຂັ້ນຕອນງ່າຍໆ",
+                subtitleTeach: "ປະຕິບັດຕາມຄໍາແນະນໍາເພື່ອເປີດປະຕູສູ່ຄວາມຮັ່ງມີ ແລະ ສຸຂະພາບ",
+                t1T: "ຂັ້ນຕອນທີ 1 ລົງທະບຽນບັນຊີຟຣີ", t1D: "ຄລິກລິ້ງລົງທະບຽນ ກອກຂໍ້ມູນ ແລະ ຈອງຕໍາແໜ່ງຂອງທ່ານ",
+                t2T: "ຂັ້ນຕອນທີ 2 ຊື້ສິນຄ້າເພື່ອເປີດໃຊ້ບັນຊີ", t2D: "ຊື້ສິນຄ້າເພື່ອຮັບສິດທິໃນການດໍາເນີນທຸລະກິດ",
+                t3T: "ຂັ້ນຕອນທີ 3 ແບ່ງປັນ ແລະ ສ້າງລາຍໄດ້", t3D: "ເລີ່ມແບ່ງປັນ ແລະ ສ້າງລາຍໄດ້ແບບພາດຊີບ!",
+                lblTut1: "ເບິ່ງວິດີໂອລົງທະບຽນ", lblTut2: "ເບິ່ງວິດີໂອການຊື້", lblTut3: "ເບິ່ງວິດີໂອການແບ່ງປັນ",
+                go1: "⚡ GO ໄປທີ່ການລົງທະບຽນ", go2: "⚡ GO ໄປທີ່ຮ້ານຄ້າ", go3: "⚡ GO ໄປທີ່ການແບ່ງປັນ",
+                titleWit: "👥 ສຽງຕອບຮັບຈາກສະມາຊິກ", titleEve: "📢 ຂ່າວສານທາງການລ່າສຸດ",
+                w1Text: "「ຫຼັງຈາກທານ AKG ເປັນເວລາ 3 ເດືອນ, ພະລັງງານຂອງຂ້ອຍກັບມາຄືອາຍຸ 30 ປີ! ແລະ ເງິນປັນຜົນເດືອນກ່ອນຫຼາຍກວ່າ $3,000!」",
+                liveStatus: "ຖ່າຍທອດສົດ · ການປະຊຸມທຸລະກິດອອນໄລນ໌ທົ່ວໂລກ",
+                liveTitle: "ຢາກຮູ້ວິທີເລື່ອນຂັ້ນເປັນ Black Diamond ໄວໆບໍ? ເບິ່ງໄລຟ໌ສົດເລີຍ!",
+                liveDesc: "ພວກເຮົາຈັດການสัมມນາອອນໄລນ໌ຫຼາຍພາສາທຸກໆມື້.",
+                liveBtn: "ເຂົ້າຮ່ວມການປະຊຸມສົດ ➡️",
+                fTitle: "ມະຫາເສດຖີ ແລະ ບໍລິສັດເຕັກໂນໂລຊີກໍາລັງລົງທຶນ", fDesc: "ນີ້ບໍ່ແມ່ນພຽງແຕ່ເທຣນ, ມັນແມ່ນການປະວັດສາດ.",
+                heroTitle2: "ຄົ້ນພົບລະຫັດອາຍຸຢືນແລ້ວ! ການມີອາຍຸເຖິງ 150 ປີບໍ່ແມ່ນຝັນອີກຕໍ່ໄປ!"
             }
+
+
+
+
+
+
+
+
+
+
         };
+
 
         function renderContent(lang) {
             const data = translations[lang] || translations["zh-TW"];
@@ -1855,12 +2941,22 @@
     <script>
 
            // 國旗與語言名稱對照資料
-            const langData = {            
-            'zh-CN': { text: '简体中文', flag: 'https://flagcdn.com/w20/cn.png' },
-            'en':    { text: 'English',  flag: 'https://flagcdn.com/w20/us.png' },
-            'zh-TW': { text: '繁體中文', flag: 'https://flagcdn.com/w20/tw.png' },
-            'ko':    { text: '한국어',   flag: 'https://flagcdn.com/w20/kr.png' },
-            'ja':    { text: '日本語',   flag: 'https://flagcdn.com/w20/jp.png' }            
+            const langData = { 
+                'zh-CN': { text: '简体中文',  flag: 'https://flagcdn.com/w20/cn.png' },
+                'en':    { text: 'English',   flag: 'https://flagcdn.com/w20/us.png' },
+                'zh-TW': { text: '繁體中文',  flag: 'https://flagcdn.com/w20/tw.png' },
+                'ko':    { text: '한국어',     flag: 'https://flagcdn.com/w20/kr.png' },
+                'ja':    { text: '日本語',     flag: 'https://flagcdn.com/w20/jp.png' },
+                'ms':    { text: 'Malay',      flag: 'https://flagcdn.com/w20/my.png' },
+                'th':    { text: 'ภาษาไทย',    flag: 'https://flagcdn.com/w20/th.png' },
+                'vi':    { text: 'Tiếng Việt', flag: 'https://flagcdn.com/w20/vn.png' },
+                'id':    { text: 'Indonesia',  flag: 'https://flagcdn.com/w20/id.png' },
+                'ru':    { text: 'Русский',    flag: 'https://flagcdn.com/w20/ru.png' },
+                'my':    { text: 'မြန်မာဘာသာ', flag: 'https://flagcdn.com/w20/mm.png' },
+                'hi':    { text: 'हिन्दी',      flag: 'https://flagcdn.com/w20/in.png' },
+                'mn':    { text: 'Монгол',     flag: 'https://flagcdn.com/w20/mn.png' },
+                'km':    { text: 'ភាសាខ្មែរ',   flag: 'https://flagcdn.com/w20/kh.png' },
+                'lo':    { text: 'ພາສາລາວ',    flag: 'https://flagcdn.com/w20/la.png' }
             };
 
             // ----------------------------------------------------
