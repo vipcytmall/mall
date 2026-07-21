@@ -581,13 +581,130 @@
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
+
+
+
+
+
+
+    <!--  國旗下拉        -->
+    <style>
+        /* 容器    */
+        .lang-dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        user-select: none;
+        }
+
+        /* 按鈕本體 */
+        .lang-dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 160px;
+        padding: 8px 12px;
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        }
+
+        .lang-dropdown-btn:hover {
+        border-color: #cbd5e1;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .lang-selected-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #334155;
+        }
+
+        .lang-flag-img {
+        width: 20px;
+        height: 14px;
+        object-fit: cover;
+        border-radius: 2px;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-arrow {
+        font-size: 10px;
+        color: #94a3b8;
+        transition: transform 0.2s ease;
+        }
+
+        /* 選單展開時箭頭旋轉 */
+        .lang-dropdown-wrapper.active .lang-arrow {
+        transform: rotate(180deg);
+        }
+
+        /* 下拉選單選單 (預設隱藏 + 動畫準備) */
+        .lang-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        width: 160px;
+        background-color: #ffffff;
+        border: 1px solid #f1f5f9;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        padding: 6px;
+        z-index: 99999;
+        
+        /* 隱藏狀態 */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 選單展開狀態 */
+        .lang-dropdown-wrapper.active .lang-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        }
+
+        /* 選項 Hover 效果 */
+        .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        font-size: 14px;
+        color: #475569;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+        }
+
+        .lang-option:hover {
+        background-color: #f1f5f9;
+        color: #1e293b;
+        }
+
+    </style>
+
+
+
+
+
+
+
 </head>
 <body>
 
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <div>000003</div>
+        <div>000004</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -613,7 +730,40 @@
         
 
 
+        <div class="lang-dropdown-wrapper">
+            <!-- 主按鈕 -->
+            <button type="button" class="lang-dropdown-btn" id="langBtn" onclick="toggleLangDropdown(event)">
+                <div class="lang-selected-info">
+                <img id="selectedFlag" src="https://flagcdn.com/w20/tw.png" alt="TW" class="lang-flag-img">
+                <span id="selectedText">繁體中文</span>
+                </div>
+                <span class="lang-arrow">▼</span>
+            </button>
 
+            <!-- 下拉選單選單 -->
+            <div class="lang-dropdown-menu" id="langMenu">
+                <div class="lang-option" onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')">
+                <img src="https://flagcdn.com/w20/tw.png" class="lang-flag-img" alt="TW">
+                <span>繁體中文</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')">
+                <img src="https://flagcdn.com/w20/cn.png" class="lang-flag-img" alt="CN">
+                <span>简体中文</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')">
+                <img src="https://flagcdn.com/w20/us.png" class="lang-flag-img" alt="US">
+                <span>English</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')">
+                <img src="https://flagcdn.com/w20/jp.png" class="lang-flag-img" alt="JP">
+                <span>日本語</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')">
+                <img src="https://flagcdn.com/w20/kr.png" class="lang-flag-img" alt="KR">
+                <span>한국어</span>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -1675,7 +1825,40 @@
     </script>
 
 
-    
+
+
+    <!--  國旗下拉 -->
+    <script>
+        // 切換選單顯示/隱藏
+        function toggleLangDropdown(event) {
+            event.stopPropagation(); // 防止冒泡導致點擊立刻關閉
+            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+            wrapper.classList.toggle('active');
+        }
+
+        // 選擇語言並自動收合
+        function selectLang(val, text, flagUrl) {
+            // 更新畫面顯示
+            document.getElementById('selectedFlag').src = flagUrl;
+            document.getElementById('selectedText').innerText = text;
+
+            // 收合選單
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+
+            // 執行你原本的語言變更邏輯
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(val);
+            }
+        }
+
+        // 點擊頁面任何其他地方時，強制收合選單
+        document.addEventListener('click', function () {
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+        });
+
+    </script>
 
 </body>
 </html>
