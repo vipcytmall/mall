@@ -709,7 +709,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <!-- <div>000006</div> -->
+        <div>000006</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -1832,29 +1832,128 @@
     <script>
         // 切換選單顯示/隱藏        
         function toggleLangDropdown(event) {
-        event.stopPropagation();
-        const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
-        wrapper.classList.toggle('active');
+            event.stopPropagation();
+            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+            wrapper.classList.toggle('active');
         }
-
         // 選擇語言並自動收合
         function selectLang(val, text, flagUrl) {
-        document.getElementById('selectedFlag').src = flagUrl;
-        document.getElementById('selectedText').innerText = text;
-
-        const wrapper = document.querySelector('.lang-dropdown-wrapper');
-        if (wrapper) wrapper.classList.remove('active');
-
-        if (typeof changeLanguage === 'function') {
-            changeLanguage(val);
+            document.getElementById('selectedFlag').src = flagUrl;
+            document.getElementById('selectedText').innerText = text;
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(val);
+            }
         }
-        }
-
         // 點擊外面自動關閉
         document.addEventListener('click', function () {
-        const wrapper = document.querySelector('.lang-dropdown-wrapper');
-        if (wrapper) wrapper.classList.remove('active');
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
         });
+    </script>
+    <script>
+
+           // 國旗與語言名稱對照資料
+            const langData = {            
+            'zh-CN': { text: '简体中文', flag: 'https://flagcdn.com/w20/cn.png' },
+            'en':    { text: 'English',  flag: 'https://flagcdn.com/w20/us.png' },
+            'zh-TW': { text: '繁體中文', flag: 'https://flagcdn.com/w20/tw.png' },
+            'ko':    { text: '한국어',   flag: 'https://flagcdn.com/w20/kr.png' },
+            'ja':    { text: '日本語',   flag: 'https://flagcdn.com/w20/jp.png' }            
+            };
+
+            // ----------------------------------------------------
+            // 1. Cookie 操作小工具
+            // ----------------------------------------------------
+
+            // 寫入 Cookie (預設儲存 30 天)
+            function setCookie(name, value, days = 30) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+            }
+
+            // 讀取 Cookie
+            function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(cname) === 0) {
+                return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+            }
+
+            // ----------------------------------------------------
+            // 2. 切換與初始化邏輯
+            // ----------------------------------------------------
+
+            // 切換選單顯示/隱藏
+            function toggleLangDropdown(event) {
+            event.stopPropagation();
+            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+            wrapper.classList.toggle('active');
+            }
+
+            // 使用者點擊選擇語言
+            function selectLang(val, text, flagUrl) {
+            // 1. 更新 UI 介面顯示
+            updateLangUI(text, flagUrl);
+
+            // 2. 儲存選擇到 Cookie (名稱記為 user_lang)
+            setCookie('user_lang', val, 30);
+
+            // 3. 收合選單
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+
+            // 4. 觸發你原本頁面上的 changeLanguage 邏輯
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(val);
+            }
+            }
+
+            // 更新畫面按鈕上的文字與國旗
+            function updateLangUI(text, flagUrl) {
+            const selectedFlag = document.getElementById('selectedFlag');
+            const selectedText = document.getElementById('selectedText');
+            if (selectedFlag) selectedFlag.src = flagUrl;
+            if (selectedText) selectedText.innerText = text;
+            }
+
+            // ----------------------------------------------------
+            // 3. 頁面載入時：自動從 Cookie 恢復使用者的語言
+            // ----------------------------------------------------
+            document.addEventListener('DOMContentLoaded', function () {
+            const savedLang = getCookie('user_lang');
+
+            // 如果 Cookie 有紀錄，且在我們的字典對照表內
+            if (savedLang && langData[savedLang]) {
+                const item = langData[savedLang];
+                
+                // 恢復 UI 顯示
+                updateLangUI(item.text, item.flag);
+                
+                // 觸發語言切換
+                if (typeof changeLanguage === 'function') {
+                changeLanguage(savedLang);
+                }
+            }
+            });
+
+            // 點擊頁面其他空白處時自動關閉選單
+            document.addEventListener('click', function () {
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+            });
+
+
+
 
     </script>
 
