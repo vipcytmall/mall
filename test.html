@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多語系跑馬燈測試</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f4f6f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 語系切換控制面板 */
+    .lang-controls {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .lang-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      border: 1px solid #007bff;
+      background: #fff;
+      color: #007bff;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active, .lang-btn:hover {
+      background: #007bff;
+      color: #fff;
+    }
+
+    /* 外層容器 */
+    .container {
+      width: 100%;
+      max-width: 900px;
+      overflow: hidden;
+      background: #fff;
+      padding: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* 預設隱藏所有語系組 */
+    .lang-marquee {
+      display: none;
+      white-space: nowrap;
+    }
+
+    /* 當該語系加上 active 類別時顯示，並套用跑馬燈動畫 */
+    .lang-marquee.active {
+      display: inline-block;
+      animation: marquee 15s linear infinite;
+    }
+
+    /* 滑鼠懸停時暫停 */
+    .container:hover .lang-marquee.active {
+      animation-play-state: paused;
+    }
+
+    /* 圖片基礎樣式 */
+    .lang-marquee img {
+      height: 120px;
+      width: auto;
+      margin-right: 15px;
+      border-radius: 8px;
+      vertical-align: middle;
+      /* 測試預設背景（防圖片載入失敗時一片空白） */
+      background-color: #eee;
+    }
+
+    /* 跑馬燈動畫 */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>多語系跑馬燈功能測試</h2>
+
+  <!-- 測試用切換按鈕 -->
+  <div class="lang-controls">
+    <button class="lang-btn active" onclick="switchLang('zh-TW')">繁體中文 (tw)</button>
+    <button class="lang-btn" onclick="switchLang('zh-CN')">簡體中文 (cn)</button>
+    <button class="lang-btn" onclick="switchLang('en')">英文 (en)</button>
+    <button class="lang-btn" onclick="switchLang('ja')">日文 (ja - 測 onerror)</button>
+    <button class="lang-btn" onclick="switchLang('ko')">韓文 (ko - 測 onerror)</button>
+  </div>
+
+  <!-- 動態跑馬圖片區 (依當前語系自動切換顯示) -->
+  <section class="container">
+      <!-- 繁體中文圖片組 -->
+      <div class="lang-marquee marquee-zh-TW active">
+          <img src="pic/indextop/tw/page-01.png" alt="tw-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-02.png" alt="tw-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-03.png" alt="tw-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-04.png" alt="tw-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-05.png" alt="tw-page-05" onerror="handleError(this)">
+          <!-- 重複一組實現無縫滾動 -->
+          <img src="pic/indextop/tw/page-01.png" alt="tw-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-02.png" alt="tw-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-03.png" alt="tw-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-04.png" alt="tw-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/tw/page-05.png" alt="tw-page-05" onerror="handleError(this)">
+      </div>
+
+      <!-- 簡體中文圖片組 -->
+      <div class="lang-marquee marquee-zh-CN">
+          <img src="pic/indextop/cn/page-01.png" alt="cn-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-02.png" alt="cn-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-03.png" alt="cn-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-04.png" alt="cn-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-05.png" alt="cn-page-05" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-01.png" alt="cn-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-02.png" alt="cn-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-03.png" alt="cn-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-04.png" alt="cn-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/cn/page-05.png" alt="cn-page-05" onerror="handleError(this)">
+      </div>
+
+      <!-- 英文圖片組 -->
+      <div class="lang-marquee marquee-en">
+          <img src="pic/indextop/en/page-01.png" alt="en-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-02.png" alt="en-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-03.png" alt="en-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-04.png" alt="en-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-05.png" alt="en-page-05" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-01.png" alt="en-page-01" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-02.png" alt="en-page-02" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-03.png" alt="en-page-03" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-04.png" alt="en-page-04" onerror="handleError(this)">
+          <img src="pic/indextop/en/page-05.png" alt="en-page-05" onerror="handleError(this)">
+      </div>
+
+      <!-- 日文圖片組 (測試 onerror 降級 fallback) -->
+      <div class="lang-marquee marquee-ja">
+          <img src="pic/indextop/ja/page-01.png" alt="ja-page-01" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/ff7f50/ffffff?text=EN+Fallback+1'">
+          <img src="pic/indextop/ja/page-02.png" alt="ja-page-02" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/ff7f50/ffffff?text=EN+Fallback+2'">
+          <img src="pic/indextop/ja/page-03.png" alt="ja-page-03" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/ff7f50/ffffff?text=EN+Fallback+3'">
+          <img src="pic/indextop/ja/page-04.png" alt="ja-page-04" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/ff7f50/ffffff?text=EN+Fallback+4'">
+          <img src="pic/indextop/ja/page-05.png" alt="ja-page-05" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/ff7f50/ffffff?text=EN+Fallback+5'">
+      </div>
+
+      <!-- 韓文圖片組 (測試 onerror 降級 fallback) -->
+      <div class="lang-marquee marquee-ko">
+          <img src="pic/indextop/ko/page-01.png" alt="ko-page-01" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/6a5acd/ffffff?text=EN+Fallback+1'">
+          <img src="pic/indextop/ko/page-02.png" alt="ko-page-02" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/6a5acd/ffffff?text=EN+Fallback+2'">
+          <img src="pic/indextop/ko/page-03.png" alt="ko-page-03" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/6a5acd/ffffff?text=EN+Fallback+3'">
+          <img src="pic/indextop/ko/page-04.png" alt="ko-page-04" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/6a5acd/ffffff?text=EN+Fallback+4'">
+          <img src="pic/indextop/ko/page-05.png" alt="ko-page-05" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x120/6a5acd/ffffff?text=EN+Fallback+5'">
+      </div>
+  </section>
+
+  <script>
+    // 切換語系顯示邏輯
+    function switchLang(lang) {
+      // 隱藏所有語系區塊
+      document.querySelectorAll('.lang-marquee').forEach(el => el.classList.remove('active'));
+      
+      // 顯示對應語系
+      const targetMarquee = document.querySelector(`.marquee-${lang}`);
+      if (targetMarquee) {
+        targetMarquee.classList.add('active');
+      }
+
+      // 更新按鈕 active 狀態
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // 防護機制：當本地找不到圖片檔時，自動產生 Placeholder 占位圖
+    function handleError(img) {
+      img.onerror = null; // 防止死迴圈
+      const text = encodeURIComponent(img.alt || 'Image');
+      img.src = `https://via.placeholder.com/200x120/007bff/ffffff?text=${text}`;
+    }
+  </script>
+
+</body>
+</html>
