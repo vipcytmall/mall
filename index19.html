@@ -587,7 +587,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <div>000001</div>
+        <div>000002</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -612,55 +612,56 @@
 
         <!-- 🌐 國旗語言選擇器 -->
         <div class="relative inline-block text-sm" id="langDropdown">
-    
-            <!-- 主按鈕 (顯示當前選擇的語言) -->
-            <button 
-                type="button" 
-                onclick="toggleLangMenu()"
-                class="flex items-center justify-between w-[160px] px-[10px] py-[8px] bg-white rounded-[4px] border border-gray-300 shadow-sm hover:border-gray-400 focus:outline-none cursor-pointer"
-            >
-                <div class="flex items-center gap-2">
-                <img id="selectedFlag" src="https://flagcdn.com/w20/tw.png" alt="TW" class="w-[20px] h-auto rounded-[2px]">
-                <span id="selectedText" class="font-medium text-gray-700">繁體中文</span>
-                </div>
-                <span class="text-xs text-gray-400">▼</span>
-            </button>
-
-            <!-- 下拉選項選單 (預設隱藏 hidden) -->
-            <div 
-                id="langMenu" 
-                class="hidden absolute left-0 top-[105%] z-50 flex flex-col w-[160px] px-[10px] py-[6px] bg-white rounded-[4px] shadow-lg border border-gray-100 gap-[2px]"
-            >
-                <div onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')" 
-                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
-                <img src="https://flagcdn.com/w20/tw.png" class="w-[20px] h-auto rounded-[2px]" alt="TW">
-                <span>繁體中文</span>
-                </div>
-
-                <div onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')" 
-                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
-                <img src="https://flagcdn.com/w20/cn.png" class="w-[20px] h-auto rounded-[2px]" alt="CN">
-                <span>简体中文</span>
-                </div>
-
-                <div onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')" 
-                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
-                <img src="https://flagcdn.com/w20/us.png" class="w-[20px] h-auto rounded-[2px]" alt="US">
-                <span>English</span>
-                </div>
-
-                <div onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')" 
-                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
-                <img src="https://flagcdn.com/w20/jp.png" class="w-[20px] h-auto rounded-[2px]" alt="JP">
-                <span>日本語</span>
-                </div>
-
-                <div onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')" 
-                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
-                <img src="https://flagcdn.com/w20/kr.png" class="w-[20px] h-auto rounded-[2px]" alt="KR">
-                <span>한국어</span>
-                </div>
+        
+        <!-- 主按鈕 -->
+        <button 
+            type="button" 
+            id="langBtn"
+            onclick="toggleLangMenu(event)"
+            class="flex items-center justify-between w-[160px] px-[10px] py-[8px] bg-white rounded-[4px] border border-gray-300 shadow-sm hover:border-gray-400 focus:outline-none cursor-pointer"
+        >
+            <div class="flex items-center gap-2 pointer-events-none">
+            <img id="selectedFlag" src="https://flagcdn.com/w20/tw.png" alt="TW" class="w-[20px] h-auto rounded-[2px]">
+            <span id="selectedText" class="font-medium text-gray-700">繁體中文</span>
             </div>
+            <span class="text-xs text-gray-400 pointer-events-none">▼</span>
+        </button>
+
+        <!-- 下拉選項選單 (加上 z-[9999] 防止被遮擋) -->
+        <div 
+            id="langMenu" 
+            class="hidden absolute left-0 top-[100%] mt-1 z-[9999] flex flex-col w-[160px] px-[10px] py-[6px] bg-white rounded-[4px] shadow-lg border border-gray-100 gap-[2px]"
+        >
+            <div onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')" 
+                class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+            <img src="https://flagcdn.com/w20/tw.png" class="w-[20px] h-auto rounded-[2px]" alt="TW">
+            <span>繁體中文</span>
+            </div>
+
+            <div onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')" 
+                class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+            <img src="https://flagcdn.com/w20/cn.png" class="w-[20px] h-auto rounded-[2px]" alt="CN">
+            <span>简体中文</span>
+            </div>
+
+            <div onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')" 
+                class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+            <img src="https://flagcdn.com/w20/us.png" class="w-[20px] h-auto rounded-[2px]" alt="US">
+            <span>English</span>
+            </div>
+
+            <div onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')" 
+                class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+            <img src="https://flagcdn.com/w20/jp.png" class="w-[20px] h-auto rounded-[2px]" alt="JP">
+            <span>日本語</span>
+            </div>
+
+            <div onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')" 
+                class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+            <img src="https://flagcdn.com/w20/kr.png" class="w-[20px] h-auto rounded-[2px]" alt="KR">
+            <span>한국어</span>
+            </div>
+        </div>
 
         </div>
 
@@ -1813,34 +1814,46 @@
 
 
     <script>
-        // 切換下拉選單開關
-        function toggleLangMenu() {
+        // 1. 開關選單 (防止點擊事件冒泡)
+        function toggleLangMenu(event) {
+        if (event) event.stopPropagation(); // 阻止點擊事件傳到全域 document
+        
         const menu = document.getElementById('langMenu');
-        menu.classList.toggle('hidden');
+        if (menu) {
+            menu.classList.toggle('hidden');
+        }
         }
 
-        // 點擊選項事件
+        // 2. 選擇語言並自動收合選單
         function selectLang(val, text, flagUrl) {
-        // 1. 更新按鈕顯示的國旗與文字
-        document.getElementById('selectedFlag').src = flagUrl;
-        document.getElementById('selectedText').innerText = text;
+        // 更新按鈕上的圖示與文字
+        const selectedFlag = document.getElementById('selectedFlag');
+        const selectedText = document.getElementById('selectedText');
+        if (selectedFlag) selectedFlag.src = flagUrl;
+        if (selectedText) selectedText.innerText = text;
         
-        // 2. 關閉下拉選單
-        document.getElementById('langMenu').classList.add('hidden');
+        // 強制收合選單
+        const menu = document.getElementById('langMenu');
+        if (menu) {
+            menu.classList.add('hidden');
+        }
         
-        // 3. 觸發你原本寫好的 changeLanguage 函式
+        // 觸發你的語言切換邏輯
         if (typeof changeLanguage === 'function') {
             changeLanguage(val);
         }
         }
 
-        // 點擊選單外部時自動收起（優化使用者體驗）
+        // 3. 點擊頁面其他地方時，自動關閉選單
         document.addEventListener('click', function(e) {
         const dropdown = document.getElementById('langDropdown');
-        if (dropdown && !dropdown.contains(e.target)) {
-            document.getElementById('langMenu').classList.add('hidden');
+        const menu = document.getElementById('langMenu');
+        
+        if (dropdown && menu && !dropdown.contains(e.target)) {
+            menu.classList.add('hidden');
         }
         });
+
     </script>
 
 </body>
