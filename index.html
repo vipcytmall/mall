@@ -104,7 +104,7 @@
         .hero p { font-size: 1.3rem; color: #94A3B8; max-width: 750px; margin: 0 auto 40px auto; }
 
         /* 🔥 超吸睛 CTA 按鈕 */
-        .btn-cta {
+        /* .btn-cta {
             display: inline-block;
             background: linear-gradient(90deg, #2563EB 0%, #3B82F6 50%, #1D4ED8 100%);
             background-size: 200% auto;
@@ -117,7 +117,78 @@
         @keyframes pulseGlow {
             0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.4); }
             50% { box-shadow: 0 0 40px rgba(37, 99, 235, 0.8); }
+        } */
+
+        /* 🔥 超吸睛心跳 CTA 按鈕 */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #2563EB 0%, #3B82F6 50%, #1D4ED8 100%);
+            background-size: 200% auto;
+            color: #ffffff; 
+            padding: 18px 45px; 
+            font-size: 1.2rem; 
+            font-weight: 700;
+            text-decoration: none; 
+            border-radius: 50px;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            /* 啟用心跳動畫，週期約 1.4 秒最像真實心跳 */
+            animation: heartbeat 1.4s ease-in-out infinite;
         }
+
+        /* 滑鼠懸停時暫停心跳動畫，並放大展現 Hover 效果 */
+        .btn-cta:hover { 
+            animation-play-state: paused;
+            transform: scale(1.08) translateY(-3px); 
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.9); 
+        }
+
+        /* 💓 心跳 Keyframes：縮放 + 光暈同步震動 */
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+            }
+            14% {
+                transform: scale(1.08); /* 第一下大跳 */
+                box-shadow: 0 0 35px rgba(37, 99, 235, 0.8);
+            }
+            28% {
+                transform: scale(1); /* 稍微回縮 */
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+            }
+            42% {
+                transform: scale(1.05); /* 第二下小跳 */
+                box-shadow: 0 0 30px rgba(37, 99, 235, 0.7);
+            }
+            70%, 100% {
+                transform: scale(1); /* 歇息平靜期 */
+                box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -510,13 +581,135 @@
             .cert-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
+
+
+
+
+
+
+    <!--  國旗下拉        -->
+    <style>
+        /* 容器 */
+        .lang-dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        user-select: none;
+        }
+
+        /* 主按鈕：深色膠囊形 (Pill shape) */
+        .lang-dropdown-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 165px;
+        padding: 8px 16px;
+        background-color: #1e293b; /* 深藍灰底色 */
+        border: 1px solid #334155;
+        border-radius: 9999px; /* 完全膠囊圓角 */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lang-dropdown-btn:hover {
+        background-color: #334155;
+        border-color: #64748b;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.25); /* 微微藍光 */
+        transform: translateY(-1px);
+        }
+
+        .lang-selected-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #f8fafc; /* 亮白文字 */
+        }
+
+        /* 國旗圖示：圓角微陰影 */
+        .lang-flag-img {
+        width: 20px;
+        height: 14px;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 箭頭樣式與旋轉動畫 */
+        .lang-arrow {
+        font-size: 9px;
+        color: #94a3b8;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s;
+        }
+
+        .lang-dropdown-wrapper.active .lang-arrow {
+        transform: rotate(180deg);
+        color: #60a5fa; /* 展開時變亮藍色 */
+        }
+
+        /* 下拉選單：深色浮空卡片 (帶弧度圓角) */
+        .lang-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 175px;
+        background-color: #0f172a; /* 更深底色突顯層次 */
+        border: 1px solid #334155;
+        border-radius: 18px; /* 圓潤選單外框 */
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        padding: 6px;
+        z-index: 99999;
+        
+        /* 開關平滑彈出動畫 */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px) scale(0.96);
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 選單展開狀態 */
+        .lang-dropdown-wrapper.active .lang-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+        }
+
+        /* 選項美化 */
+        .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #cbd5e1;
+        border-radius: 9999px; /* 選項 Hover 時也是膠囊圓角 */
+        cursor: pointer;
+        transition: all 0.15s ease;
+        }
+
+        /* 選項 Hover 狀態 */
+        .lang-option:hover {
+        background-color: #1e293b;
+        color: #60a5fa; /* Hover 亮藍色 */
+        }
+    </style>
+
+
+
+
+
+
+
 </head>
 <body>
 
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        
+        <!-- <div>000006</div> -->
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -527,13 +720,77 @@
             <a href="#tutorials" id="n-5">註冊購物教學</a>
             <a href="#live" id="n-6">即時會議室</a>
         </div>
-        <select class="lang-selector" onchange="changeLanguage(this.value)" id="langSelect">
+        <!-- <select class="lang-selector" onchange="changeLanguage(this.value)" id="langSelect">
             <option value="zh-TW">繁體中文</option>
             <option value="zh-CN">简体中文</option>
             <option value="en">English</option>
             <option value="ja">日本語</option>
             <option value="ko">한국어</option>
-        </select>
+        </select> -->
+      
+
+
+        <div class="lang-dropdown-wrapper">
+            <!-- 主按鈕 -->
+            <button type="button" class="lang-dropdown-btn" id="langBtn" onclick="toggleLangDropdown(event)">
+                <div class="lang-selected-info">
+                <img id="selectedFlag" src="https://flagcdn.com/w20/tw.png" alt="TW" class="lang-flag-img">
+                <span id="selectedText">繁體中文</span>
+                </div>
+                <span class="lang-arrow">▼</span>
+            </button>
+
+            <!-- 下拉選單選單 -->
+            <div class="lang-dropdown-menu" id="langMenu">                
+                <div class="lang-option" onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')">
+                    <img src="https://flagcdn.com/w20/cn.png" class="lang-flag-img" alt="CN">
+                    <span>简体中文</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')">
+                    <img src="https://flagcdn.com/w20/us.png" class="lang-flag-img" alt="US">
+                    <span>English</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')">
+                    <img src="https://flagcdn.com/w20/tw.png" class="lang-flag-img" alt="TW">
+                    <span>繁體中文</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')">
+                    <img src="https://flagcdn.com/w20/kr.png" class="lang-flag-img" alt="KR">
+                    <span>한국어</span>
+                </div>
+                <div class="lang-option" onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')">
+                    <img src="https://flagcdn.com/w20/jp.png" class="lang-flag-img" alt="JP">
+                    <span>日本語</span>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </nav>
 
     <!-- 1. 英雄主視覺引流區 -->
@@ -1567,5 +1824,138 @@
 
         let count = 4821; setInterval(() => { count += Math.floor(Math.random() * 3) + 1; document.getElementById('visitor-count').innerText = count.toLocaleString(); }, 3000);
     </script>
+
+
+
+
+    <!--  國旗下拉 -->
+    <script>
+        // 切換選單顯示/隱藏        
+        function toggleLangDropdown(event) {
+            event.stopPropagation();
+            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+            wrapper.classList.toggle('active');
+        }
+        // 選擇語言並自動收合
+        function selectLang(val, text, flagUrl) {
+            document.getElementById('selectedFlag').src = flagUrl;
+            document.getElementById('selectedText').innerText = text;
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(val);
+            }
+        }
+        // 點擊外面自動關閉
+        document.addEventListener('click', function () {
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+        });
+    </script>
+    <script>
+
+           // 國旗與語言名稱對照資料
+            const langData = {            
+            'zh-CN': { text: '简体中文', flag: 'https://flagcdn.com/w20/cn.png' },
+            'en':    { text: 'English',  flag: 'https://flagcdn.com/w20/us.png' },
+            'zh-TW': { text: '繁體中文', flag: 'https://flagcdn.com/w20/tw.png' },
+            'ko':    { text: '한국어',   flag: 'https://flagcdn.com/w20/kr.png' },
+            'ja':    { text: '日本語',   flag: 'https://flagcdn.com/w20/jp.png' }            
+            };
+
+            // ----------------------------------------------------
+            // 1. Cookie 操作小工具
+            // ----------------------------------------------------
+
+            // 寫入 Cookie (預設儲存 30 天)
+            function setCookie(name, value, days = 30) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+            }
+
+            // 讀取 Cookie
+            function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(cname) === 0) {
+                return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+            }
+
+            // ----------------------------------------------------
+            // 2. 切換與初始化邏輯
+            // ----------------------------------------------------
+
+            // 切換選單顯示/隱藏
+            function toggleLangDropdown(event) {
+            event.stopPropagation();
+            const wrapper = event.currentTarget.closest('.lang-dropdown-wrapper');
+            wrapper.classList.toggle('active');
+            }
+
+            // 使用者點擊選擇語言
+            function selectLang(val, text, flagUrl) {
+            // 1. 更新 UI 介面顯示
+            updateLangUI(text, flagUrl);
+
+            // 2. 儲存選擇到 Cookie (名稱記為 user_lang)
+            setCookie('user_lang', val, 30);
+
+            // 3. 收合選單
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+
+            // 4. 觸發你原本頁面上的 changeLanguage 邏輯
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(val);
+            }
+            }
+
+            // 更新畫面按鈕上的文字與國旗
+            function updateLangUI(text, flagUrl) {
+            const selectedFlag = document.getElementById('selectedFlag');
+            const selectedText = document.getElementById('selectedText');
+            if (selectedFlag) selectedFlag.src = flagUrl;
+            if (selectedText) selectedText.innerText = text;
+            }
+
+            // ----------------------------------------------------
+            // 3. 頁面載入時：自動從 Cookie 恢復使用者的語言
+            // ----------------------------------------------------
+            document.addEventListener('DOMContentLoaded', function () {
+            const savedLang = getCookie('user_lang');
+
+            // 如果 Cookie 有紀錄，且在我們的字典對照表內
+            if (savedLang && langData[savedLang]) {
+                const item = langData[savedLang];
+                
+                // 恢復 UI 顯示
+                updateLangUI(item.text, item.flag);
+                
+                // 觸發語言切換
+                if (typeof changeLanguage === 'function') {
+                changeLanguage(savedLang);
+                }
+            }
+            });
+
+            // 點擊頁面其他空白處時自動關閉選單
+            document.addEventListener('click', function () {
+            const wrapper = document.querySelector('.lang-dropdown-wrapper');
+            if (wrapper) wrapper.classList.remove('active');
+            });
+
+
+
+
+    </script>
+
 </body>
 </html>
