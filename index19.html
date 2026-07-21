@@ -587,7 +587,7 @@
     <!-- 頂部導覽列 -->
     <nav>
         <div class="logo"><img src="https://www.vipyct.com/assets/logo-Cv0F07G6.svg" alt="AKG Global Logo"></div>
-        <div>004</div>
+        <div>005</div>
         <div class="nav-links">
             <a href="bible.html" id="n-1">AKG海購聖經</a>
             <a href="system.html" id="n-2">全球獎金制度</a>
@@ -605,6 +605,93 @@
             <option value="ja">日本語</option>
             <option value="ko">한국어</option>
         </select>
+
+
+
+
+
+        <!-- 🌐 國旗語言選擇器 -->
+        <div class="relative inline-block text-sm" id="langDropdown">
+    
+            <!-- 主按鈕 (顯示當前選擇的語言) -->
+            <button 
+                type="button" 
+                onclick="toggleLangMenu()"
+                class="flex items-center justify-between w-[160px] px-[10px] py-[8px] bg-white rounded-[4px] border border-gray-300 shadow-sm hover:border-gray-400 focus:outline-none cursor-pointer"
+            >
+                <div class="flex items-center gap-2">
+                <img id="selectedFlag" src="https://flagcdn.com/w20/tw.png" alt="TW" class="w-[20px] h-auto rounded-[2px]">
+                <span id="selectedText" class="font-medium text-gray-700">繁體中文</span>
+                </div>
+                <span class="text-xs text-gray-400">▼</span>
+            </button>
+
+            <!-- 下拉選項選單 (預設隱藏 hidden) -->
+            <div 
+                id="langMenu" 
+                class="hidden absolute left-0 top-[105%] z-50 flex flex-col w-[160px] px-[10px] py-[6px] bg-white rounded-[4px] shadow-lg border border-gray-100 gap-[2px]"
+            >
+                <div onclick="selectLang('zh-TW', '繁體中文', 'https://flagcdn.com/w20/tw.png')" 
+                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+                <img src="https://flagcdn.com/w20/tw.png" class="w-[20px] h-auto rounded-[2px]" alt="TW">
+                <span>繁體中文</span>
+                </div>
+
+                <div onclick="selectLang('zh-CN', '简体中文', 'https://flagcdn.com/w20/cn.png')" 
+                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+                <img src="https://flagcdn.com/w20/cn.png" class="w-[20px] h-auto rounded-[2px]" alt="CN">
+                <span>简体中文</span>
+                </div>
+
+                <div onclick="selectLang('en', 'English', 'https://flagcdn.com/w20/us.png')" 
+                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+                <img src="https://flagcdn.com/w20/us.png" class="w-[20px] h-auto rounded-[2px]" alt="US">
+                <span>English</span>
+                </div>
+
+                <div onclick="selectLang('ja', '日本語', 'https://flagcdn.com/w20/jp.png')" 
+                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+                <img src="https://flagcdn.com/w20/jp.png" class="w-[20px] h-auto rounded-[2px]" alt="JP">
+                <span>日本語</span>
+                </div>
+
+                <div onclick="selectLang('ko', '한국어', 'https://flagcdn.com/w20/kr.png')" 
+                    class="flex items-center gap-2 px-[8px] py-[6px] hover:bg-blue-50 rounded-[4px] cursor-pointer text-gray-700 transition-colors">
+                <img src="https://flagcdn.com/w20/kr.png" class="w-[20px] h-auto rounded-[2px]" alt="KR">
+                <span>한국어</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </nav>
 
     <!-- 1. 英雄主視覺引流區 -->
@@ -1638,5 +1725,38 @@
 
         let count = 4821; setInterval(() => { count += Math.floor(Math.random() * 3) + 1; document.getElementById('visitor-count').innerText = count.toLocaleString(); }, 3000);
     </script>
+
+
+    <script>
+        // 切換下拉選單開關
+        function toggleLangMenu() {
+        const menu = document.getElementById('langMenu');
+        menu.classList.toggle('hidden');
+        }
+
+        // 點擊選項事件
+        function selectLang(val, text, flagUrl) {
+        // 1. 更新按鈕顯示的國旗與文字
+        document.getElementById('selectedFlag').src = flagUrl;
+        document.getElementById('selectedText').innerText = text;
+        
+        // 2. 關閉下拉選單
+        document.getElementById('langMenu').classList.add('hidden');
+        
+        // 3. 觸發你原本寫好的 changeLanguage 函式
+        if (typeof changeLanguage === 'function') {
+            changeLanguage(val);
+        }
+        }
+
+        // 點擊選單外部時自動收起（優化使用者體驗）
+        document.addEventListener('click', function(e) {
+        const dropdown = document.getElementById('langDropdown');
+        if (dropdown && !dropdown.contains(e.target)) {
+            document.getElementById('langMenu').classList.add('hidden');
+        }
+        });
+    </script>
+
 </body>
 </html>
