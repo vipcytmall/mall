@@ -1,0 +1,397 @@
+{
+  "languages": {
+    "zh-tw": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 943692
+      }
+    },
+    "zh-cn": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 998521
+      }
+    },
+    "en": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 961535
+      }
+    },
+    "ja": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 981952
+      }
+    },
+    "ko": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1002451
+      }
+    },
+    "ms": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 987425
+      }
+    },
+    "th": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1013665
+      }
+    },
+    "vi": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 959003
+      }
+    },
+    "id": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 987907
+      }
+    },
+    "ru": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1006758
+      }
+    },
+    "my": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1048855
+      }
+    },
+    "hi": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1013865
+      }
+    },
+    "mn": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1017792
+      }
+    },
+    "km": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1004831
+      }
+    },
+    "lo": {
+      "title_count": 1,
+      "description_count": 1,
+      "robots_count": 1,
+      "googlebot_count": 1,
+      "bingbot_count": 1,
+      "canonical_count": 1,
+      "hreflang_count": 16,
+      "og_image_count": 1,
+      "og_image_width": "1200",
+      "og_image_height": "630",
+      "twitter_image_count": 1,
+      "twitter_image_alt_count": 1,
+      "counter_preserved": true,
+      "social_image_exists": true,
+      "social_image_size": {
+        "width": 1200,
+        "height": 630,
+        "bytes": 1011041
+      }
+    }
+  },
+  "errors": [],
+  "images": {
+    "zh-tw": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 943692
+    },
+    "zh-cn": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 998521
+    },
+    "en": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 961535
+    },
+    "ja": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 981952
+    },
+    "ko": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1002451
+    },
+    "ms": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 987425
+    },
+    "th": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1013665
+    },
+    "vi": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 959003
+    },
+    "id": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 987907
+    },
+    "ru": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1006758
+    },
+    "my": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1048855
+    },
+    "hi": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1013865
+    },
+    "mn": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1017792
+    },
+    "km": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1004831
+    },
+    "lo": {
+      "width": 1200,
+      "height": 630,
+      "bytes": 1011041
+    }
+  }
+}
