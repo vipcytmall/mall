@@ -24,7 +24,14 @@
   var statusEl = document.getElementById("stats-status");
   var updatedEl = document.getElementById("last-updated");
   var refreshBtn = document.getElementById("refresh-stats");
+  var resetBtn = document.getElementById("reset-stats");
   var configPanel = document.getElementById("config-warning");
+  var resetModal = document.getElementById("reset-modal");
+  var resetTokenInput = document.getElementById("reset-token");
+  var resetMessage = document.getElementById("reset-message");
+  var cancelResetBtn = document.getElementById("cancel-reset");
+  var confirmResetBtn = document.getElementById("confirm-reset");
+  var lastFocusedElement = null;
 
   function getConfig() {
     var config = window.AKG_COUNTER || {};
@@ -83,12 +90,15 @@
       configPanel.hidden = false;
       statusEl.textContent = "尚未設定 Cloudflare Worker 網址";
       totalEl.textContent = "—";
+      refreshBtn.disabled = false;
+      resetBtn.disabled = true;
       renderSkeleton("尚未設定");
       return;
     }
 
     configPanel.hidden = true;
     refreshBtn.disabled = true;
+    resetBtn.disabled = true;
     statusEl.textContent = "正在讀取 Cloudflare D1 統計…";
     renderSkeleton("載入中…");
 
@@ -123,9 +133,110 @@
       renderSkeleton("讀取失敗");
     } finally {
       refreshBtn.disabled = false;
+      resetBtn.disabled = false;
+    }
+  }
+
+  function openResetModal() {
+    var config = getConfig();
+    if (!configured(config)) {
+      statusEl.textContent = "尚未設定 Cloudflare Worker 網址，無法歸零";
+      return;
+    }
+    lastFocusedElement = document.activeElement;
+    resetTokenInput.value = "";
+    resetMessage.textContent = "";
+    confirmResetBtn.disabled = false;
+    cancelResetBtn.disabled = false;
+    resetModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    window.setTimeout(function () { resetTokenInput.focus(); }, 0);
+  }
+
+  function closeResetModal() {
+    if (confirmResetBtn.disabled) return;
+    resetTokenInput.value = "";
+    resetMessage.textContent = "";
+    resetModal.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  }
+
+  async function resetAllStats() {
+    var config = getConfig();
+    var token = resetTokenInput.value.trim();
+
+    if (!configured(config)) {
+      resetMessage.textContent = "尚未設定 Cloudflare Worker 網址。";
+      return;
+    }
+    if (!token) {
+      resetMessage.textContent = "請輸入 RESET_TOKEN。";
+      resetTokenInput.focus();
+      return;
+    }
+
+    confirmResetBtn.disabled = true;
+    cancelResetBtn.disabled = true;
+    resetMessage.textContent = "正在清除全部訪客統計…";
+
+    try {
+      var response = await fetch(config.apiBase + "/admin/reset", {
+        method: "POST",
+        mode: "cors",
+        cache: "no-store",
+        credentials: "omit",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ siteKey: config.siteKey })
+      });
+
+      var data = await response.json().catch(function () { return {}; });
+      if (!response.ok || !data.ok) {
+        if (response.status === 401) throw new Error("歸零密碼錯誤，或 Worker 尚未設定 RESET_TOKEN。 ");
+        if (response.status === 403) throw new Error("此網站來源未被 Worker 允許。 ");
+        throw new Error("歸零失敗（HTTP " + response.status + "）。");
+      }
+
+      resetTokenInput.value = "";
+      resetMessage.textContent = "歸零成功，正在重新載入統計…";
+      statusEl.textContent = "全部訪客統計已歸零";
+
+      window.setTimeout(async function () {
+        resetModal.hidden = true;
+        document.body.style.overflow = "";
+        confirmResetBtn.disabled = false;
+        cancelResetBtn.disabled = false;
+        await loadStats();
+      }, 450);
+    } catch (error) {
+      console.error("Failed to reset Cloudflare D1 statistics", error);
+      resetMessage.textContent = error && error.message ? error.message : "歸零失敗，請稍後再試。";
+      confirmResetBtn.disabled = false;
+      cancelResetBtn.disabled = false;
+      resetTokenInput.select();
+    } finally {
+      token = "";
     }
   }
 
   refreshBtn.addEventListener("click", loadStats);
+  resetBtn.addEventListener("click", openResetModal);
+  cancelResetBtn.addEventListener("click", closeResetModal);
+  confirmResetBtn.addEventListener("click", resetAllStats);
+  resetTokenInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") resetAllStats();
+  });
+  resetModal.addEventListener("click", function (event) {
+    if (event.target === resetModal) closeResetModal();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !resetModal.hidden) closeResetModal();
+  });
+
   loadStats();
 })();
