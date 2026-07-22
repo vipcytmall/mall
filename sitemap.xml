@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://CHANGE-ME.example/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/zh-tw/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/zh-cn/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/en/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/ja/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/ko/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/ms/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/th/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/vi/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/id/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/ru/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/my/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/hi/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/mn/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/km/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+  <url>
+    <loc>https://CHANGE-ME.example/lo/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://CHANGE-ME.example/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://CHANGE-ME.example/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://CHANGE-ME.example/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://CHANGE-ME.example/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://CHANGE-ME.example/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://CHANGE-ME.example/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://CHANGE-ME.example/ms/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://CHANGE-ME.example/th/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://CHANGE-ME.example/vi/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://CHANGE-ME.example/id/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://CHANGE-ME.example/ru/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://CHANGE-ME.example/my/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://CHANGE-ME.example/hi/"/>
+    <xhtml:link rel="alternate" hreflang="mn" href="https://CHANGE-ME.example/mn/"/>
+    <xhtml:link rel="alternate" hreflang="km" href="https://CHANGE-ME.example/km/"/>
+    <xhtml:link rel="alternate" hreflang="lo" href="https://CHANGE-ME.example/lo/"/>
+  </url>
+</urlset>
