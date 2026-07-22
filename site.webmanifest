@@ -1,0 +1,15 @@
+{
+  "name": "AKG Global",
+  "short_name": "AKG Global",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070B14",
+  "theme_color": "#070B14",
+  "icons": [
+    {
+      "src": "https://point.vipyct.com/assets/logo-rRfhN4-b.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
