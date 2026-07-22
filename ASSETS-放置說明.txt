@@ -1,0 +1,10 @@
+此 ZIP 只根據你提供的 index.html 拆分 HTML，沒有包含原網站圖片資料夾。
+
+請把原網站以下資料夾放在 deploy 根目錄，與 index.html 同一層：
+
+pic/
+StartPic/
+Step/
+
+若原網站另有 bible.html、system.html、strategy.html，也請放在 deploy 根目錄。
+商品與 LOGO 的遠端圖片會繼續使用原本網址。
