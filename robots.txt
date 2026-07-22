@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://CHANGE-ME.example/sitemap.xml
