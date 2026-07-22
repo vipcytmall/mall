@@ -1,0 +1,12 @@
+# Merge these directives into your HTTPS server block.
+index index.html;
+error_page 404 /404.html;
+
+location / {
+    try_files $uri $uri/ =404;
+}
+
+location ~* \.(?:avif|webp|png|jpg|jpeg|svg|css|js)$ {
+    expires 30d;
+    add_header Cache-Control "public, max-age=2592000";
+}
