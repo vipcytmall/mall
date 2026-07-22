@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AKG 多語系訪客統計</title>
+  <meta name="description" content="AKG Global 15 個語系首頁訪問次數統計儀表板。">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="color-scheme" content="dark">
+  <style>
+    :root{--bg:#070b14;--panel:#0f172a;--panel2:#111c31;--text:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.08);--blue:#60a5fa;--gold:#fbbf24;--red:#fb7185}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#172554 0,#070b14 38%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",sans-serif;min-height:100vh}
+    main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:48px 0 72px}
+    .top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(2rem,5vw,3.5rem);margin:.4rem 0 .7rem;line-height:1.08}.subtitle{color:var(--muted);margin:0;max-width:720px;line-height:1.7}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:11px 17px;text-decoration:none;font-weight:700;cursor:pointer}.btn:hover{border-color:var(--blue);transform:translateY(-1px)}.btn:disabled{opacity:.55;cursor:wait}
+    .summary{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px;margin:24px 0}.summary-card{background:linear-gradient(145deg,rgba(30,58,138,.45),rgba(15,23,42,.88));border:1px solid var(--line);border-radius:22px;padding:22px}.summary-card span{display:block;color:var(--muted);font-size:.9rem}.summary-card strong{display:block;font-size:2.2rem;color:var(--gold);margin-top:8px}.summary-card p{margin:8px 0 0;color:var(--muted);font-size:.84rem}
+    .warning{border:1px solid rgba(251,191,36,.45);background:rgba(120,53,15,.25);border-radius:18px;padding:18px 20px;margin:18px 0;color:#fde68a;line-height:1.65}.warning code{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:6px;color:#fff}
+    .table-card{background:rgba(15,23,42,.92);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.3)}.table-head{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line)}.table-head h2{margin:0;font-size:1.2rem}.status{color:var(--muted);font-size:.88rem}
+    .table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:850px}th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}th{color:#cbd5e1;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;background:rgba(255,255,255,.02)}tbody tr:hover{background:rgba(96,165,250,.045)}tbody tr:last-child td{border-bottom:0}.rank{color:#64748b;width:48px}.language-cell{display:flex;align-items:center;gap:12px}.language-cell img{border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.35)}.language-cell strong,.language-cell small{display:block}.language-cell small{color:var(--muted);margin-top:2px}td a{color:var(--blue);text-decoration:none}.count{font-variant-numeric:tabular-nums;font-size:1.05rem;font-weight:800;color:var(--gold)}.count.error{color:var(--red);font-size:.85rem}.share{color:#cbd5e1;font-variant-numeric:tabular-nums}.bar-track{height:9px;width:160px;background:#1e293b;border-radius:999px;overflow:hidden}.bar-track span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#2563eb,#60a5fa,#fbbf24)}
+    .notes{color:var(--muted);font-size:.86rem;line-height:1.75;margin:20px 4px 0}.notes strong{color:#e2e8f0}
+    @media(max-width:820px){main{width:min(100% - 20px,1180px);padding-top:28px}.top{display:block}.actions{margin-top:18px}.summary{grid-template-columns:1fr}.summary-card strong{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="top">
+    <div>
+      <div class="eyebrow">AKG Global Analytics</div>
+      <h1>15 語系訪客統計</h1>
+      <p class="subtitle">集中查看每個語系首頁的累積訪問次數。此頁不會記錄自己的瀏覽，也已設定為不讓搜尋引擎建立索引。</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="./">返回語言首頁</a>
+      <button class="btn" type="button" id="refresh-stats">重新整理數據</button>
+    </div>
+  </section>
+
+  <section class="summary" aria-label="統計摘要">
+    <div class="summary-card"><span>15 語系累積訪問</span><strong id="total-visits">—</strong><p>由下方 15 個語系頁面即時計算加總</p></div>
+    <div class="summary-card"><span>統計頁面數</span><strong>15</strong><p>不包含語言入口與本統計頁</p></div>
+    <div class="summary-card"><span>最後讀取時間</span><strong id="last-updated" style="font-size:1.15rem;color:#e2e8f0">尚未讀取</strong><p>GoatCounter 公開計數可能快取數小時</p></div>
+  </section>
+
+  <aside class="warning" id="config-warning" hidden>
+    尚未設定 GoatCounter。請編輯 <code>deploy/assets/js/goatcounter-config.js</code>，把 <code>CHANGE-ME</code> 改成你的 GoatCounter code；或執行 <code>tools/RUN-設定訪客統計.bat</code>。
+  </aside>
+
+  <section class="table-card">
+    <div class="table-head"><h2>各語系首頁</h2><div class="status" id="stats-status">準備讀取…</div></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>語言</th><th>統計路徑</th><th>訪問次數</th><th>占比</th><th>比較</th></tr></thead>
+        <tbody id="language-stats-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="notes"><strong>注意：</strong>這是公開統計頁，只要知道 <code>/viewed.html</code> 網址就能查看。GoatCounter 必須在後台開啟「Allow adding visitor counts on your website」。公開計數端點可能快取最長約四小時，因此新造訪不一定立即顯示。</p>
+</main>
+<script src="./assets/js/goatcounter-config.js"></script>
+<script src="./assets/js/viewed-dashboard.js"></script>
+</body>
+</html>
