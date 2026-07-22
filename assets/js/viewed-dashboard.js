@@ -26,43 +26,32 @@
   var refreshBtn = document.getElementById("refresh-stats");
   var configPanel = document.getElementById("config-warning");
 
-  function getCode() {
-    return String((window.AKG_STATS || {}).goatCounterCode || "").trim();
+  function getConfig() {
+    var config = window.AKG_COUNTER || {};
+    return {
+      apiBase: String(config.apiBase || "").trim().replace(/\/+$/, ""),
+      siteKey: String(config.siteKey || "vipcytmall-mall").trim()
+    };
   }
 
-  function configured(code) {
-    return Boolean(code && code !== "CHANGE-ME" && /^[a-z0-9-]+$/i.test(code));
-  }
-
-  function endpoint(code, path) {
-    return "https://" + code + ".goatcounter.com/counter/" + encodeURIComponent(path) + ".json";
-  }
-
-  function parseCount(value) {
-    var n = Number(String(value || "0").replace(/[^0-9.-]/g, ""));
-    return Number.isFinite(n) ? n : 0;
+  function configured(config) {
+    return Boolean(
+      /^https:\/\//i.test(config.apiBase) &&
+      config.apiBase.indexOf("REPLACE-WITH-") === -1 &&
+      /^[a-z0-9-]+$/i.test(config.siteKey)
+    );
   }
 
   function formatCount(value) {
-    return new Intl.NumberFormat("zh-TW").format(value);
+    return new Intl.NumberFormat("zh-TW").format(Number(value) || 0);
   }
 
-  async function fetchCount(code, path) {
-    var response = await fetch(endpoint(code, path), { cache: "no-store" });
-    if (response.status === 404) return 0;
-    if (!response.ok) throw new Error("HTTP " + response.status);
-    var data = await response.json();
-    return parseCount(data.count);
-  }
-
-  function renderRows(rows) {
+  function renderRows(rows, total) {
     var max = Math.max.apply(null, rows.map(function (row) { return row.count; }).concat([1]));
-    var total = rows.reduce(function (sum, row) { return sum + row.count; }, 0);
 
     tbody.innerHTML = rows.map(function (row, index) {
-      var width = row.error ? 0 : Math.max(2, Math.round((row.count / max) * 100));
+      var width = Math.max(row.count > 0 ? 2 : 0, Math.round((row.count / max) * 100));
       var share = total > 0 ? ((row.count / total) * 100).toFixed(1) : "0.0";
-      var countText = row.error ? "讀取失敗" : formatCount(row.count);
       return '<tr>' +
         '<td class="rank">' + (index + 1) + '</td>' +
         '<td><div class="language-cell">' +
@@ -70,56 +59,71 @@
           '<div><strong>' + row.native + '</strong><small>' + row.name + '</small></div>' +
         '</div></td>' +
         '<td><a href=".' + row.path + '" target="_blank" rel="noopener">' + row.path + '</a></td>' +
-        '<td class="count ' + (row.error ? 'error' : '') + '">' + countText + '</td>' +
-        '<td class="share">' + (row.error ? '—' : share + '%') + '</td>' +
-        '<td><div class="bar-track" aria-label="' + row.native + ' ' + countText + '"><span style="width:' + width + '%"></span></div></td>' +
+        '<td class="count">' + formatCount(row.count) + '</td>' +
+        '<td class="share">' + share + '%</td>' +
+        '<td><div class="bar-track" aria-label="' + row.native + ' ' + formatCount(row.count) + '"><span style="width:' + width + '%"></span></div></td>' +
       '</tr>';
     }).join("");
 
     totalEl.textContent = formatCount(total);
   }
 
-  function renderSkeleton() {
+  function renderSkeleton(label) {
     tbody.innerHTML = LANGUAGES.map(function (lang, index) {
       return '<tr class="loading-row">' +
         '<td class="rank">' + (index + 1) + '</td>' +
         '<td><div class="language-cell"><img src="https://flagcdn.com/w40/' + lang.flag + '.png" alt="" width="30" height="21"><div><strong>' + lang.native + '</strong><small>' + lang.name + '</small></div></div></td>' +
-        '<td>' + lang.path + '</td><td class="count">載入中…</td><td>—</td><td><div class="bar-track"></div></td></tr>';
+        '<td>' + lang.path + '</td><td class="count">' + label + '</td><td>—</td><td><div class="bar-track"></div></td></tr>';
     }).join("");
   }
 
   async function loadStats() {
-    var code = getCode();
-    if (!configured(code)) {
+    var config = getConfig();
+    if (!configured(config)) {
       configPanel.hidden = false;
-      statusEl.textContent = "尚未設定 GoatCounter code";
+      statusEl.textContent = "尚未設定 Cloudflare Worker 網址";
       totalEl.textContent = "—";
-      renderSkeleton();
+      renderSkeleton("尚未設定");
       return;
     }
 
     configPanel.hidden = true;
     refreshBtn.disabled = true;
-    statusEl.textContent = "正在讀取 15 個語系資料…";
-    renderSkeleton();
+    statusEl.textContent = "正在讀取 Cloudflare D1 統計…";
+    renderSkeleton("載入中…");
 
-    var results = await Promise.all(LANGUAGES.map(async function (lang) {
-      try {
-        var count = await fetchCount(code, lang.path);
-        return Object.assign({}, lang, { count: count, error: false });
-      } catch (error) {
-        console.error("Failed to load", lang.path, error);
-        return Object.assign({}, lang, { count: 0, error: true });
-      }
-    }));
+    try {
+      var url = config.apiBase + "/stats?siteKey=" + encodeURIComponent(config.siteKey) + "&_=" + Date.now();
+      var response = await fetch(url, {
+        method: "GET",
+        mode: "cors",
+        cache: "no-store",
+        credentials: "omit"
+      });
+      if (!response.ok) throw new Error("HTTP " + response.status);
 
-    renderRows(results);
-    var failures = results.filter(function (row) { return row.error; }).length;
-    statusEl.textContent = failures ? ("完成，但有 " + failures + " 個語系讀取失敗") : "15 個語系已全部載入";
-    updatedEl.textContent = new Intl.DateTimeFormat("zh-TW", {
-      dateStyle: "medium", timeStyle: "medium"
-    }).format(new Date());
-    refreshBtn.disabled = false;
+      var data = await response.json();
+      var counts = data.languages || {};
+      var rows = LANGUAGES.map(function (lang) {
+        return Object.assign({}, lang, { count: Number(counts[lang.code]) || 0 });
+      });
+      var calculatedTotal = rows.reduce(function (sum, row) { return sum + row.count; }, 0);
+      var total = Number(data.total);
+      if (!Number.isFinite(total)) total = calculatedTotal;
+
+      renderRows(rows, total);
+      statusEl.textContent = "15 個語系已全部載入（近即時）";
+      updatedEl.textContent = new Intl.DateTimeFormat("zh-TW", {
+        dateStyle: "medium", timeStyle: "medium"
+      }).format(new Date());
+    } catch (error) {
+      console.error("Failed to load Cloudflare D1 statistics", error);
+      statusEl.textContent = "統計 API 讀取失敗，請檢查 Worker 網址、D1 綁定與 CORS";
+      totalEl.textContent = "—";
+      renderSkeleton("讀取失敗");
+    } finally {
+      refreshBtn.disabled = false;
+    }
   }
 
   refreshBtn.addEventListener("click", loadStats);
