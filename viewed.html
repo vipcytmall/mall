@@ -38,11 +38,11 @@
   <section class="summary" aria-label="統計摘要">
     <div class="summary-card"><span>15 語系累積訪問</span><strong id="total-visits">—</strong><p>由下方 15 個語系頁面即時計算加總</p></div>
     <div class="summary-card"><span>統計頁面數</span><strong>15</strong><p>不包含語言入口與本統計頁</p></div>
-    <div class="summary-card"><span>最後讀取時間</span><strong id="last-updated" style="font-size:1.15rem;color:#e2e8f0">尚未讀取</strong><p>GoatCounter 公開計數可能快取數小時</p></div>
+    <div class="summary-card"><span>最後讀取時間</span><strong id="last-updated" style="font-size:1.15rem;color:#e2e8f0">尚未讀取</strong><p>Cloudflare D1 統計近即時更新</p></div>
   </section>
 
   <aside class="warning" id="config-warning" hidden>
-    尚未設定 GoatCounter。請編輯 <code>deploy/assets/js/goatcounter-config.js</code>，把 <code>CHANGE-ME</code> 改成你的 GoatCounter code；或執行 <code>tools/RUN-設定訪客統計.bat</code>。
+    尚未設定 Cloudflare Worker。請編輯 <code>deploy/assets/js/counter-config.js</code>，將 <code>REPLACE-WITH-CLOUDFLARE-WORKER-URL</code> 改成你的 Worker 完整網址。
   </aside>
 
   <section class="table-card">
@@ -55,9 +55,9 @@
     </div>
   </section>
 
-  <p class="notes"><strong>注意：</strong>這是公開統計頁，只要知道 <code>/viewed.html</code> 網址就能查看。GoatCounter 必須在後台開啟「Allow adding visitor counts on your website」。公開計數端點可能快取最長約四小時，因此新造訪不一定立即顯示。</p>
+  <p class="notes"><strong>注意：</strong>這是公開統計頁，只要知道 <code>/viewed.html</code> 網址就能查看。資料直接讀取 Cloudflare D1，不匯入任何舊統計；同一瀏覽器在同一語系 8 小時內只計一次。</p>
 </main>
-<script src="./assets/js/goatcounter-config.js"></script>
+<script src="./assets/js/counter-config.js"></script>
 <script src="./assets/js/viewed-dashboard.js"></script>
 </body>
 </html>
