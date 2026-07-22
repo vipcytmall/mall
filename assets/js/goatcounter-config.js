@@ -5,5 +5,5 @@
  *    例如：https://akg-global.goatcounter.com -> code 為 akg-global
  */
 window.AKG_STATS = Object.freeze({
-  goatCounterCode: "CHANGE-ME"
+  goatCounterCode: "vipcytmall"
 });
