@@ -8,16 +8,17 @@
   <meta name="robots" content="noindex,nofollow,noarchive">
   <meta name="color-scheme" content="dark">
   <style>
-    :root{--bg:#070b14;--panel:#0f172a;--panel2:#111c31;--text:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.08);--blue:#60a5fa;--gold:#fbbf24;--red:#fb7185}
+    :root{--bg:#070b14;--panel:#0f172a;--panel2:#111c31;--text:#f8fafc;--muted:#94a3b8;--line:rgba(255,255,255,.08);--blue:#60a5fa;--gold:#fbbf24;--red:#fb7185;--red-dark:#9f1239}
     *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#172554 0,#070b14 38%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft JhengHei",sans-serif;min-height:100vh}
     main{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:48px 0 72px}
     .top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}h1{font-size:clamp(2rem,5vw,3.5rem);margin:.4rem 0 .7rem;line-height:1.08}.subtitle{color:var(--muted);margin:0;max-width:720px;line-height:1.7}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:11px 17px;text-decoration:none;font-weight:700;cursor:pointer}.btn:hover{border-color:var(--blue);transform:translateY(-1px)}.btn:disabled{opacity:.55;cursor:wait}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:11px 17px;text-decoration:none;font-weight:700;cursor:pointer}.btn:hover{border-color:var(--blue);transform:translateY(-1px)}.btn:disabled{opacity:.55;cursor:wait;transform:none}.btn-danger{border-color:rgba(251,113,133,.55);background:rgba(159,18,57,.2);color:#fecdd3}.btn-danger:hover{border-color:var(--red);background:rgba(159,18,57,.34)}
     .summary{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px;margin:24px 0}.summary-card{background:linear-gradient(145deg,rgba(30,58,138,.45),rgba(15,23,42,.88));border:1px solid var(--line);border-radius:22px;padding:22px}.summary-card span{display:block;color:var(--muted);font-size:.9rem}.summary-card strong{display:block;font-size:2.2rem;color:var(--gold);margin-top:8px}.summary-card p{margin:8px 0 0;color:var(--muted);font-size:.84rem}
     .warning{border:1px solid rgba(251,191,36,.45);background:rgba(120,53,15,.25);border-radius:18px;padding:18px 20px;margin:18px 0;color:#fde68a;line-height:1.65}.warning code{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:6px;color:#fff}
     .table-card{background:rgba(15,23,42,.92);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.3)}.table-head{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line)}.table-head h2{margin:0;font-size:1.2rem}.status{color:var(--muted);font-size:.88rem}
     .table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:850px}th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}th{color:#cbd5e1;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;background:rgba(255,255,255,.02)}tbody tr:hover{background:rgba(96,165,250,.045)}tbody tr:last-child td{border-bottom:0}.rank{color:#64748b;width:48px}.language-cell{display:flex;align-items:center;gap:12px}.language-cell img{border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.35)}.language-cell strong,.language-cell small{display:block}.language-cell small{color:var(--muted);margin-top:2px}td a{color:var(--blue);text-decoration:none}.count{font-variant-numeric:tabular-nums;font-size:1.05rem;font-weight:800;color:var(--gold)}.count.error{color:var(--red);font-size:.85rem}.share{color:#cbd5e1;font-variant-numeric:tabular-nums}.bar-track{height:9px;width:160px;background:#1e293b;border-radius:999px;overflow:hidden}.bar-track span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#2563eb,#60a5fa,#fbbf24)}
     .notes{color:var(--muted);font-size:.86rem;line-height:1.75;margin:20px 4px 0}.notes strong{color:#e2e8f0}
+    .modal-backdrop{position:fixed;inset:0;z-index:9999;background:rgba(2,6,23,.78);display:grid;place-items:center;padding:20px;backdrop-filter:blur(8px)}.modal-backdrop[hidden]{display:none}.modal{width:min(520px,100%);background:linear-gradient(160deg,#172036,#0f172a);border:1px solid rgba(251,113,133,.34);border-radius:24px;padding:24px;box-shadow:0 28px 90px rgba(0,0,0,.55)}.modal h2{margin:0 0 10px;font-size:1.4rem}.modal p{margin:0 0 18px;color:var(--muted);line-height:1.7}.modal label{display:block;margin-bottom:8px;font-weight:700}.modal input{width:100%;border:1px solid var(--line);background:#070b14;color:var(--text);border-radius:12px;padding:13px 14px;font:inherit;outline:none}.modal input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(251,113,133,.12)}.modal-message{min-height:24px;margin-top:10px;color:#fecdd3;font-size:.9rem}.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.modal-note{font-size:.82rem;color:#64748b!important;margin-top:14px!important}
     @media(max-width:820px){main{width:min(100% - 20px,1180px);padding-top:28px}.top{display:block}.actions{margin-top:18px}.summary{grid-template-columns:1fr}.summary-card strong{font-size:1.8rem}}
   </style>
 </head>
@@ -32,6 +33,7 @@
     <div class="actions">
       <a class="btn" href="./">返回語言首頁</a>
       <button class="btn" type="button" id="refresh-stats">重新整理數據</button>
+      <button class="btn btn-danger" type="button" id="reset-stats">全部歸零</button>
     </div>
   </section>
 
@@ -55,8 +57,24 @@
     </div>
   </section>
 
-  <p class="notes"><strong>注意：</strong>這是公開統計頁，只要知道 <code>/viewed.html</code> 網址就能查看。資料直接讀取 Cloudflare D1，不匯入任何舊統計；同一瀏覽器在同一語系 8 小時內只計一次。</p>
+  <p class="notes"><strong>注意：</strong>這是公開統計頁，只要知道 <code>/viewed.html</code> 網址就能查看。資料直接讀取 Cloudflare D1；同一瀏覽器在同一語系 8 小時內只計一次。歸零功能必須輸入 Worker 的 <code>RESET_TOKEN</code>，密碼不會儲存在本頁。</p>
 </main>
+
+<div class="modal-backdrop" id="reset-modal" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="reset-modal-title" aria-describedby="reset-modal-description">
+    <h2 id="reset-modal-title">全部訪客統計歸零</h2>
+    <p id="reset-modal-description">這會永久刪除 15 個語系的全部訪客統計，且無法復原。請輸入 Cloudflare Worker 的歸零密碼。</p>
+    <label for="reset-token">RESET_TOKEN</label>
+    <input id="reset-token" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="輸入歸零密碼">
+    <div class="modal-message" id="reset-message" role="status" aria-live="polite"></div>
+    <div class="modal-actions">
+      <button class="btn" type="button" id="cancel-reset">取消</button>
+      <button class="btn btn-danger" type="button" id="confirm-reset">確認全部歸零</button>
+    </div>
+    <p class="modal-note">安全設計：密碼僅在本次請求中傳送，不會寫入 GitHub、網址、LocalStorage 或 SessionStorage。</p>
+  </section>
+</div>
+
 <script src="./assets/js/counter-config.js"></script>
 <script src="./assets/js/viewed-dashboard.js"></script>
 </body>
